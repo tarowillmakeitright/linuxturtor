@@ -1,6 +1,8 @@
 # linuxtutor 🐧
 
-![linuxtutor screenshot](screenshot-20251203-201044.png)
+<p align="center">
+  <img src="screenshot-20251203-201044.png" alt="linuxtutor thumbnail" width="700">
+</p>
 
 > A terminal-based Linux & DevOps quiz game, inspired by `vimtutor`  
 > Learn real commands, concepts, and hardcore DevOps by *typing*, not scrolling blog posts.
