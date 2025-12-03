@@ -1,0 +1,658 @@
+# ===== Beginner Pack (50) =====
+BEGINNER|List files in current directory|ls
+BEGINNER|List files in long format|ls -l
+BEGINNER|List all files including hidden|ls -a
+BEGINNER|List all files including hidden in long format|ls -la
+BEGINNER|Show current working directory|pwd
+BEGINNER|Change to home directory|cd ~
+BEGINNER|Change to parent directory|cd ..
+BEGINNER|Change to /var/log directory|cd /var/log
+BEGINNER|Create directory testdir|mkdir testdir
+BEGINNER|Create nested directories a/b/c|mkdir -p a/b/c
+BEGINNER|Remove empty directory olddir|rmdir olddir
+BEGINNER|Create empty file notes.txt|touch notes.txt
+BEGINNER|Show contents of file.txt|cat file.txt
+BEGINNER|View file.txt page by page|less file.txt
+BEGINNER|Show first 10 lines of file.txt|head file.txt
+BEGINNER|Show last 10 lines of file.txt|tail file.txt
+BEGINNER|Copy file a.txt to b.txt|cp a.txt b.txt
+BEGINNER|Copy a.txt into backup directory|cp a.txt backup/
+BEGINNER|Copy folder src to dest recursively|cp -r src dest
+BEGINNER|Move file a.txt to backup directory|mv a.txt backup/
+BEGINNER|Rename file old.txt to new.txt|mv old.txt new.txt
+BEGINNER|Remove file unwanted.txt|rm unwanted.txt
+BEGINNER|Remove directory tmp and its contents|rm -rf tmp
+BEGINNER|Print a message hello world|echo hello world
+BEGINNER|Show command history|history
+BEGINNER|Clear the terminal screen|clear
+BEGINNER|Show manual page for ls|man ls
+BEGINNER|Show current date|date
+BEGINNER|Show calendar for this month|cal
+BEGINNER|Print current user name|whoami
+BEGINNER|List logged-in users|who
+BEGINNER|Show environment variables|env
+BEGINNER|Show PATH variable|echo $PATH
+BEGINNER|Search for error in log.txt|grep error log.txt
+BEGINNER|Count lines in file.txt|wc -l file.txt
+BEGINNER|Count words in file.txt|wc -w file.txt
+BEGINNER|List files sorted by time|ls -lt
+BEGINNER|List files sorted by size|ls -lhS
+BEGINNER|Show disk usage of all mounted filesystems|df -h
+BEGINNER|Show disk usage of current directory|du -sh .
+BEGINNER|Show system kernel version|uname -r
+BEGINNER|Show all system information|uname -a
+BEGINNER|Show last 20 lines of syslog|tail -n 20 /var/log/syslog
+BEGINNER|Repeat last command|!!
+BEGINNER|Run last command starting with ls|!ls
+BEGINNER|Exit the shell|exit
+BEGINNER|Redirect echo output to file|echo hello > file.txt
+BEGINNER|Append output to file.txt|echo hello >> file.txt
+BEGINNER|Redirect stderr to error.log|ls /nope 2>error.log
+BEGINNER|Pipe ls output into less|ls | less
+
+# ===== Intermediate Pack (70) =====
+INTERMEDIATE|Find file named myfile.txt|find . -name "myfile.txt"
+INTERMEDIATE|Find all .log files|find . -name "*.log"
+INTERMEDIATE|Find files larger than 10MB|find . -size +10M
+INTERMEDIATE|Find directories named backup|find . -type d -name "backup"
+INTERMEDIATE|Find files modified in last day|find . -mtime -1
+INTERMEDIATE|Recursive search for TODO|grep -r "TODO" .
+INTERMEDIATE|Case-insensitive search for error|grep -i error log.txt
+INTERMEDIATE|Show non-matching lines|grep -v foo file.txt
+INTERMEDIATE|Show grep matches with line numbers|grep -n error log.txt
+INTERMEDIATE|Sort file.txt|sort file.txt
+INTERMEDIATE|Sort unique lines|sort file.txt | uniq
+INTERMEDIATE|Count frequency of each line|sort file.txt | uniq -c
+INTERMEDIATE|Cut first column|cut -d' ' -f1 file.txt
+INTERMEDIATE|Cut second field from /etc/passwd|cut -d':' -f2 /etc/passwd
+INTERMEDIATE|Replace foo with bar|sed 's/foo/bar/g' file.txt
+INTERMEDIATE|Delete lines with DEBUG|sed '/DEBUG/d' file.txt
+INTERMEDIATE|Print first column using awk|awk '{print $1}' file.txt
+INTERMEDIATE|Print lines where 3rd field > 100|awk '$3 > 100' file.txt
+INTERMEDIATE|Show first 5 processes|ps aux | head -n 5
+INTERMEDIATE|Top 10 largest files|ls -lhS | head -n 10
+INTERMEDIATE|Compress file|gzip data.txt
+INTERMEDIATE|Uncompress file|gunzip data.txt.gz
+INTERMEDIATE|Create tar archive|tar cf backup.tar folder
+INTERMEDIATE|Extract tar archive|tar xf backup.tar
+INTERMEDIATE|Create gzip tar|tar czf backup.tar.gz folder
+INTERMEDIATE|Extract gzip tar|tar xzf backup.tar.gz
+INTERMEDIATE|Create bzip2 tar|tar cjf backup.tar.bz2 folder
+INTERMEDIATE|Extract bzip2 tar|tar xjf backup.tar.bz2
+INTERMEDIATE|List running processes|ps aux
+INTERMEDIATE|Filter ssh processes|ps aux | grep ssh
+INTERMEDIATE|Show process tree|pstree
+INTERMEDIATE|Kill PID 1234|kill 1234
+INTERMEDIATE|Force kill PID 1234|kill -9 1234
+INTERMEDIATE|Show open files on port 80|sudo lsof -i :80
+INTERMEDIATE|Show open files of PID 1234|lsof -p 1234
+INTERMEDIATE|Show listening TCP ports|ss -tln
+INTERMEDIATE|Show IP addresses|ip addr
+INTERMEDIATE|Show default route|ip route
+INTERMEDIATE|Ping example.com|ping -c 4 example.com
+INTERMEDIATE|Download file with curl|curl -O https://example.com/file.txt
+INTERMEDIATE|Download file using wget|wget https://example.com/file.txt
+INTERMEDIATE|Show symbolic permissions for file|namei -l file.txt
+INTERMEDIATE|Change permissions to 600|chmod 600 file.txt
+INTERMEDIATE|Change script to 755|chmod 755 script.sh
+INTERMEDIATE|Change owner to alice|sudo chown alice file.txt
+INTERMEDIATE|Change owner and group|sudo chown alice:dev file.txt
+INTERMEDIATE|Show current umask|umask
+INTERMEDIATE|Set umask to 022|umask 022
+INTERMEDIATE|Create hard link|ln original.txt newfile
+INTERMEDIATE|Create symbolic link|ln -s original.txt link.txt
+INTERMEDIATE|Show inode numbers|ls -i
+INTERMEDIATE|Display last 50 journalctl lines|sudo journalctl -n 50
+INTERMEDIATE|Show boot messages|dmesg | less
+INTERMEDIATE|Monitor kernel messages|dmesg -w
+INTERMEDIATE|List loaded modules|lsmod
+INTERMEDIATE|Show ext4 module info|modinfo ext4
+INTERMEDIATE|Show mounted filesystems|mount | column -t
+INTERMEDIATE|Free memory|free -h
+INTERMEDIATE|Top CPU processes|ps aux --sort=-%cpu | head
+INTERMEDIATE|Top memory processes|ps aux --sort=-%mem | head
+INTERMEDIATE|Schedule job in 5 minutes|echo "echo hi" | at now + 5 minutes
+
+# ===== Advanced Pack (100) =====
+ADVANCED|Sed print lines 10-20|sed -n '10,20p' file.txt
+ADVANCED|Sed delete first line|sed -i '1d' file.txt
+ADVANCED|Sed replace foo globally|sed -i 's/foo/bar/g' *.txt
+ADVANCED|Awk match regex ERROR|awk '/^ERROR/' log.txt
+ADVANCED|Awk sum 3rd column|awk '{sum+=$3} END {print sum}' file.txt
+ADVANCED|Unique IPs from log|awk '{print $1}' access.log | sort -u
+ADVANCED|Sort processes by memory|ps aux --sort=-%mem | head
+ADVANCED|Sort processes by CPU|ps aux --sort=-%cpu | head
+ADVANCED|Top 5 largest files|find . -type f -printf '%s %p\n' | sort -nr | head -n 5
+ADVANCED|Find empty files|find . -type f -empty
+ADVANCED|Find world-writable files|find / -type f -perm -0002 2>/dev/null
+ADVANCED|Find files owned by alice|find / -user alice 2>/dev/null
+ADVANCED|Record terminal session|script typescript
+ADVANCED|Replay terminal session|scriptreplay typescript
+ADVANCED|Show login history|last
+ADVANCED|Show failed logins|sudo lastb
+ADVANCED|Monitor logs in real time|sudo journalctl -f
+ADVANCED|Logs for ssh.service|sudo journalctl -u ssh.service
+ADVANCED|List systemd services|systemctl list-units --type=service
+ADVANCED|Status of sshd|systemctl status sshd
+ADVANCED|Restart sshd|sudo systemctl restart sshd
+ADVANCED|Enable sshd|sudo systemctl enable sshd
+ADVANCED|Disable sshd|sudo systemctl disable sshd
+ADVANCED|List systemd timers|systemctl list-timers
+ADVANCED|Show listening sockets|sudo ss -tulpn
+ADVANCED|Trace ls system calls|strace ls
+ADVANCED|Time command|time ls -R
+ADVANCED|Check SHA256 of iso|sha256sum file.iso
+ADVANCED|Generate random 32-byte hex|head -c 32 /dev/urandom | xxd -p
+ADVANCED|Lock user alice|sudo passwd -l alice
+ADVANCED|Unlock user alice|sudo passwd -u alice
+ADVANCED|Add user alice|sudo useradd alice
+ADVANCED|Add user alice with home|sudo useradd -m alice
+ADVANCED|Delete user alice|sudo userdel alice
+ADVANCED|Delete user alice and home|sudo userdel -r alice
+ADVANCED|Add alice to sudo group|sudo usermod -aG sudo alice
+ADVANCED|Show groups for alice|groups alice
+ADVANCED|Create group devs|sudo groupadd devs
+ADVANCED|Change alice primary group|sudo usermod -g devs alice
+ADVANCED|Change ownership recursively|sudo chown -R user:group path
+ADVANCED|Set ACL for group g|setfacl -m g:g:rw path
+ADVANCED|Show ACLs|getfacl file.txt
+ADVANCED|Mount iso|sudo mount -o loop image.iso /mnt/iso
+ADVANCED|Unmount iso|sudo umount /mnt/iso
+ADVANCED|Remount root read-only|sudo mount -o remount,ro /
+ADVANCED|Check filesystem|sudo fsck /dev/sda1
+ADVANCED|SMART info|sudo smartctl -a /dev/sda
+ADVANCED|I/O stats|iostat
+ADVANCED|iptables rules|sudo iptables -L
+ADVANCED|nftables ruleset|sudo nft list ruleset
+ADVANCED|Route table|ip route show
+ADVANCED|ARP table|ip neigh
+ADVANCED|List open connections|sudo lsof -Pni
+ADVANCED|Generate SSH key|ssh-keygen -t ed25519
+ADVANCED|Copy SSH key|ssh-copy-id user@host
+ADVANCED|SSH into host|ssh user@host
+ADVANCED|Run remote command via SSH|ssh user@host 'uptime'
+ADVANCED|Copy file via scp|scp file.txt user@host:/path/
+ADVANCED|Copy directory via rsync|rsync -avz dir/ user@host:/path/
+ADVANCED|Limit rsync bandwidth|rsync --bwlimit=1024 -avz dir/ user@host:/path/
+ADVANCED|Disk usage of /var/log|sudo du -h --max-depth=1 /var/log
+ADVANCED|Find large dirs in /home|sudo du -h /home | sort -hr | head
+ADVANCED|Count TCP connections|ss -tan | grep ESTAB | wc -l
+
+# ===== Real-World Sysadmin Tasks (more) =====
+SYSADMIN|Check disk usage of all mounted filesystems|df -h
+SYSADMIN|Check disk usage of /var in human readable form|du -sh /var
+SYSADMIN|Find files larger than 100MB under /var|sudo find /var -type f -size +100M
+SYSADMIN|Show memory usage in human readable form|free -h
+SYSADMIN|Show top CPU and memory consuming processes|top
+SYSADMIN|Show top 10 memory-hungry processes using ps|ps aux --sort=-%mem | head -n 10
+SYSADMIN|Show top 10 CPU-hungry processes using ps|ps aux --sort=-%cpu | head -n 10
+SYSADMIN|Show which services failed to start|systemctl --failed
+SYSADMIN|Show system boot log from previous boot|sudo journalctl -b -1
+SYSADMIN|List all log files in /var/log|ls /var/log
+SYSADMIN|Check if system time is synchronized|timedatectl
+SYSADMIN|Set system timezone to Asia/Tokyo|sudo timedatectl set-timezone Asia/Tokyo
+SYSADMIN|List user crontab entries for current user|crontab -l
+SYSADMIN|Edit current user crontab|crontab -e
+SYSADMIN|List system-wide crontab directory|ls /etc/cron.d
+SYSADMIN|Backup /etc directory to /root/etc-backup.tar.gz|sudo tar czf /root/etc-backup.tar.gz /etc
+SYSADMIN|List kernels installed on the system|rpm -q kernel
+SYSADMIN|Check SELinux status quickly|getenforce
+SYSADMIN|Show human readable journal entries for today|sudo journalctl --since today
+SYSADMIN|Show last 50 lines from system journal|sudo journalctl -n 50
+SYSADMIN|Show current open file limits for shell|ulimit -a
+SYSADMIN|Check which process is using port 80|sudo ss -tulpn | grep :80
+SYSADMIN|Show last reboot times|last reboot
+SYSADMIN|Schedule system reboot in 10 minutes|sudo shutdown -r +10
+SYSADMIN|Cancel a scheduled shutdown or reboot|sudo shutdown -c
+SYSADMIN|Reload systemd manager configuration after unit changes|sudo systemctl daemon-reload
+SYSADMIN|Check status of cron service on systemd systems|systemctl status crond
+SYSADMIN|Restart cron service on systemd systems|sudo systemctl restart crond
+SYSADMIN|View kernel ring buffer messages|dmesg
+SYSADMIN|Check available updates on a DNF based system|sudo dnf check-update
+
+# ===== Filesystem Layout (more) =====
+FS|Which directory contains user-local binary executables by default?|/usr/bin
+FS|Which directory contains essential system binaries for all users?|/bin
+FS|Which directory contains system administration binaries?|/sbin
+FS|Which directory contains system-wide libraries?|/usr/lib
+FS|Which directory is usually used for optional third-party software?|/opt
+FS|Which directory contains runtime variable data like PID files and sockets?|/run
+FS|Which pseudo-filesystem exposes kernel and process info as files?|/proc
+FS|Which pseudo-filesystem exposes device information and kernel data?|/sys
+FS|Which directory contains device files representing hardware?|/dev
+FS|Which directory is typically used for mail and print spool files?|/var/spool
+FS|Which directory usually contains temporary files that survive reboots (on many systems)?|/var/tmp
+FS|Which directory on many distros contains system-wide application data shared between machines?|/srv
+FS|Which directory in a home folder commonly stores user configuration files according to XDG?|.config
+FS|Which file in a user home directory typically stores bash shell configuration?|.bashrc
+FS|Which file in a user home directory typically stores login shell environment?|.profile
+FS|Which directory often stores user-specific bin scripts in home?|bin
+FS|Which directory in home is commonly used for downloads?|Downloads
+
+# ===== Permissions (more) =====
+PERMISSIONS|Numeric perm for rwxr-xr-x|755
+PERMISSIONS|Numeric perm for rw-------|600
+PERMISSIONS|Numeric perm for rwxr-x---|750
+PERMISSIONS|Symbolic for 644|rw-r--r--
+PERMISSIONS|Symbolic for 700|rwx------
+PERMISSIONS|Which permission bit allows reading a file?|r
+PERMISSIONS|Which permission bit allows modifying a file?|w
+PERMISSIONS|Which permission bit allows entering a directory?|x
+PERMISSIONS|What special bit allows executables to run with file owner's privileges?|suid
+PERMISSIONS|What special bit on directories preserves group ownership of new files?|sgid
+PERMISSIONS|What special bit on /tmp prevents users deleting each other's files?|sticky bit
+PERMISSIONS|Which command conceptually changes file permissions?|chmod
+PERMISSIONS|Which command conceptually changes file owner and group?|chown
+PERMISSIONS|Which command conceptually changes only the group of a file?|chgrp
+PERMISSIONS|What is the name for the default permission mask used when creating files?|umask
+PERMISSIONS|If umask is 022 what are typical new file permissions in numeric form?|644
+PERMISSIONS|If umask is 022 what are typical new directory permissions in numeric form?|755
+PERMISSIONS|What is the term for permissions like rwxr-xr-x instead of numeric?|symbolic
+PERMISSIONS|What is the term for permissions like 755 instead of symbolic?|numeric
+
+# ===== Shell Theory (more) =====
+SHELL|What does $0 usually represent in a shell script?|script name
+SHELL|What does $@ represent in a shell script?|all arguments
+SHELL|What does $# represent in a shell script?|argument count
+SHELL|What does $$ represent in a shell script?|current shell pid
+SHELL|What does $? represent in the shell?|exit status of last command
+SHELL|What does && between two commands mean?|run second only if first succeeded
+SHELL|What does || between two commands mean?|run second only if first failed
+SHELL|What is the name of the feature that stores previously entered commands?|history
+SHELL|What is the typical default shell on many Linux systems?|bash
+SHELL|What is the feature that replaces variables and commands before execution called?|expansion
+SHELL|What is the syntax $(command) used for?|command substitution
+SHELL|What does the single dot command . do with a script?|source it in current shell
+SHELL|What is the term for connecting output of one program to input of another?|pipe
+SHELL|Which character is used for single-character globbing?|?
+SHELL|Which characters are used for multi-character globbing?|*
+SHELL|What is the shell variable that defines the path search list for commands?|PATH
+SHELL|Which environment variable usually indicates the current user's home directory?|HOME
+SHELL|Which environment variable usually indicates the login shell?|SHELL
+SHELL|What does Ctrl+C send to the running process?|SIGINT
+SHELL|What does Ctrl+Z do to the current foreground process?|suspend
+SHELL|Which built-in command lists background jobs?|jobs
+SHELL|Which built-in command brings a job to the foreground?|fg
+SHELL|Which built-in command continues a job in the background?|bg
+
+# ===== Process Theory (more) =====
+PROCESS|What does PID stand for?|process id
+PROCESS|What does PPID stand for?|parent process id
+PROCESS|What is the parent of all processes on systemd-based systems?|systemd
+PROCESS|What is the term for a process that has finished but not yet reaped by its parent?|zombie
+PROCESS|What is the term for a background process with no controlling terminal?|daemon
+PROCESS|Which command conceptually lists running processes in full detail?|ps aux
+PROCESS|Which command shows an interactive real-time view of running processes?|top
+PROCESS|Which signal is sent when a process receives a request to terminate gracefully?|SIGTERM
+PROCESS|Which signal is often used to ask a daemon to reload configuration?|SIGHUP
+PROCESS|Which signal is impossible to catch or ignore?|SIGKILL
+PROCESS|Which exit code value typically means success?|0
+PROCESS|Which shell variable holds the exit code of the last finished command?|$?
+PROCESS|What is the term for a process spawned by another process?|child process
+PROCESS|What is the term for the process that spawns child processes?|parent process
+PROCESS|What command conceptually can change process priority (niceness)?|renice
+PROCESS|What is the term for the numeric scheduling priority hint on Unix-like systems?|nice value
+
+# ===== Boot & Systemd (more) =====
+SYSTEMD|What is the name of the init system used by most modern Linux distros?|systemd
+SYSTEMD|Which command manages systemd services and units?|systemctl
+SYSTEMD|Which command shows overall systemd log messages?|journalctl
+SYSTEMD|What is the systemd unit type used for background services?|service
+SYSTEMD|What is the systemd unit type that groups other units into a state?|target
+SYSTEMD|Which target is commonly used for non-graphical multi-user systems?|multi-user.target
+SYSTEMD|Which target is commonly used for full graphical login systems?|graphical.target
+SYSTEMD|Which command shows the current default target?|systemctl get-default
+SYSTEMD|Which command sets the default target to multi-user.target?|sudo systemctl set-default multi-user.target
+SYSTEMD|Which directory typically holds package-provided unit files on systemd systems?|/usr/lib/systemd/system
+SYSTEMD|Which directory typically holds local override or custom unit files?|/etc/systemd/system
+SYSTEMD|Which command reloads systemd manager configuration after unit file changes?|sudo systemctl daemon-reload
+SYSTEMD|Which command shows the status of a unit named sshd.service?|systemctl status sshd
+SYSTEMD|Which command starts a service immediately?|sudo systemctl start sshd
+SYSTEMD|Which command stops a service immediately?|sudo systemctl stop sshd
+SYSTEMD|Which command enables a service to start at boot?|sudo systemctl enable sshd
+SYSTEMD|Which command disables a service from starting at boot?|sudo systemctl disable sshd
+
+# ===== Networking (more) =====
+NETWORK|What is the standard hostname for the loopback interface?|localhost
+NETWORK|What is the name of the loopback network interface?|lo
+NETWORK|Which command shows IP addresses of all interfaces?|ip addr
+NETWORK|Which command shows routing table information?|ip route
+NETWORK|Which protocol uses port 80 by default?|http
+NETWORK|Which protocol uses port 443 by default?|https
+NETWORK|Which protocol uses port 22 by default?|ssh
+NETWORK|Which protocol uses port 25 by default?|smtp
+NETWORK|Which protocol uses port 53 by default?|dns
+NETWORK|Which protocol uses port 3306 by default?|mysql
+NETWORK|Which protocol uses port 5432 by default?|postgresql
+NETWORK|Which file on Debian-based systems logs authentication messages?|/var/log/auth.log
+NETWORK|Which file on RHEL-based systems logs secure messages and auth?|/var/log/secure
+NETWORK|What is the address 127.0.0.1 called?|loopback
+NETWORK|What is the term for converting domain names to IP addresses?|dns resolution
+NETWORK|Which private IPv4 range begins with 192.168?|192.168.0.0/16
+NETWORK|Which private IPv4 range begins with 10.|10.0.0.0/8
+NETWORK|Which private IPv4 range begins with 172.16.|172.16.0.0/12
+NETWORK|What is the term for mapping private IPs to a public IP at a router?|nat
+NETWORK|Which command sends ICMP echo requests to test connectivity?|ping
+NETWORK|Which command can fetch URL content from the command line (starts with c)?|curl
+NETWORK|Which command can download files non-interactively from the web (starts with w)?|wget
+NETWORK|Which command shows listening TCP and UDP sockets on modern Linux?|ss
+
+# ===== Security (more) =====
+SECURITY|What file defines sudo permissions for all users?|/etc/sudoers
+SECURITY|Which command should always be used to edit sudoers file safely?|visudo
+SECURITY|Which directory typically holds extra sudo configuration drop-in files?|/etc/sudoers.d
+SECURITY|What is the numeric user id of the root user?|0
+SECURITY|What file holds hashed local user passwords on modern systems?|/etc/shadow
+SECURITY|What file contains local group definitions?|/etc/group
+SECURITY|Which config file defines SSH daemon settings on most systems?|/etc/ssh/sshd_config
+SECURITY|Which port does SSH listen on by default?|22
+SECURITY|Which directory in the user's home stores SSH keys?|.ssh
+SECURITY|Which file in .ssh stores authorized public keys for SSH login?|authorized_keys
+SECURITY|Which Linux security module enforces mandatory access control on RHEL-based systems?|selinux
+SECURITY|Which SELinux mode blocks actions that violate policy?|enforcing
+SECURITY|Which SELinux mode only logs but does not block actions?|permissive
+SECURITY|What is the path of the main SELinux config file on many systems?|/etc/selinux/config
+SECURITY|Which framework provides pluggable authentication modules on Linux?|pam
+SECURITY|Which directory contains PAM configuration files?|/etc/pam.d
+SECURITY|Which tool can ban IPs after too many failed login attempts (popular IDS)?|fail2ban
+SECURITY|Which file controls password aging and expiry information per user?|/etc/shadow
+SECURITY|Which command shows password aging info for a user?|chage
+SECURITY|Which command can lock a user's password to disable login?|passwd -l
+
+# ===== Trivia (more) =====
+TRIVIA|What is the name of the kernel used by most Linux distributions?|linux
+TRIVIA|What do we call a complete operating system built around the Linux kernel?|distribution
+TRIVIA|Name a popular Debian-based Linux distribution starting with U|ubuntu
+TRIVIA|Name a popular Fedora successor enterprise distro backed by Red Hat|rhel
+TRIVIA|Name a minimalist rolling-release distribution starting with A|arch
+TRIVIA|What does CLI stand for?|command line interface
+TRIVIA|What does GUI stand for?|graphical user interface
+TRIVIA|What does TTY originally stand for?|teletype
+TRIVIA|What is the special device file that discards all data written to it?|/dev/null
+TRIVIA|Which directory name is used for temporary files?|/tmp
+TRIVIA|Which command shows manual pages for commands?|man
+TRIVIA|Which general term describes using only text commands without GUI?|cli
+TRIVIA|What does LTS mean in context of distro releases?|long term support
+TRIVIA|Which program typically handles the boot menu and loads the kernel on many systems?|grub
+TRIVIA|What is the term for running a full OS from removable media like a USB stick without installing?|live system
+TRIVIA|What is the term for a small program running in the background performing services?|daemon
+TRIVIA|What is the name for a job scheduled with cron?|cron job
+TRIVIA|Which program is commonly used as the default shell on many Linux systems?|bash
+TRIVIA|Which program is widely used to track versions of source code repositories?|git
+TRIVIA|Which three-letter acronym refers to the Unix-like tools collection that Linux relies heavily on?|gnu
+
+# ===== DevOps Pack: Docker =====
+DOCKER|Show Docker client and server version information|docker version
+DOCKER|Show detailed system-wide Docker information|docker info
+DOCKER|List running containers|docker ps
+DOCKER|List all containers including stopped|docker ps -a
+DOCKER|List Docker images|docker images
+DOCKER|Pull the latest nginx image from Docker Hub|docker pull nginx:latest
+DOCKER|Run nginx container detached mapping host port 8080 to container port 80|docker run -d -p 8080:80 nginx:latest
+DOCKER|Run ubuntu container interactively with a bash shell|docker run -it ubuntu bash
+DOCKER|Run container and auto-remove when it exits|docker run --rm alpine
+DOCKER|Assign a name web to a new nginx container|docker run -d --name web nginx
+DOCKER|Start an existing container named web|docker start web
+DOCKER|Stop a running container named web|docker stop web
+DOCKER|Restart a container named web|docker restart web
+DOCKER|Remove a stopped container with ID abc123|docker rm abc123
+DOCKER|Remove all stopped containers|docker container prune
+DOCKER|Remove image nginx:latest|docker rmi nginx:latest
+DOCKER|Remove all dangling images|docker image prune
+DOCKER|Remove all unused images not referenced by containers|docker image prune -a
+DOCKER|Follow logs for container web|docker logs -f web
+DOCKER|Show last 100 log lines for container web|docker logs --tail 100 web
+DOCKER|Execute bash inside running container web|docker exec -it web bash
+DOCKER|Copy file /tmp/a.txt from container web to current directory on host|docker cp web:/tmp/a.txt .
+DOCKER|Copy file local.txt from host to container web at /tmp/local.txt|docker cp local.txt web:/tmp/local.txt
+DOCKER|Build an image named myapp:latest from current directory|docker build -t myapp:latest .
+DOCKER|Tag local image myapp:latest as myrepo/myapp:v1|docker tag myapp:latest myrepo/myapp:v1
+DOCKER|Login to Docker registry interactively|docker login
+DOCKER|Push image myrepo/myapp:v1 to registry|docker push myrepo/myapp:v1
+DOCKER|Show resource usage (CPU, memory) of running containers|docker stats
+DOCKER|Inspect low-level details of container web|docker inspect web
+DOCKER|Inspect low-level details of image nginx:latest|docker inspect nginx:latest
+DOCKER|List Docker networks|docker network ls
+DOCKER|Create user-defined bridge network mynet|docker network create mynet
+DOCKER|Run nginx attached to mynet network with name web1|docker run -d --network=mynet --name web1 nginx
+DOCKER|Connect existing container web1 to network mynet2|docker network connect mynet2 web1
+DOCKER|Disconnect container web1 from network mynet2|docker network disconnect mynet2 web1
+DOCKER|List Docker volumes|docker volume ls
+DOCKER|Create named volume data-vol|docker volume create data-vol
+DOCKER|Run container mounting data-vol at /data|docker run -d -v data-vol:/data alpine sleep infinity
+DOCKER|Run container mounting host directory /host/data to /data in container|docker run -d -v /host/data:/data alpine sleep infinity
+DOCKER|Set environment variable FOO=bar in a new container|docker run -e FOO=bar alpine env
+DOCKER|Limit container to 512MB memory|docker run -d --memory=512m alpine sleep infinity
+DOCKER|Limit container to 1 CPU|docker run -d --cpus=1 alpine sleep infinity
+DOCKER|Show top-like stats for a single container web|docker top web
+DOCKER|Export container filesystem of web as tar to web.tar|docker export web -o web.tar
+DOCKER|Import a tarball as an image named imported:latest|docker import web.tar imported:latest
+DOCKER|Save image nginx:latest to tar archive nginx.tar|docker save nginx:latest -o nginx.tar
+DOCKER|Load image from tar archive nginx.tar|docker load -i nginx.tar
+DOCKER|Clean up unused containers images networks and build cache|docker system prune
+DOCKER|Show difference between container filesystem and its image for web|docker diff web
+
+# ===== DevOps Pack: Kubernetes (kubectl) =====
+KUBERNETES|Show current kubectl context|kubectl config current-context
+KUBERNETES|List all contexts in kubeconfig|kubectl config get-contexts
+KUBERNETES|Switch kubectl context to my-cluster|kubectl config use-context my-cluster
+KUBERNETES|List nodes in the cluster|kubectl get nodes
+KUBERNETES|List pods in current namespace|kubectl get pods
+KUBERNETES|List pods in all namespaces|kubectl get pods -A
+KUBERNETES|List services in current namespace|kubectl get svc
+KUBERNETES|List deployments in current namespace|kubectl get deployments
+KUBERNETES|Get all resource types in current namespace|kubectl get all
+KUBERNETES|Describe pod mypod|kubectl describe pod mypod
+KUBERNETES|Describe deployment web|kubectl describe deployment web
+KUBERNETES|View logs for pod mypod|kubectl logs mypod
+KUBERNETES|Follow logs for pod mypod|kubectl logs -f mypod
+KUBERNETES|View logs for container app in pod mypod|kubectl logs mypod -c app
+KUBERNETES|Execute bash inside pod mypod|kubectl exec -it mypod -- bash
+KUBERNETES|Apply configuration from manifest.yaml|kubectl apply -f manifest.yaml
+KUBERNETES|Delete resources defined in manifest.yaml|kubectl delete -f manifest.yaml
+KUBERNETES|Delete pod mypod in current namespace|kubectl delete pod mypod
+KUBERNETES|Delete deployment web in current namespace|kubectl delete deployment web
+KUBERNETES|Scale deployment web to 3 replicas|kubectl scale deployment web --replicas=3
+KUBERNETES|Get rollout status of deployment web|kubectl rollout status deployment/web
+KUBERNETES|Undo last rollout of deployment web|kubectl rollout undo deployment/web
+KUBERNETES|List events in current namespace|kubectl get events
+KUBERNETES|Explain fields of deployment resource|kubectl explain deployment
+KUBERNETES|Get configmaps in current namespace|kubectl get configmaps
+KUBERNETES|Get secrets in current namespace|kubectl get secrets
+KUBERNETES|Create namespace staging|kubectl create namespace staging
+KUBERNETES|List namespaces|kubectl get namespaces
+KUBERNETES|Run temporary busybox pod with interactive shell|kubectl run tmp-shell --rm -it --image=busybox -- sh
+KUBERNETES|Port-forward pod mypod port 8080 to local port 8080|kubectl port-forward pod/mypod 8080:8080
+KUBERNETES|Port-forward service web port 80 to local port 8080|kubectl port-forward svc/web 8080:80
+KUBERNETES|Get pods with labels displayed|kubectl get pods --show-labels
+KUBERNETES|Label pod mypod with env=dev|kubectl label pod mypod env=dev
+KUBERNETES|Remove label env from pod mypod|kubectl label pod mypod env-
+KUBERNETES|Get pods with label env=dev|kubectl get pods -l env=dev
+KUBERNETES|Set image of deployment web container app to myapp:v2|kubectl set image deployment/web app=myapp:v2
+KUBERNETES|Get detailed yaml for deployment web|kubectl get deployment web -o yaml
+KUBERNETES|Dry-run create a deployment manifest printed to stdout|kubectl create deployment web --image=nginx --dry-run=client -o yaml
+KUBERNETES|Create a secret named db-secret from literal password=secret|kubectl create secret generic db-secret --from-literal=password=secret
+KUBERNETES|Get nodes with labels|kubectl get nodes --show-labels
+KUBERNETES|Cordon node node1 to disable new pods scheduling|kubectl cordon node1
+KUBERNETES|Uncordon node node1 to allow scheduling|kubectl uncordon node1
+KUBERNETES|Drain node node1 evicting pods safely|kubectl drain node1 --ignore-daemonsets --delete-emptydir-data
+KUBERNETES|Un-taint node node1 from key dedicated=testing:NoSchedule|kubectl taint nodes node1 dedicated=testing:NoSchedule-
+KUBERNETES|Get pod IPs in current namespace|kubectl get pods -o wide
+KUBERNETES|Check cluster information summary|kubectl cluster-info
+KUBERNETES|Show API resources supported by server|kubectl api-resources
+KUBERNETES|Create configmap app-config from file config.properties|kubectl create configmap app-config --from-file=config.properties
+KUBERNETES|Patch deployment web from patch.json file|kubectl patch deployment web --patch-file=patch.json
+KUBERNETES|Delete all pods in namespace default|kubectl delete pods --all -n default
+
+# ===== DevOps Pack: Git =====
+GIT|Configure global Git user name to Your Name|git config --global user.name "Your Name"
+GIT|Configure global Git user email you@example.com|git config --global user.email "you@example.com"
+GIT|Initialize a new Git repository in current directory|git init
+GIT|Clone repository from URL https://github.com/user/repo.git|git clone https://github.com/user/repo.git
+GIT|Check status of working tree|git status
+GIT|Stage file file.txt for commit|git add file.txt
+GIT|Stage all changes in current directory|git add .
+GIT|Commit staged changes with message Initial commit|git commit -m "Initial commit"
+GIT|Show commit history|git log
+GIT|Show compact one-line commit history|git log --oneline
+GIT|Show differences between working tree and index|git diff
+GIT|Show differences between index and last commit|git diff --cached
+GIT|Create new branch feature1|git branch feature1
+GIT|Switch to branch feature1|git checkout feature1
+GIT|Create and switch to new branch feature2|git checkout -b feature2
+GIT|List all branches|git branch
+GIT|Delete local branch feature1|git branch -d feature1
+GIT|Set remote origin URL for existing repo|git remote add origin https://github.com/user/repo.git
+GIT|Show configured remotes and URLs|git remote -v
+GIT|Push current branch to origin|git push origin HEAD
+GIT|Push local main branch to origin|git push origin main
+GIT|Pull latest changes from origin main|git pull origin main
+GIT|Fetch updates from origin without merging|git fetch origin
+GIT|Stash current uncommitted changes|git stash
+GIT|List available stashes|git stash list
+GIT|Apply most recent stash|git stash apply
+GIT|Drop most recent stash|git stash drop
+GIT|Reset file.txt to last committed version|git checkout -- file.txt
+GIT|Undo last commit but keep changes staged|git reset --soft HEAD~1
+GIT|Undo last commit and unstage changes but keep in working tree|git reset --mixed HEAD~1
+GIT|Undo last commit and discard changes permanently|git reset --hard HEAD~1
+GIT|Show file history including renames for file.txt|git log --follow -- file.txt
+GIT|Show who last changed each line in file.txt|git blame file.txt
+GIT|Create annotated tag v1.0 with message|git tag -a v1.0 -m "Version 1.0"
+GIT|Push all tags to origin|git push origin --tags
+GIT|Show diff between branches main and feature1|git diff main..feature1
+GIT|Merge branch feature1 into current branch|git merge feature1
+GIT|Abort an in-progress merge|git merge --abort
+GIT|Rebase current branch onto main|git rebase main
+GIT|Abort an in-progress rebase|git rebase --abort
+GIT|Continue an in-progress rebase|git rebase --continue
+GIT|Create .gitignore file including node_modules directory|echo "node_modules/" >> .gitignore
+GIT|Show summary of changes in last commit|git show --stat
+GIT|Show last commit details|git show HEAD
+GIT|Clean untracked files interactively|git clean -i
+GIT|Clean untracked files and directories forcefully|git clean -fd
+GIT|Verify Git configuration file locations|git config --list --show-origin
+GIT|Revert commit with hash abc1234 and create new commit|git revert abc1234
+
+# ===== HARDCORE DEVOPS EXAM MODE =====
+
+# --- Kubernetes Deep Dive ---
+DEVOPS-HARDCORE|Explain the difference between Requests and Limits in Kubernetes|requests define minimum resources; limits define maximum resources
+DEVOPS-HARDCORE|Which kubelet flag controls eviction thresholds?|--eviction-hard
+DEVOPS-HARDCORE|What happens when a pod exceeds its memory limit?|OOMKilled
+DEVOPS-HARDCORE|What happens when a pod exceeds its CPU limit?|throttling
+DEVOPS-HARDCORE|What Kubernetes object defines network policy rules?|NetworkPolicy
+DEVOPS-HARDCORE|Default Kubernetes service type|ClusterIP
+DEVOPS-HARDCORE|How does kube-proxy handle routing in IPTABLES mode?|DNAT
+DEVOPS-HARDCORE|What CIDR holds pod IPs in a cluster?|pod CIDR
+DEVOPS-HARDCORE|What command shows all API resources the cluster supports?|kubectl api-resources
+DEVOPS-HARDCORE|What Kubernetes object stores passwords and TLS keys?|Secret
+DEVOPS-HARDCORE|What is the Kubernetes built-in load balancer type for external traffic?|LoadBalancer
+DEVOPS-HARDCORE|Which controller manages ReplicaSets?|Deployment controller
+DEVOPS-HARDCORE|What is the purpose of the HorizontalPodAutoscaler?|scale replicas automatically
+DEVOPS-HARDCORE|What is the default DNS name for a service named web in namespace default?|web.default.svc.cluster.local
+DEVOPS-HARDCORE|Where does kubelet read static pod manifests?|/etc/kubernetes/manifests
+DEVOPS-HARDCORE|Which component manages etcd snapshots in managed clusters?|kube-controller-manager
+DEVOPS-HARDCORE|Which command checks certificate expiration for kube components?|kubeadm certs check-expiration
+DEVOPS-HARDCORE|Which resource defines persistent storage in the cluster?|PersistentVolume
+DEVOPS-HARDCORE|Which resource binds a pod to a persistent volume?|PersistentVolumeClaim
+DEVOPS-HARDCORE|What is the CSI acronym?|container storage interface
+DEVOPS-HARDCORE|Which feature isolates container privileges in Kubernetes?|Pod Security Admission
+DEVOPS-HARDCORE|What is the recommended minimum etcd nodes for HA?|3
+DEVOPS-HARDCORE|Which controller handles node lifecycle?|node controller
+DEVOPS-HARDCORE|Which API object defines RBAC permissions?|Role/ClusterRole
+DEVOPS-HARDCORE|What is the control plane component that exposes the Kubernetes API?|kube-apiserver
+DEVOPS-HARDCORE|Command to check which node a pod is running on|kubectl get pod -o wide
+
+# --- Docker Hardcore ---
+DEVOPS-HARDCORE|Which Docker feature reuses filesystem layers for efficiency?|image layers
+DEVOPS-HARDCORE|Where are Docker images stored on Linux by default?|/var/lib/docker
+DEVOPS-HARDCORE|What system feature enforces resource isolation in containers?|cgroups
+DEVOPS-HARDCORE|What system feature provides process isolation?|namespaces
+DEVOPS-HARDCORE|Which Docker network mode gives each container its own IP?|bridge
+DEVOPS-HARDCORE|Which Docker mode uses host network stack directly?|host
+DEVOPS-HARDCORE|Command to view running container cgroup info|docker inspect --format '{{.HostConfig.CgroupParent}}'
+DEVOPS-HARDCORE|What command shows low-level events from Docker daemon?|docker events
+DEVOPS-HARDCORE|What exit code indicates container OOM kill?|137
+DEVOPS-HARDCORE|Remove all containers including running ones|docker rm -f $(docker ps -aq)
+DEVOPS-HARDCORE|What is the purpose of Docker multi-stage builds?|reduce final image size
+DEVOPS-HARDCORE|Which Dockerfile instruction sets environment variables?|ENV
+DEVOPS-HARDCORE|Which Dockerfile instruction sets default command?|CMD
+DEVOPS-HARDCORE|Which Dockerfile instruction runs build steps?|RUN
+DEVOPS-HARDCORE|Which Dockerfile instruction changes working directory?|WORKDIR
+DEVOPS-HARDCORE|Which Dockerfile instruction copies files?|COPY
+
+# --- Linux Sysadmin Hardcore ---
+DEVOPS-HARDCORE|Command to show per-core CPU usage in top|press 1
+DEVOPS-HARDCORE|What kernel parameter controls OOM killer aggressiveness?|vm.overcommit_memory
+DEVOPS-HARDCORE|Which file contains kernel runtime parameters?|/proc/sys
+DEVOPS-HARDCORE|Command to modify sysctl parameter at runtime|sysctl -w
+DEVOPS-HARDCORE|Persistent sysctl configuration file path|/etc/sysctl.conf
+DEVOPS-HARDCORE|Which command detects filesystem errors?|fsck
+DEVOPS-HARDCORE|Which file lists mounted filesystems?|/proc/mounts
+DEVOPS-HARDCORE|How to check open files per process?|lsof -p PID
+DEVOPS-HARDCORE|Command to show top IO processes|iotop
+DEVOPS-HARDCORE|Command to benchmark disk performance|dd if=/dev/zero of=test bs=1M count=1024
+DEVOPS-HARDCORE|Which file stores system hostname?|/etc/hostname
+DEVOPS-HARDCORE|Which program initializes networking on most distros?|NetworkManager
+DEVOPS-HARDCORE|Command to trace system calls of a process|strace -p PID
+DEVOPS-HARDCORE|Command to list all open network sockets|ss -tulnp
+DEVOPS-HARDCORE|What does exit code 0 mean?|success
+DEVOPS-HARDCORE|What kernel facility logs hardware events?|dmesg
+
+# --- Git Hardcore ---
+DEVOPS-HARDCORE|Command to stage only part of a file interactively|git add -p
+DEVOPS-HARDCORE|Command to resolve merge conflicts using a tool|git mergetool
+DEVOPS-HARDCORE|Difference between rebase and merge|rebase rewrites history; merge preserves history
+DEVOPS-HARDCORE|Command to squash last 3 commits|git rebase -i HEAD~3
+DEVOPS-HARDCORE|Command to generate a patch file from last commit|git format-patch -1
+DEVOPS-HARDCORE|Command to apply a patch|git apply file.patch
+DEVOPS-HARDCORE|Command to show reflog|git reflog
+DEVOPS-HARDCORE|Command to restore deleted commit via reflog|git checkout <commit>
+DEVOPS-HARDCORE|Command to amend last commit without changing message|git commit --amend --no-edit
+DEVOPS-HARDCORE|Git state where a commit has no parents|root commit
+
+# --- Terraform Hardcore ---
+DEVOPS-HARDCORE|Command to show Terraform execution plan|terraform plan
+DEVOPS-HARDCORE|Command that applies infrastructure changes|terraform apply
+DEVOPS-HARDCORE|Command to download providers|terraform init
+DEVOPS-HARDCORE|Where are Terraform state files stored by default?|terraform.tfstate
+DEVOPS-HARDCORE|What backend stores state in an S3 bucket?|s3 backend
+DEVOPS-HARDCORE|What is the purpose of remote state?|collaboration and locking
+DEVOPS-HARDCORE|What is Terraform drift?|real world config differs from state
+DEVOPS-HARDCORE|What is a Terraform module?|reusable collection of resources
+
+# --- Ansible Hardcore ---
+DEVOPS-HARDCORE|Default inventory file location for Ansible|/etc/ansible/hosts
+DEVOPS-HARDCORE|Default Ansible config file|ansible.cfg
+DEVOPS-HARDCORE|Command to run ad-hoc ping test on hosts|ansible all -m ping
+DEVOPS-HARDCORE|What language are Ansible playbooks written in?|yaml
+DEVOPS-HARDCORE|Command to run playbook site.yml|ansible-playbook site.yml
+DEVOPS-HARDCORE|What is an Ansible role?|reusable automation unit
+DEVOPS-HARDCORE|How to encrypt secrets for Ansible?|ansible-vault
+
+# --- CI/CD Hardcore ---
+DEVOPS-HARDCORE|Default GitHub Actions workflow path|.github/workflows
+DEVOPS-HARDCORE|Default GitLab CI file name|.gitlab-ci.yml
+DEVOPS-HARDCORE|Default Jenkinsfile filename|Jenkinsfile
+DEVOPS-HARDCORE|GitHub Actions keyword for defining a job|jobs
+DEVOPS-HARDCORE|GitHub Actions runner OS for ubuntu|ubuntu-latest
+DEVOPS-HARDCORE|GitLab CI default stages keyword|stages
+
+# --- SRE Fundamentals ---
+DEVOPS-HARDCORE|What does SLO stand for?|service level objective
+DEVOPS-HARDCORE|What does SLI stand for?|service level indicator
+DEVOPS-HARDCORE|What is an error budget?|allowable failure before SLO violation
+DEVOPS-HARDCORE|What is MTTR?|mean time to recovery
+DEVOPS-HARDCORE|What is MTBF?|mean time between failures
+DEVOPS-HARDCORE|What is the term for automated rollback based on metrics?|auto rollback
+
+# --- Incident Response ---
+DEVOPS-HARDCORE|First step in incident response|identify problem
+DEVOPS-HARDCORE|What log file contains kernel panic messages?|dmesg
+DEVOPS-HARDCORE|Command to check system time drift|timedatectl
+DEVOPS-HARDCORE|What is a postmortem?|analysis after incident
+DEVOPS-HARDCORE|What is root cause analysis?|identify underlying cause
+DEVOPS-HARDCORE|What is a runbook?|step-by-step operational guide
+
+
