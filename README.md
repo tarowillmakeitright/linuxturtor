@@ -1,9 +1,3 @@
-Here you go — a nice chunky `README.md` you can drop straight into your repo 😎
-(You can tweak the joke level later if you want it more “corporate”.)
-
----
-
-````markdown
 # linuxtutor 🐧
 
 > A terminal-based Linux & DevOps quiz game, inspired by `vimtutor`  
@@ -387,9 +381,5 @@ This can become your personal “command gym”.
 
 Happy hacking 🐧
 
-```
 
-If you tell me your GitHub username and how serious you want this to look (more fun vs more professional), I can also generate a short project description + tags for the repo.
-::contentReference[oaicite:0]{index=0}
-```
 
