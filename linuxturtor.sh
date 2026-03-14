@@ -136,6 +136,36 @@ show_badges() {
   (( TOTAL_CORRECT >= 250 )) && echo "  👑 250 Correct - Terminal King"
 }
 
+# ------------ Welcome screen ----------------
+show_welcome_page() {
+  clear
+
+  local RESET="\033[0m"
+  local C1="\033[38;5;213m"  # pink
+  local C2="\033[38;5;219m"  # soft magenta
+  local C3="\033[38;5;117m"  # mellow blue
+  local C4="\033[38;5;121m"  # mint
+  local C5="\033[38;5;228m"  # pastel yellow
+  local C6="\033[38;5;216m"  # peach
+
+  echo
+  printf "${C1}   ██████╗ ${C2}██╗  ██╗${C3} █████╗ ${C4}███████╗${C5}██████╗ ${C6}██╗${RESET}\n"
+  printf "${C2}  ██╔═══██╗${C3}██║ ██╔╝${C4}██╔══██╗${C5}██╔════╝${C6}██╔══██╗${C1}██║${RESET}\n"
+  printf "${C3}  ██║   ██║${C4}█████╔╝ ${C5}███████║${C6}█████╗  ${C1}██████╔╝${C2}██║${RESET}\n"
+  printf "${C4}  ██║   ██║${C5}██╔═██╗ ${C6}██╔══██║${C1}██╔══╝  ${C2}██╔══██╗${C3}██║${RESET}\n"
+  printf "${C5}  ╚██████╔╝${C6}██║  ██╗${C1}██║  ██║${C2}███████╗${C3}██║  ██║${C4}██║${RESET}\n"
+  printf "${C6}   ╚═════╝ ${C1}╚═╝  ╚═╝${C2}╚═╝  ╚═╝${C3}╚══════╝${C4}╚═╝  ╚═╝${C5}╚═╝${RESET}\n"
+  echo
+  printf "${C2}                 🌈  Welcome back, legend.  🌈${RESET}\n"
+  printf "${C3}              mellow mode: ON • chaos mode: optional${RESET}\n"
+  echo
+
+  # tiny dramatic pause if interactive
+  if [[ -t 0 ]]; then
+    read -rp "Press Enter to open LinuxTutor RPG... " _
+  fi
+}
+
 # ------------ Category selection ----------------
 
 choose_category() {
@@ -368,6 +398,7 @@ run_quiz() {
 # ------------ Entry point ----------------
 
 load_stats
+show_welcome_page
 
 while true; do
   choose_category
