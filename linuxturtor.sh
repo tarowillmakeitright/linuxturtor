@@ -6,6 +6,7 @@
 # Lines starting with # or empty are ignored.
 
 QUESTIONS_FILE="${QUESTIONS_FILE:-questions.txt}"
+STATS_FILE="${STATS_FILE:-$HOME/.linuxturtor_stats}"
 
 if [[ ! -f "$QUESTIONS_FILE" ]]; then
   echo "ERROR: '$QUESTIONS_FILE' not found."
@@ -28,7 +29,10 @@ trim() {
 declare -a ALL_LINES
 declare -a CATEGORIES
 
-mapfile -t ALL_LINES < "$QUESTIONS_FILE"
+# Bash 3.x (macOS default) doesn't support mapfile, so use while-read.
+while IFS= read -r line || [[ -n "$line" ]]; do
+  ALL_LINES+=("$line")
+done < "$QUESTIONS_FILE"
 
 # Build unique category list
 for line in "${ALL_LINES[@]}"; do
@@ -62,13 +66,84 @@ fi
 
 EXIT_TO_MENU=0
 
+# ------------ Game state ----------------
+XP=0
+LEVEL=1
+TOTAL_CORRECT=0
+TOTAL_QUESTIONS=0
+BEST_STREAK=0
+PLAY_DAYS=0
+LAST_PLAY_DATE=""
+SESSION_HEARTS=3
+
+save_stats() {
+  cat > "$STATS_FILE" <<EOF
+XP=$XP
+LEVEL=$LEVEL
+TOTAL_CORRECT=$TOTAL_CORRECT
+TOTAL_QUESTIONS=$TOTAL_QUESTIONS
+BEST_STREAK=$BEST_STREAK
+PLAY_DAYS=$PLAY_DAYS
+LAST_PLAY_DATE=$LAST_PLAY_DATE
+EOF
+}
+
+load_stats() {
+  if [[ -f "$STATS_FILE" ]]; then
+    # shellcheck disable=SC1090
+    source "$STATS_FILE" || true
+  fi
+
+  local today
+  today="$(date +%F)"
+  if [[ "${LAST_PLAY_DATE:-}" != "$today" ]]; then
+    PLAY_DAYS=$((PLAY_DAYS + 1))
+    LAST_PLAY_DATE="$today"
+    save_stats
+  fi
+}
+
+level_from_xp() {
+  # 100xp per level (simple and motivating)
+  echo $(( XP / 100 + 1 ))
+}
+
+rank_title() {
+  if (( LEVEL >= 25 )); then echo "🐉 Shell Shogun";
+  elif (( LEVEL >= 18 )); then echo "🧠 Command Ninja";
+  elif (( LEVEL >= 12 )); then echo "⚔️ Terminal Samurai";
+  elif (( LEVEL >= 7 )); then echo "🛡️ Linux Ranger";
+  elif (( LEVEL >= 3 )); then echo "🥷 Junior Hacker";
+  else echo "🌱 Newbie Adventurer"; fi
+}
+
+award_xp() {
+  local gained="$1"
+  XP=$((XP + gained))
+  local new_level
+  new_level="$(level_from_xp)"
+  if (( new_level > LEVEL )); then
+    LEVEL=$new_level
+    echo "🎉 LEVEL UP! You are now Lv.$LEVEL ($(rank_title))"
+  fi
+}
+
+show_badges() {
+  echo "Badges:"
+  (( TOTAL_CORRECT >= 10 )) && echo "  🥉 10 Correct - Bronze Brain"
+  (( TOTAL_CORRECT >= 50 )) && echo "  🥈 50 Correct - Silver Shell"
+  (( TOTAL_CORRECT >= 100 )) && echo "  🥇 100 Correct - Gold Grep"
+  (( TOTAL_CORRECT >= 250 )) && echo "  👑 250 Correct - Terminal King"
+}
+
 # ------------ Category selection ----------------
 
 choose_category() {
   echo "======================================="
-  echo "            Linux Tutor"
+  echo "         LinuxTutor RPG Mode"
   echo "======================================="
   echo "Questions file: $QUESTIONS_FILE"
+  echo "Player: Lv.$LEVEL $(rank_title) | XP: $XP | Best Streak: $BEST_STREAK | Days: $PLAY_DAYS"
   echo
   echo "Choose a category:"
   local i=1
@@ -165,6 +240,8 @@ run_quiz() {
   local total=${#QUESTIONS[@]}
   local score=0
   local index=1
+  local streak=0
+  local hearts=$SESSION_HEARTS
 
   echo
   if [[ "$SELECTED_CATEGORY" == "__ALL__" ]]; then
@@ -176,12 +253,14 @@ run_quiz() {
   fi
   echo "Total questions: $total"
   echo
-  echo "Rules:"
+  echo "Game Rules:"
   echo "  - Type the exact answer shown in questions.txt"
-  echo "  - Type '?' or 'skip' to skip and immediately see the answer"
+  echo "  - Type '?' or 'skip' to skip (costs 1 heart)"
   echo "  - Type 'end' to quit this lesson and go back to the menu"
   echo "  - You have 3 attempts per question"
-  echo "  - After 3 mistakes, the correct answer is shown"
+  echo "  - Correct answer gives XP (+combo bonus by streak)"
+  echo "  - Wrong 3 times costs 1 heart"
+  echo "  - Hearts this run: $hearts"
   echo "  - Ctrl+C to quit completely at any time"
   echo
   echo "======================================="
@@ -197,7 +276,7 @@ run_quiz() {
     question="$(trim "$question")"
     correct="$(trim "$correct")"
 
-    echo "[$index/$total] $question"
+    echo "[$index/$total] ❤️ $hearts | 🔥 $streak  :: $question"
 
     local attempts=0
 
@@ -208,9 +287,18 @@ run_quiz() {
 
       # Skip feature
       if [[ "$answer" == "?" || "$answer" == "skip" ]]; then
-        echo "⏭ Skipped."
+        hearts=$((hearts - 1))
+        streak=0
+        ((TOTAL_QUESTIONS++))
+        echo "⏭ Skipped. (-1 ❤️)"
         echo "   Correct answer: $correct"
         echo
+        if (( hearts <= 0 )); then
+          echo "💀 Game Over! Out of hearts."
+          EXIT_TO_MENU=1
+          SESSION_HEARTS=3
+          return 0
+        fi
         break
       fi
 
@@ -224,16 +312,34 @@ run_quiz() {
 
       # Normal check
       if [[ "$answer" == "$correct" ]]; then
-        echo "✅ Correct!"
         ((score++))
+        ((streak++))
+        ((TOTAL_CORRECT++))
+        ((TOTAL_QUESTIONS++))
+        (( streak > BEST_STREAK )) && BEST_STREAK=$streak
+
+        local bonus=$(( streak / 3 ))
+        local gained=$(( 10 + bonus ))
+        award_xp "$gained"
+
+        echo "✅ Correct! +${gained}XP (streak: $streak)"
         echo
         break
       else
         ((attempts++))
         if (( attempts >= 3 )); then
-          echo "❌ Wrong 3 times."
+          hearts=$((hearts - 1))
+          streak=0
+          ((TOTAL_QUESTIONS++))
+          echo "❌ Wrong 3 times. (-1 ❤️)"
           echo "   Correct answer: $correct"
           echo
+          if (( hearts <= 0 )); then
+            echo "💀 Game Over! Out of hearts."
+            EXIT_TO_MENU=1
+            SESSION_HEARTS=3
+            return 0
+          fi
           break
         else
           echo "❌ Not quite. Try again. (Attempt $attempts/3)"
@@ -245,16 +351,23 @@ run_quiz() {
   done
 
   echo "======================================="
-  echo "  Finished!"
+  echo "  Stage Clear!"
   echo "  Score: $score / $total"
   if (( total > 0 )); then
     local pct=$(( 100 * score / total ))
     echo "  Accuracy: $pct %"
   fi
+  echo "  Player: Lv.$LEVEL ($(rank_title)) | XP: $XP"
+  echo "  Best Streak: $BEST_STREAK"
+  show_badges
   echo "======================================="
+
+  save_stats
 }
 
 # ------------ Entry point ----------------
+
+load_stats
 
 while true; do
   choose_category
@@ -263,6 +376,7 @@ while true; do
 
   EXIT_TO_MENU=0
   run_quiz
+  save_stats
 
   # If user typed 'end', just loop and show menu again
   if (( EXIT_TO_MENU == 1 )); then

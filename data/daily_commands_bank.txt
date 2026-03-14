@@ -1,0 +1,118 @@
+Show command type information for ls|type ls
+Show absolute path of command ls|which ls
+Run previous command as sudo|sudo !!
+Show your shell name|echo $SHELL
+List only directories in current path|ls -d */
+Show hidden files only|ls -d .[^.]*
+Create file with current timestamp in name|touch "note_$(date +%F_%H%M).txt"
+Print numbers 1 to 10|seq 1 10
+Show uptime in pretty format|uptime -p
+Show current date in ISO format|date +%F
+Show current time only|date +%T
+Show first 20 lines and line numbers|nl -ba file.txt | head -n 20
+Show last 20 lines and line numbers|nl -ba file.txt | tail -n 20
+Count files in current directory|find . -maxdepth 1 -type f | wc -l
+Count directories in current directory|find . -maxdepth 1 -type d | wc -l
+Find command location and man page path|whereis grep
+Search command history for docker|history | grep docker
+Repeat previous command but replace word|^old^new
+Show file mime type|file somefile
+Show only names from passwd file|cut -d: -f1 /etc/passwd
+Show sorted unique usernames from passwd|cut -d: -f1 /etc/passwd | sort -u
+Print environment variable HOME|printenv HOME
+List exported variables|export -p
+Show all aliases|alias
+Create alias ll for ls -la|alias ll='ls -la'
+Remove alias ll|unalias ll
+Run command in background|sleep 60 &
+Show background jobs|jobs -l
+Bring latest job to foreground|fg %+
+Stop foreground and continue in background|bg
+Show process IDs for bash|pgrep bash
+Show full command line for PID 1|ps -p 1 -o pid,ppid,cmd
+Watch command output every 2 sec|watch -n 2 date
+Show open TCP listening ports|ss -ltn
+Show DNS lookup for example.com|dig +short example.com
+Show route to 8.8.8.8|ip route get 8.8.8.8
+Display network interfaces briefly|ip -br addr
+Show ARP/neighbor table|ip neigh
+Show disk usage sorted desc|du -sh * | sort -hr
+Show largest 10 files recursively|find . -type f -exec du -h {} + | sort -hr | head -n 10
+Find files changed in last 60 minutes|find . -type f -mmin -60
+Find empty directories|find . -type d -empty
+Delete empty directories under .|find . -type d -empty -delete
+Show file checksums sha256|sha256sum file.txt
+Compare two files side by side|diff -y a.txt b.txt
+Show only differing lines using diff|diff -u a.txt b.txt
+Split file into 100-line chunks|split -l 100 big.txt chunk_
+Join lines from two files on first field|join -1 1 -2 1 a.txt b.txt
+Replace tabs with spaces|expand -t 2 file.txt
+Replace multiple spaces with one|tr -s ' ' < file.txt
+Uppercase file content|tr '[:lower:]' '[:upper:]' < file.txt
+Lowercase file content|tr '[:upper:]' '[:lower:]' < file.txt
+Tail log and filter errors in real-time|tail -f app.log | grep --line-buffered ERROR
+Show command execution time|time curl -I https://example.com
+Create random password length 20|openssl rand -base64 20
+Check SSL cert dates for host|echo | openssl s_client -servername example.com -connect example.com:443 2>/dev/null | openssl x509 -noout -dates
+List cron jobs for current user|crontab -l
+Edit cron jobs for current user|crontab -e
+Run command at 7:30 tomorrow|echo 'echo hello' | at 07:30 tomorrow
+Show systemd failed units|systemctl --failed
+Show logs for nginx service today|journalctl -u nginx --since today
+Follow logs for ssh service|journalctl -u ssh -f
+Show top memory consumers|ps aux --sort=-%mem | head -n 15
+Show top CPU consumers|ps aux --sort=-%cpu | head -n 15
+Nicely list tree up to 2 levels|tree -L 2
+Find TODO recursively and show numbers|grep -Rni "TODO" .
+Search case-insensitive for pattern|grep -Rni "error" .
+Show only matching part with grep|grep -o "error" file.txt
+Delete duplicate adjacent lines|uniq file.txt
+Sort then remove all duplicates|sort file.txt | uniq
+Show duplicated lines only|sort file.txt | uniq -d
+Keep first 3 columns from CSV|cut -d, -f1-3 data.csv
+Extract column 2 from TSV|cut -f2 data.tsv
+Print lines 5 to 15 with sed|sed -n '5,15p' file.txt
+In-place replace foo with bar|sed -i '' 's/foo/bar/g' file.txt
+Preview replace without editing|sed 's/foo/bar/g' file.txt
+Print lines containing number > 100 in col3|awk '$3>100' data.txt
+Sum values of second column|awk '{sum+=$2} END{print sum}' data.txt
+Print line count with awk|awk 'END{print NR}' file.txt
+Format JSON with jq|jq . file.json
+Extract JSON field name with jq|jq -r '.name' file.json
+Filter JSON array by age>20|jq '.[] | select(.age>20)' users.json
+List git branches sorted by recent commit|git branch --sort=-committerdate
+Show concise git graph|git log --oneline --graph --decorate --all -n 20
+Show changed files in last commit|git show --name-only --oneline HEAD
+Stash including untracked files|git stash -u
+Apply and drop latest stash|git stash pop
+Create and switch branch feat/demo|git switch -c feat/demo
+Switch back to previous branch|git switch -
+Show remote URLs|git remote -v
+Fetch all remotes and prune|git fetch --all --prune
+Dry-run rsync from src to dst|rsync -avhn src/ dst/
+Sync directories with delete|rsync -avh --delete src/ dst/
+Download URL headers only|curl -I https://example.com
+Download with progress and output name|curl -L https://example.com/file -o file
+Resume interrupted download with curl|curl -C - -O https://example.com/bigfile
+Test HTTP endpoint quickly|curl -s -o /dev/null -w "%{http_code}\n" https://example.com
+Check open ports on host with nc|nc -vz localhost 22
+Check if command exists|command -v kubectl
+Run xargs from newline list|cat list.txt | xargs -n1 echo
+Delete .tmp files safely using xargs|find . -name '*.tmp' -print0 | xargs -0 rm -f
+Create tar.gz backup with date|tar czf backup_$(date +%F).tar.gz folder/
+List contents of tar.gz|tar tzf backup.tar.gz
+Extract tar.gz to target dir|tar xzf backup.tar.gz -C /tmp
+Show disk inode usage|df -ih
+Show mounted filesystems in table|mount | column -t
+Show UUIDs for disks|lsblk -f
+Show block devices tree|lsblk
+View realtime dmesg (new kernel logs)|dmesg -w
+Show login history for current user|last $USER
+Show who is logged in and what they do|w
+Display current limits|ulimit -a
+Set open files soft limit to 4096|ulimit -n 4096
+Test bash syntax without executing|bash -n script.sh
+Run script with execution trace|bash -x script.sh
+Exit script on first error mode|set -e
+Fail on unset variables mode|set -u
+Safer bash mode with pipefail|set -euo pipefail

@@ -656,3 +656,9 @@ DEVOPS-HARDCORE|What is root cause analysis?|identify underlying cause
 DEVOPS-HARDCORE|What is a runbook?|step-by-step operational guide
 
 
+
+DAILY-BOOST|Show command type information for ls|type ls
+
+DAILY-BOOST|Show absolute path of command ls|which ls
+
+DAILY-BOOST|Run previous command as sudo|sudo !!
