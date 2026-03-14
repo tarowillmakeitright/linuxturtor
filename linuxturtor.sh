@@ -2,7 +2,7 @@
 
 # linuxtutor - Linux command & concepts tutor (vimtutor-style)
 # Uses questions.txt with format:
-# CATEGORY|QUESTION|ANSWER
+# CATEGORY|QUESTION|ANSWER|SOURCE(optional)
 # Lines starting with # or empty are ignored.
 
 QUESTIONS_FILE="${QUESTIONS_FILE:-questions.txt}"
@@ -11,7 +11,7 @@ STATS_FILE="${STATS_FILE:-$HOME/.linuxturtor_stats}"
 if [[ ! -f "$QUESTIONS_FILE" ]]; then
   echo "ERROR: '$QUESTIONS_FILE' not found."
   echo "Place your questions in $QUESTIONS_FILE in the format:"
-  echo "CATEGORY|Question text|exact answer"
+  echo "CATEGORY|Question text|exact answer|source(optional)"
   exit 1
 fi
 
@@ -241,23 +241,20 @@ collect_questions() {
     [[ -z "$line" ]] && continue
     [[ "$line" =~ ^# ]] && continue
 
-    # Parse category, question, answer
-    local cat rest question answer
-
-    cat="${line%%|*}"
-    rest="${line#*|}"
-    question="${rest%%|*}"
-    answer="${rest#*|}"
+    # Parse category, question, answer, optional source
+    local cat question answer source
+    IFS='|' read -r cat question answer source <<< "$line"
 
     cat="$(trim "$cat")"
     question="$(trim "$question")"
     answer="$(trim "$answer")"
+    source="$(trim "${source:-}")"
 
     [[ -z "$cat" || -z "$question" || -z "$answer" ]] && continue
 
     case "$SELECTED_CATEGORY" in
       LINUX101|LINUX102|LINUX201|LINUX202|LINUX301|LINUX302|DOCKER|TERRAFORM|KUBERNETES|GIT|AWS|GCP|OCI)
-        [[ "$cat" == "$SELECTED_CATEGORY" ]] && QUESTIONS+=("$cat|$question|$answer")
+        [[ "$cat" == "$SELECTED_CATEGORY" ]] && QUESTIONS+=("$cat|$question|$answer|$source")
         ;;
     esac
   done
@@ -323,14 +320,12 @@ run_quiz() {
   echo
 
   for line in "${QUESTIONS[@]}"; do
-    local cat rest question correct
-    cat="${line%%|*}"
-    rest="${line#*|}"
-    question="${rest%%|*}"
-    correct="${rest#*|}"
+    local cat question correct source
+    IFS='|' read -r cat question correct source <<< "$line"
 
     question="$(trim "$question")"
     correct="$(trim "$correct")"
+    source="$(trim "${source:-}")"
 
     echo "[$index/$total] ❤️ $hearts | 🔥 $streak  :: $question"
 
@@ -348,6 +343,7 @@ run_quiz() {
         ((TOTAL_QUESTIONS++))
         echo "⏭ Skipped. (-1 ❤️)"
         echo "   Correct answer: $correct"
+        [[ -n "$source" ]] && echo "   📚 Reference: $source"
         echo
         if (( hearts <= 0 )); then
           echo "💀 Game Over! Out of hearts."
@@ -379,6 +375,7 @@ run_quiz() {
         award_xp "$gained"
 
         echo "✅ Correct! +${gained}XP (streak: $streak)"
+        [[ -n "$source" ]] && echo "   📚 Reference: $source"
         echo
         break
       else
@@ -389,6 +386,7 @@ run_quiz() {
           ((TOTAL_QUESTIONS++))
           echo "❌ Wrong 3 times. (-1 ❤️)"
           echo "   Correct answer: $correct"
+          [[ -n "$source" ]] && echo "   📚 Reference: $source"
           echo
           if (( hearts <= 0 )); then
             echo "💀 Game Over! Out of hearts."

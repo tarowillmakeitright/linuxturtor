@@ -1,762 +1,802 @@
 # ===== Beginner Pack (50) =====
-LINUX101|List files in current directory|ls
-LINUX101|List files in long format|ls -l
-LINUX101|List all files including hidden|ls -a
-LINUX101|List all files including hidden in long format|ls -la
-LINUX101|Show current working directory|pwd
-LINUX101|Change to home directory|cd ~
-LINUX101|Change to parent directory|cd ..
-LINUX101|Change to /var/log directory|cd /var/log
-LINUX101|Create directory testdir|mkdir testdir
-LINUX101|Create nested directories a/b/c|mkdir -p a/b/c
-LINUX101|Remove empty directory olddir|rmdir olddir
-LINUX101|Create empty file notes.txt|touch notes.txt
-LINUX101|Show contents of file.txt|cat file.txt
-LINUX101|View file.txt page by page|less file.txt
-LINUX101|Show first 10 lines of file.txt|head file.txt
-LINUX101|Show last 10 lines of file.txt|tail file.txt
-LINUX101|Copy file a.txt to b.txt|cp a.txt b.txt
-LINUX101|Copy a.txt into backup directory|cp a.txt backup/
-LINUX101|Copy folder src to dest recursively|cp -r src dest
-LINUX101|Move file a.txt to backup directory|mv a.txt backup/
-LINUX101|Rename file old.txt to new.txt|mv old.txt new.txt
-LINUX101|Remove file unwanted.txt|rm unwanted.txt
-LINUX101|Remove directory tmp and its contents|rm -rf tmp
-LINUX101|Print a message hello world|echo hello world
-LINUX101|Show command history|history
-LINUX101|Clear the terminal screen|clear
-LINUX101|Show manual page for ls|man ls
-LINUX101|Show current date|date
-LINUX101|Show calendar for this month|cal
-LINUX101|Print current user name|whoami
-LINUX101|List logged-in users|who
-LINUX101|Show environment variables|env
-LINUX101|Show PATH variable|echo $PATH
-LINUX101|Search for error in log.txt|grep error log.txt
-LINUX101|Count lines in file.txt|wc -l file.txt
-LINUX101|Count words in file.txt|wc -w file.txt
-LINUX101|List files sorted by time|ls -lt
-LINUX101|List files sorted by size|ls -lhS
-LINUX101|Show disk usage of all mounted filesystems|df -h
-LINUX101|Show disk usage of current directory|du -sh .
-LINUX101|Show system kernel version|uname -r
-LINUX101|Show all system information|uname -a
-LINUX101|Show last 20 lines of syslog|tail -n 20 /var/log/syslog
-LINUX101|Repeat last command|!!
-LINUX101|Run last command starting with ls|!ls
-LINUX101|Exit the shell|exit
-LINUX101|Redirect echo output to file|echo hello > file.txt
-LINUX101|Append output to file.txt|echo hello >> file.txt
-LINUX101|Redirect stderr to error.log|ls /nope 2>error.log
-LINUX101|Pipe ls output into less|ls | less
+LINUX101|List files in current directory|ls|https://man7.org/linux/man-pages/man1/ls.1.html
+LINUX101|List files in long format|ls -l|https://man7.org/linux/man-pages/man1/ls.1.html
+LINUX101|List all files including hidden|ls -a|https://man7.org/linux/man-pages/man1/ls.1.html
+LINUX101|List all files including hidden in long format|ls -la|https://man7.org/linux/man-pages/man1/ls.1.html
+LINUX101|Show current working directory|pwd|https://man7.org/linux/man-pages/man1/pwd.1.html
+LINUX101|Change to home directory|cd ~|https://www.gnu.org/software/bash/manual/bash.html#index-cd
+LINUX101|Change to parent directory|cd ..|https://www.gnu.org/software/bash/manual/bash.html#index-cd
+LINUX101|Change to /var/log directory|cd /var/log|https://www.gnu.org/software/bash/manual/bash.html#index-cd
+LINUX101|Create directory testdir|mkdir testdir|https://man7.org/linux/man-pages/man1/mkdir.1.html
+LINUX101|Create nested directories a/b/c|mkdir -p a/b/c|https://man7.org/linux/man-pages/man1/mkdir.1.html
+LINUX101|Remove empty directory olddir|rmdir olddir|https://man7.org/linux/man-pages/man1/rmdir.1.html
+LINUX101|Create empty file notes.txt|touch notes.txt|https://man7.org/linux/man-pages/man1/touch.1.html
+LINUX101|Show contents of file.txt|cat file.txt|https://man7.org/linux/man-pages/man1/cat.1.html
+LINUX101|View file.txt page by page|less file.txt|https://man7.org/linux/man-pages/man1/less.1.html
+LINUX101|Show first 10 lines of file.txt|head file.txt|https://man7.org/linux/man-pages/man1/head.1.html
+LINUX101|Show last 10 lines of file.txt|tail file.txt|https://man7.org/linux/man-pages/man1/tail.1.html
+LINUX101|Copy file a.txt to b.txt|cp a.txt b.txt|https://man7.org/linux/man-pages/man1/cp.1.html
+LINUX101|Copy a.txt into backup directory|cp a.txt backup/|https://man7.org/linux/man-pages/man1/cp.1.html
+LINUX101|Copy folder src to dest recursively|cp -r src dest|https://man7.org/linux/man-pages/man1/cp.1.html
+LINUX101|Move file a.txt to backup directory|mv a.txt backup/|https://man7.org/linux/man-pages/man1/mv.1.html
+LINUX101|Rename file old.txt to new.txt|mv old.txt new.txt|https://man7.org/linux/man-pages/man1/mv.1.html
+LINUX101|Remove file unwanted.txt|rm unwanted.txt|https://man7.org/linux/man-pages/man1/rm.1.html
+LINUX101|Remove directory tmp and its contents|rm -rf tmp|https://man7.org/linux/man-pages/man1/rm.1.html
+LINUX101|Print a message hello world|echo hello world|https://www.gnu.org/software/bash/manual/bash.html#index-echo
+LINUX101|Show command history|history|https://www.gnu.org/software/bash/manual/bash.html#index-history
+LINUX101|Clear the terminal screen|clear|https://man7.org/linux/man-pages/man1/clear.1.html
+LINUX101|Show manual page for ls|man ls|https://man7.org/linux/man-pages/man1/man.1.html
+LINUX101|Show current date|date|https://man7.org/linux/man-pages/man1/date.1.html
+LINUX101|Show calendar for this month|cal|https://man7.org/linux/man-pages/man1/cal.1.html
+LINUX101|Print current user name|whoami|https://man7.org/linux/man-pages/man1/whoami.1.html
+LINUX101|List logged-in users|who|https://man7.org/linux/man-pages/man1/who.1.html
+LINUX101|Show environment variables|env|https://man7.org/linux/man-pages/man1/env.1.html
+LINUX101|Show PATH variable|echo $PATH|https://www.gnu.org/software/bash/manual/bash.html#index-echo
+LINUX101|Search for error in log.txt|grep error log.txt|https://man7.org/linux/man-pages/man1/grep.1.html
+LINUX101|Count lines in file.txt|wc -l file.txt|https://man7.org/linux/man-pages/man1/wc.1.html
+LINUX101|Count words in file.txt|wc -w file.txt|https://man7.org/linux/man-pages/man1/wc.1.html
+LINUX101|List files sorted by time|ls -lt|https://man7.org/linux/man-pages/man1/ls.1.html
+LINUX101|List files sorted by size|ls -lhS|https://man7.org/linux/man-pages/man1/ls.1.html
+LINUX101|Show disk usage of all mounted filesystems|df -h|https://man7.org/linux/man-pages/man1/df.1.html
+LINUX101|Show disk usage of current directory|du -sh .|https://man7.org/linux/man-pages/man1/du.1.html
+LINUX101|Show system kernel version|uname -r|https://man7.org/linux/man-pages/man1/uname.1.html
+LINUX101|Show all system information|uname -a|https://man7.org/linux/man-pages/man1/uname.1.html
+LINUX101|Show last 20 lines of syslog|tail -n 20 /var/log/syslog|https://man7.org/linux/man-pages/man1/tail.1.html
+LINUX101|Repeat last command|!!|https://man7.org/linux/man-pages/
+LINUX101|Run last command starting with ls|!ls|https://man7.org/linux/man-pages/
+LINUX101|Exit the shell|exit|https://man7.org/linux/man-pages/
+LINUX101|Redirect echo output to file|echo hello > file.txt|https://www.gnu.org/software/bash/manual/bash.html#index-echo
+LINUX101|Append output to file.txt|echo hello >> file.txt|https://www.gnu.org/software/bash/manual/bash.html#index-echo
+LINUX101|Redirect stderr to error.log|ls /nope 2>error.log|https://man7.org/linux/man-pages/man1/ls.1.html
+LINUX101|Pipe ls output into less|ls|less
 
 # ===== Intermediate Pack (70) =====
-LINUX201|Find file named myfile.txt|find . -name "myfile.txt"
-LINUX201|Find all .log files|find . -name "*.log"
-LINUX201|Find files larger than 10MB|find . -size +10M
-LINUX201|Find directories named backup|find . -type d -name "backup"
-LINUX201|Find files modified in last day|find . -mtime -1
-LINUX201|Recursive search for TODO|grep -r "TODO" .
-LINUX201|Case-insensitive search for error|grep -i error log.txt
-LINUX201|Show non-matching lines|grep -v foo file.txt
-LINUX201|Show grep matches with line numbers|grep -n error log.txt
-LINUX201|Sort file.txt|sort file.txt
-LINUX201|Sort unique lines|sort file.txt | uniq
-LINUX201|Count frequency of each line|sort file.txt | uniq -c
-LINUX201|Cut first column|cut -d' ' -f1 file.txt
-LINUX201|Cut second field from /etc/passwd|cut -d':' -f2 /etc/passwd
-LINUX201|Replace foo with bar|sed 's/foo/bar/g' file.txt
-LINUX201|Delete lines with DEBUG|sed '/DEBUG/d' file.txt
-LINUX201|Print first column using awk|awk '{print $1}' file.txt
-LINUX201|Print lines where 3rd field > 100|awk '$3 > 100' file.txt
-LINUX201|Show first 5 processes|ps aux | head -n 5
-LINUX201|Top 10 largest files|ls -lhS | head -n 10
-LINUX201|Compress file|gzip data.txt
-LINUX201|Uncompress file|gunzip data.txt.gz
-LINUX201|Create tar archive|tar cf backup.tar folder
-LINUX201|Extract tar archive|tar xf backup.tar
-LINUX201|Create gzip tar|tar czf backup.tar.gz folder
-LINUX201|Extract gzip tar|tar xzf backup.tar.gz
-LINUX201|Create bzip2 tar|tar cjf backup.tar.bz2 folder
-LINUX201|Extract bzip2 tar|tar xjf backup.tar.bz2
-LINUX201|List running processes|ps aux
-LINUX201|Filter ssh processes|ps aux | grep ssh
-LINUX201|Show process tree|pstree
-LINUX201|Kill PID 1234|kill 1234
-LINUX201|Force kill PID 1234|kill -9 1234
-LINUX201|Show open files on port 80|sudo lsof -i :80
-LINUX201|Show open files of PID 1234|lsof -p 1234
-LINUX201|Show listening TCP ports|ss -tln
-LINUX201|Show IP addresses|ip addr
-LINUX201|Show default route|ip route
-LINUX201|Ping example.com|ping -c 4 example.com
-LINUX201|Download file with curl|curl -O https://example.com/file.txt
-LINUX201|Download file using wget|wget https://example.com/file.txt
-LINUX201|Show symbolic permissions for file|namei -l file.txt
-LINUX201|Change permissions to 600|chmod 600 file.txt
-LINUX201|Change script to 755|chmod 755 script.sh
-LINUX201|Change owner to alice|sudo chown alice file.txt
-LINUX201|Change owner and group|sudo chown alice:dev file.txt
-LINUX201|Show current umask|umask
-LINUX201|Set umask to 022|umask 022
-LINUX201|Create hard link|ln original.txt newfile
-LINUX201|Create symbolic link|ln -s original.txt link.txt
-LINUX201|Show inode numbers|ls -i
-LINUX201|Display last 50 journalctl lines|sudo journalctl -n 50
-LINUX201|Show boot messages|dmesg | less
-LINUX201|Monitor kernel messages|dmesg -w
-LINUX201|List loaded modules|lsmod
-LINUX201|Show ext4 module info|modinfo ext4
-LINUX201|Show mounted filesystems|mount | column -t
-LINUX201|Free memory|free -h
-LINUX201|Top CPU processes|ps aux --sort=-%cpu | head
-LINUX201|Top memory processes|ps aux --sort=-%mem | head
-LINUX201|Schedule job in 5 minutes|echo "echo hi" | at now + 5 minutes
+LINUX201|Find file named myfile.txt|find . -name "myfile.txt"|https://man7.org/linux/man-pages/man1/find.1.html
+LINUX201|Find all .log files|find . -name "*.log"|https://man7.org/linux/man-pages/man1/find.1.html
+LINUX201|Find files larger than 10MB|find . -size +10M|https://man7.org/linux/man-pages/man1/find.1.html
+LINUX201|Find directories named backup|find . -type d -name "backup"|https://man7.org/linux/man-pages/man1/find.1.html
+LINUX201|Find files modified in last day|find . -mtime -1|https://man7.org/linux/man-pages/man1/find.1.html
+LINUX201|Recursive search for TODO|grep -r "TODO" .|https://man7.org/linux/man-pages/man1/grep.1.html
+LINUX201|Case-insensitive search for error|grep -i error log.txt|https://man7.org/linux/man-pages/man1/grep.1.html
+LINUX201|Show non-matching lines|grep -v foo file.txt|https://man7.org/linux/man-pages/man1/grep.1.html
+LINUX201|Show grep matches with line numbers|grep -n error log.txt|https://man7.org/linux/man-pages/man1/grep.1.html
+LINUX201|Sort file.txt|sort file.txt|https://man7.org/linux/man-pages/man1/sort.1.html
+LINUX201|Sort unique lines|sort file.txt|uniq
+LINUX201|Count frequency of each line|sort file.txt|uniq -c
+LINUX201|Cut first column|cut -d' ' -f1 file.txt|https://man7.org/linux/man-pages/man1/cut.1.html
+LINUX201|Cut second field from /etc/passwd|cut -d':' -f2 /etc/passwd|https://man7.org/linux/man-pages/man1/cut.1.html
+LINUX201|Replace foo with bar|sed 's/foo/bar/g' file.txt|https://man7.org/linux/man-pages/man1/sed.1.html
+LINUX201|Delete lines with DEBUG|sed '/DEBUG/d' file.txt|https://man7.org/linux/man-pages/man1/sed.1.html
+LINUX201|Print first column using awk|awk '{print $1}' file.txt|https://man7.org/linux/man-pages/man1/awk.1p.html
+LINUX201|Print lines where 3rd field > 100|awk '$3 > 100' file.txt|https://man7.org/linux/man-pages/man1/awk.1p.html
+LINUX201|Show first 5 processes|ps aux|head -n 5
+LINUX201|Top 10 largest files|ls -lhS|head -n 10
+LINUX201|Compress file|gzip data.txt|https://man7.org/linux/man-pages/man1/gzip.1.html
+LINUX201|Uncompress file|gunzip data.txt.gz|https://man7.org/linux/man-pages/man1/gzip.1.html
+LINUX201|Create tar archive|tar cf backup.tar folder|https://man7.org/linux/man-pages/man1/tar.1.html
+LINUX201|Extract tar archive|tar xf backup.tar|https://man7.org/linux/man-pages/man1/tar.1.html
+LINUX201|Create gzip tar|tar czf backup.tar.gz folder|https://man7.org/linux/man-pages/man1/tar.1.html
+LINUX201|Extract gzip tar|tar xzf backup.tar.gz|https://man7.org/linux/man-pages/man1/tar.1.html
+LINUX201|Create bzip2 tar|tar cjf backup.tar.bz2 folder|https://man7.org/linux/man-pages/man1/tar.1.html
+LINUX201|Extract bzip2 tar|tar xjf backup.tar.bz2|https://man7.org/linux/man-pages/man1/tar.1.html
+LINUX201|List running processes|ps aux|https://man7.org/linux/man-pages/man1/ps.1.html
+LINUX201|Filter ssh processes|ps aux|grep ssh
+LINUX201|Show process tree|pstree|https://man7.org/linux/man-pages/man1/pstree.1.html
+LINUX201|Kill PID 1234|kill 1234|https://man7.org/linux/man-pages/man1/kill.1.html
+LINUX201|Force kill PID 1234|kill -9 1234|https://man7.org/linux/man-pages/man1/kill.1.html
+LINUX201|Show open files on port 80|sudo lsof -i :80|https://man7.org/linux/man-pages/man8/lsof.8.html
+LINUX201|Show open files of PID 1234|lsof -p 1234|https://man7.org/linux/man-pages/man8/lsof.8.html
+LINUX201|Show listening TCP ports|ss -tln|https://man7.org/linux/man-pages/man8/ss.8.html
+LINUX201|Show IP addresses|ip addr|https://man7.org/linux/man-pages/man8/ip.8.html
+LINUX201|Show default route|ip route|https://man7.org/linux/man-pages/man8/ip.8.html
+LINUX201|Ping example.com|ping -c 4 example.com|https://man7.org/linux/man-pages/man8/ping.8.html
+LINUX201|Download file with curl|curl -O https://example.com/file.txt|https://curl.se/docs/manpage.html
+LINUX201|Download file using wget|wget https://example.com/file.txt|https://www.gnu.org/software/wget/manual/wget.html
+LINUX201|Show symbolic permissions for file|namei -l file.txt|https://man7.org/linux/man-pages/
+LINUX201|Change permissions to 600|chmod 600 file.txt|https://man7.org/linux/man-pages/man1/chmod.1.html
+LINUX201|Change script to 755|chmod 755 script.sh|https://man7.org/linux/man-pages/man1/chmod.1.html
+LINUX201|Change owner to alice|sudo chown alice file.txt|https://man7.org/linux/man-pages/man1/chown.1.html
+LINUX201|Change owner and group|sudo chown alice:dev file.txt|https://man7.org/linux/man-pages/man1/chown.1.html
+LINUX201|Show current umask|umask|https://www.gnu.org/software/bash/manual/bash.html#index-umask
+LINUX201|Set umask to 022|umask 022|https://www.gnu.org/software/bash/manual/bash.html#index-umask
+LINUX201|Create hard link|ln original.txt newfile|https://man7.org/linux/man-pages/man1/ln.1.html
+LINUX201|Create symbolic link|ln -s original.txt link.txt|https://man7.org/linux/man-pages/man1/ln.1.html
+LINUX201|Show inode numbers|ls -i|https://man7.org/linux/man-pages/man1/ls.1.html
+LINUX201|Display last 50 journalctl lines|sudo journalctl -n 50|https://man7.org/linux/man-pages/man1/journalctl.1.html
+LINUX201|Show boot messages|dmesg|less
+LINUX201|Monitor kernel messages|dmesg -w|https://man7.org/linux/man-pages/man1/dmesg.1.html
+LINUX201|List loaded modules|lsmod|https://man7.org/linux/man-pages/man8/lsmod.8.html
+LINUX201|Show ext4 module info|modinfo ext4|https://man7.org/linux/man-pages/man8/modinfo.8.html
+LINUX201|Show mounted filesystems|mount|column -t
+LINUX201|Free memory|free -h|https://man7.org/linux/man-pages/man1/free.1.html
+LINUX201|Top CPU processes|ps aux --sort=-%cpu|head
+LINUX201|Top memory processes|ps aux --sort=-%mem|head
+LINUX201|Schedule job in 5 minutes|echo "echo hi"|at now + 5 minutes
 
 # ===== Advanced Pack (100) =====
-LINUX301|Sed print lines 10-20|sed -n '10,20p' file.txt
-LINUX301|Sed delete first line|sed -i '1d' file.txt
-LINUX301|Sed replace foo globally|sed -i 's/foo/bar/g' *.txt
-LINUX301|Awk match regex ERROR|awk '/^ERROR/' log.txt
-LINUX301|Awk sum 3rd column|awk '{sum+=$3} END {print sum}' file.txt
-LINUX301|Unique IPs from log|awk '{print $1}' access.log | sort -u
-LINUX301|Sort processes by memory|ps aux --sort=-%mem | head
-LINUX301|Sort processes by CPU|ps aux --sort=-%cpu | head
-LINUX301|Top 5 largest files|find . -type f -printf '%s %p\n' | sort -nr | head -n 5
-LINUX301|Find empty files|find . -type f -empty
-LINUX301|Find world-writable files|find / -type f -perm -0002 2>/dev/null
-LINUX301|Find files owned by alice|find / -user alice 2>/dev/null
-LINUX301|Record terminal session|script typescript
-LINUX301|Replay terminal session|scriptreplay typescript
-LINUX301|Show login history|last
-LINUX301|Show failed logins|sudo lastb
-LINUX301|Monitor logs in real time|sudo journalctl -f
-LINUX301|Logs for ssh.service|sudo journalctl -u ssh.service
-LINUX301|List systemd services|systemctl list-units --type=service
-LINUX301|Status of sshd|systemctl status sshd
-LINUX301|Restart sshd|sudo systemctl restart sshd
-LINUX301|Enable sshd|sudo systemctl enable sshd
-LINUX301|Disable sshd|sudo systemctl disable sshd
-LINUX301|List systemd timers|systemctl list-timers
-LINUX301|Show listening sockets|sudo ss -tulpn
-LINUX301|Trace ls system calls|strace ls
-LINUX301|Time command|time ls -R
-LINUX301|Check SHA256 of iso|sha256sum file.iso
-LINUX301|Generate random 32-byte hex|head -c 32 /dev/urandom | xxd -p
-LINUX301|Lock user alice|sudo passwd -l alice
-LINUX301|Unlock user alice|sudo passwd -u alice
-LINUX301|Add user alice|sudo useradd alice
-LINUX301|Add user alice with home|sudo useradd -m alice
-LINUX301|Delete user alice|sudo userdel alice
-LINUX301|Delete user alice and home|sudo userdel -r alice
-LINUX301|Add alice to sudo group|sudo usermod -aG sudo alice
-LINUX301|Show groups for alice|groups alice
-LINUX301|Create group devs|sudo groupadd devs
-LINUX301|Change alice primary group|sudo usermod -g devs alice
-LINUX301|Change ownership recursively|sudo chown -R user:group path
-LINUX301|Set ACL for group g|setfacl -m g:g:rw path
-LINUX301|Show ACLs|getfacl file.txt
-LINUX301|Mount iso|sudo mount -o loop image.iso /mnt/iso
-LINUX301|Unmount iso|sudo umount /mnt/iso
-LINUX301|Remount root read-only|sudo mount -o remount,ro /
-LINUX301|Check filesystem|sudo fsck /dev/sda1
-LINUX301|SMART info|sudo smartctl -a /dev/sda
-LINUX301|I/O stats|iostat
-LINUX301|iptables rules|sudo iptables -L
-LINUX301|nftables ruleset|sudo nft list ruleset
-LINUX301|Route table|ip route show
-LINUX301|ARP table|ip neigh
-LINUX301|List open connections|sudo lsof -Pni
-LINUX301|Generate SSH key|ssh-keygen -t ed25519
-LINUX301|Copy SSH key|ssh-copy-id user@host
-LINUX301|SSH into host|ssh user@host
-LINUX301|Run remote command via SSH|ssh user@host 'uptime'
-LINUX301|Copy file via scp|scp file.txt user@host:/path/
-LINUX301|Copy directory via rsync|rsync -avz dir/ user@host:/path/
-LINUX301|Limit rsync bandwidth|rsync --bwlimit=1024 -avz dir/ user@host:/path/
-LINUX301|Disk usage of /var/log|sudo du -h --max-depth=1 /var/log
-LINUX301|Find large dirs in /home|sudo du -h /home | sort -hr | head
-LINUX301|Count TCP connections|ss -tan | grep ESTAB | wc -l
+LINUX301|Sed print lines 10-20|sed -n '10,20p' file.txt|https://man7.org/linux/man-pages/man1/sed.1.html
+LINUX301|Sed delete first line|sed -i '1d' file.txt|https://man7.org/linux/man-pages/man1/sed.1.html
+LINUX301|Sed replace foo globally|sed -i 's/foo/bar/g' *.txt|https://man7.org/linux/man-pages/man1/sed.1.html
+LINUX301|Awk match regex ERROR|awk '/^ERROR/' log.txt|https://man7.org/linux/man-pages/man1/awk.1p.html
+LINUX301|Awk sum 3rd column|awk '{sum+=$3} END {print sum}' file.txt|https://man7.org/linux/man-pages/man1/awk.1p.html
+LINUX301|Unique IPs from log|awk '{print $1}' access.log|sort -u
+LINUX301|Sort processes by memory|ps aux --sort=-%mem|head
+LINUX301|Sort processes by CPU|ps aux --sort=-%cpu|head
+LINUX301|Top 5 largest files|find . -type f -printf '%s %p\n'|sort -nr
+LINUX301|Find empty files|find . -type f -empty|https://man7.org/linux/man-pages/man1/find.1.html
+LINUX301|Find world-writable files|find / -type f -perm -0002 2>/dev/null|https://man7.org/linux/man-pages/man1/find.1.html
+LINUX301|Find files owned by alice|find / -user alice 2>/dev/null|https://man7.org/linux/man-pages/man1/find.1.html
+LINUX301|Record terminal session|script typescript|https://man7.org/linux/man-pages/
+LINUX301|Replay terminal session|scriptreplay typescript|https://man7.org/linux/man-pages/
+LINUX301|Show login history|last|https://man7.org/linux/man-pages/
+LINUX301|Show failed logins|sudo lastb|https://man7.org/linux/man-pages/
+LINUX301|Monitor logs in real time|sudo journalctl -f|https://man7.org/linux/man-pages/man1/journalctl.1.html
+LINUX301|Logs for ssh.service|sudo journalctl -u ssh.service|https://man7.org/linux/man-pages/man1/journalctl.1.html
+LINUX301|List systemd services|systemctl list-units --type=service|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX301|Status of sshd|systemctl status sshd|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX301|Restart sshd|sudo systemctl restart sshd|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX301|Enable sshd|sudo systemctl enable sshd|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX301|Disable sshd|sudo systemctl disable sshd|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX301|List systemd timers|systemctl list-timers|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX301|Show listening sockets|sudo ss -tulpn|https://man7.org/linux/man-pages/man8/ss.8.html
+LINUX301|Trace ls system calls|strace ls|https://man7.org/linux/man-pages/
+LINUX301|Time command|time ls -R|https://man7.org/linux/man-pages/
+LINUX301|Check SHA256 of iso|sha256sum file.iso|https://man7.org/linux/man-pages/man1/sha256sum.1.html
+LINUX301|Generate random 32-byte hex|head -c 32 /dev/urandom|xxd -p
+LINUX301|Lock user alice|sudo passwd -l alice|https://man7.org/linux/man-pages/man1/passwd.1.html
+LINUX301|Unlock user alice|sudo passwd -u alice|https://man7.org/linux/man-pages/man1/passwd.1.html
+LINUX301|Add user alice|sudo useradd alice|https://man7.org/linux/man-pages/man8/useradd.8.html
+LINUX301|Add user alice with home|sudo useradd -m alice|https://man7.org/linux/man-pages/man8/useradd.8.html
+LINUX301|Delete user alice|sudo userdel alice|https://man7.org/linux/man-pages/man8/userdel.8.html
+LINUX301|Delete user alice and home|sudo userdel -r alice|https://man7.org/linux/man-pages/man8/userdel.8.html
+LINUX301|Add alice to sudo group|sudo usermod -aG sudo alice|https://man7.org/linux/man-pages/man8/usermod.8.html
+LINUX301|Show groups for alice|groups alice|https://man7.org/linux/man-pages/
+LINUX301|Create group devs|sudo groupadd devs|https://man7.org/linux/man-pages/man8/groupadd.8.html
+LINUX301|Change alice primary group|sudo usermod -g devs alice|https://man7.org/linux/man-pages/man8/usermod.8.html
+LINUX301|Change ownership recursively|sudo chown -R user:group path|https://man7.org/linux/man-pages/man1/chown.1.html
+LINUX301|Set ACL for group g|setfacl -m g:g:rw path|https://man7.org/linux/man-pages/man1/setfacl.1.html
+LINUX301|Show ACLs|getfacl file.txt|https://man7.org/linux/man-pages/man1/getfacl.1.html
+LINUX301|Mount iso|sudo mount -o loop image.iso /mnt/iso|https://man7.org/linux/man-pages/man8/mount.8.html
+LINUX301|Unmount iso|sudo umount /mnt/iso|https://man7.org/linux/man-pages/
+LINUX301|Remount root read-only|sudo mount -o remount,ro /|https://man7.org/linux/man-pages/man8/mount.8.html
+LINUX301|Check filesystem|sudo fsck /dev/sda1|https://man7.org/linux/man-pages/man8/fsck.8.html
+LINUX301|SMART info|sudo smartctl -a /dev/sda|https://manpages.debian.org/smartmontools/smartctl.8.en.html
+LINUX301|I/O stats|iostat|https://man7.org/linux/man-pages/
+LINUX301|iptables rules|sudo iptables -L|https://man7.org/linux/man-pages/man8/iptables.8.html
+LINUX301|nftables ruleset|sudo nft list ruleset|https://man7.org/linux/man-pages/man8/nft.8.html
+LINUX301|Route table|ip route show|https://man7.org/linux/man-pages/man8/ip.8.html
+LINUX301|ARP table|ip neigh|https://man7.org/linux/man-pages/man8/ip.8.html
+LINUX301|List open connections|sudo lsof -Pni|https://man7.org/linux/man-pages/man8/lsof.8.html
+LINUX301|Generate SSH key|ssh-keygen -t ed25519|https://man7.org/linux/man-pages/
+LINUX301|Copy SSH key|ssh-copy-id user@host|https://man7.org/linux/man-pages/
+LINUX301|SSH into host|ssh user@host|https://man7.org/linux/man-pages/man1/ssh.1.html
+LINUX301|Run remote command via SSH|ssh user@host 'uptime'|https://man7.org/linux/man-pages/man1/ssh.1.html
+LINUX301|Copy file via scp|scp file.txt user@host:/path/|https://man7.org/linux/man-pages/man1/scp.1.html
+LINUX301|Copy directory via rsync|rsync -avz dir/ user@host:/path/|https://download.samba.org/pub/rsync/rsync.1
+LINUX301|Limit rsync bandwidth|rsync --bwlimit=1024 -avz dir/ user@host:/path/|https://download.samba.org/pub/rsync/rsync.1
+LINUX301|Disk usage of /var/log|sudo du -h --max-depth=1 /var/log|https://man7.org/linux/man-pages/man1/du.1.html
+LINUX301|Find large dirs in /home|sudo du -h /home|sort -hr
+LINUX301|Count TCP connections|ss -tan|grep ESTAB
 
 # ===== Real-World Sysadmin Tasks (more) =====
-LINUX202|Check disk usage of all mounted filesystems|df -h
-LINUX202|Check disk usage of /var in human readable form|du -sh /var
-LINUX202|Find files larger than 100MB under /var|sudo find /var -type f -size +100M
-LINUX202|Show memory usage in human readable form|free -h
-LINUX202|Show top CPU and memory consuming processes|top
-LINUX202|Show top 10 memory-hungry processes using ps|ps aux --sort=-%mem | head -n 10
-LINUX202|Show top 10 CPU-hungry processes using ps|ps aux --sort=-%cpu | head -n 10
-LINUX202|Show which services failed to start|systemctl --failed
-LINUX202|Show system boot log from previous boot|sudo journalctl -b -1
-LINUX202|List all log files in /var/log|ls /var/log
-LINUX202|Check if system time is synchronized|timedatectl
-LINUX202|Set system timezone to Asia/Tokyo|sudo timedatectl set-timezone Asia/Tokyo
-LINUX202|List user crontab entries for current user|crontab -l
-LINUX202|Edit current user crontab|crontab -e
-LINUX202|List system-wide crontab directory|ls /etc/cron.d
-LINUX202|Backup /etc directory to /root/etc-backup.tar.gz|sudo tar czf /root/etc-backup.tar.gz /etc
-LINUX202|List kernels installed on the system|rpm -q kernel
-LINUX202|Check SELinux status quickly|getenforce
-LINUX202|Show human readable journal entries for today|sudo journalctl --since today
-LINUX202|Show last 50 lines from system journal|sudo journalctl -n 50
-LINUX202|Show current open file limits for shell|ulimit -a
-LINUX202|Check which process is using port 80|sudo ss -tulpn | grep :80
-LINUX202|Show last reboot times|last reboot
-LINUX202|Schedule system reboot in 10 minutes|sudo shutdown -r +10
-LINUX202|Cancel a scheduled shutdown or reboot|sudo shutdown -c
-LINUX202|Reload systemd manager configuration after unit changes|sudo systemctl daemon-reload
-LINUX202|Check status of cron service on systemd systems|systemctl status crond
-LINUX202|Restart cron service on systemd systems|sudo systemctl restart crond
-LINUX202|View kernel ring buffer messages|dmesg
-LINUX202|Check available updates on a DNF based system|sudo dnf check-update
+LINUX202|Check disk usage of all mounted filesystems|df -h|https://man7.org/linux/man-pages/man1/df.1.html
+LINUX202|Check disk usage of /var in human readable form|du -sh /var|https://man7.org/linux/man-pages/man1/du.1.html
+LINUX202|Find files larger than 100MB under /var|sudo find /var -type f -size +100M|https://man7.org/linux/man-pages/man1/find.1.html
+LINUX202|Show memory usage in human readable form|free -h|https://man7.org/linux/man-pages/man1/free.1.html
+LINUX202|Show top CPU and memory consuming processes|top|https://man7.org/linux/man-pages/
+LINUX202|Show top 10 memory-hungry processes using ps|ps aux --sort=-%mem|head -n 10
+LINUX202|Show top 10 CPU-hungry processes using ps|ps aux --sort=-%cpu|head -n 10
+LINUX202|Show which services failed to start|systemctl --failed|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX202|Show system boot log from previous boot|sudo journalctl -b -1|https://man7.org/linux/man-pages/man1/journalctl.1.html
+LINUX202|List all log files in /var/log|ls /var/log|https://man7.org/linux/man-pages/man1/ls.1.html
+LINUX202|Check if system time is synchronized|timedatectl|https://man7.org/linux/man-pages/man1/timedatectl.1.html
+LINUX202|Set system timezone to Asia/Tokyo|sudo timedatectl set-timezone Asia/Tokyo|https://man7.org/linux/man-pages/man1/timedatectl.1.html
+LINUX202|List user crontab entries for current user|crontab -l|https://man7.org/linux/man-pages/man1/crontab.1.html
+LINUX202|Edit current user crontab|crontab -e|https://man7.org/linux/man-pages/man1/crontab.1.html
+LINUX202|List system-wide crontab directory|ls /etc/cron.d|https://man7.org/linux/man-pages/man1/ls.1.html
+LINUX202|Backup /etc directory to /root/etc-backup.tar.gz|sudo tar czf /root/etc-backup.tar.gz /etc|https://man7.org/linux/man-pages/man1/tar.1.html
+LINUX202|List kernels installed on the system|rpm -q kernel|https://man7.org/linux/man-pages/
+LINUX202|Check SELinux status quickly|getenforce|https://man7.org/linux/man-pages/
+LINUX202|Show human readable journal entries for today|sudo journalctl --since today|https://man7.org/linux/man-pages/man1/journalctl.1.html
+LINUX202|Show last 50 lines from system journal|sudo journalctl -n 50|https://man7.org/linux/man-pages/man1/journalctl.1.html
+LINUX202|Show current open file limits for shell|ulimit -a|https://www.gnu.org/software/bash/manual/bash.html#index-ulimit
+LINUX202|Check which process is using port 80|sudo ss -tulpn|grep :80
+LINUX202|Show last reboot times|last reboot|https://man7.org/linux/man-pages/
+LINUX202|Schedule system reboot in 10 minutes|sudo shutdown -r +10|https://man7.org/linux/man-pages/man8/shutdown.8.html
+LINUX202|Cancel a scheduled shutdown or reboot|sudo shutdown -c|https://man7.org/linux/man-pages/man8/shutdown.8.html
+LINUX202|Reload systemd manager configuration after unit changes|sudo systemctl daemon-reload|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX202|Check status of cron service on systemd systems|systemctl status crond|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX202|Restart cron service on systemd systems|sudo systemctl restart crond|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX202|View kernel ring buffer messages|dmesg|https://man7.org/linux/man-pages/man1/dmesg.1.html
+LINUX202|Check available updates on a DNF based system|sudo dnf check-update|https://man7.org/linux/man-pages/
 
 # ===== Filesystem Layout (more) =====
-LINUX101|Which directory contains user-local binary executables by default?|/usr/bin
-LINUX101|Which directory contains essential system binaries for all users?|/bin
-LINUX101|Which directory contains system administration binaries?|/sbin
-LINUX101|Which directory contains system-wide libraries?|/usr/lib
-LINUX101|Which directory is usually used for optional third-party software?|/opt
-LINUX101|Which directory contains runtime variable data like PID files and sockets?|/run
-LINUX101|Which pseudo-filesystem exposes kernel and process info as files?|/proc
-LINUX101|Which pseudo-filesystem exposes device information and kernel data?|/sys
-LINUX101|Which directory contains device files representing hardware?|/dev
-LINUX101|Which directory is typically used for mail and print spool files?|/var/spool
-LINUX101|Which directory usually contains temporary files that survive reboots (on many systems)?|/var/tmp
-LINUX101|Which directory on many distros contains system-wide application data shared between machines?|/srv
-LINUX101|Which directory in a home folder commonly stores user configuration files according to XDG?|.config
-LINUX101|Which file in a user home directory typically stores bash shell configuration?|.bashrc
-LINUX101|Which file in a user home directory typically stores login shell environment?|.profile
-LINUX101|Which directory often stores user-specific bin scripts in home?|bin
-LINUX101|Which directory in home is commonly used for downloads?|Downloads
+LINUX101|Which directory contains user-local binary executables by default?|/usr/bin|https://man7.org/linux/man-pages/
+LINUX101|Which directory contains essential system binaries for all users?|/bin|https://man7.org/linux/man-pages/
+LINUX101|Which directory contains system administration binaries?|/sbin|https://man7.org/linux/man-pages/
+LINUX101|Which directory contains system-wide libraries?|/usr/lib|https://man7.org/linux/man-pages/
+LINUX101|Which directory is usually used for optional third-party software?|/opt|https://man7.org/linux/man-pages/
+LINUX101|Which directory contains runtime variable data like PID files and sockets?|/run|https://man7.org/linux/man-pages/
+LINUX101|Which pseudo-filesystem exposes kernel and process info as files?|/proc|https://man7.org/linux/man-pages/
+LINUX101|Which pseudo-filesystem exposes device information and kernel data?|/sys|https://man7.org/linux/man-pages/
+LINUX101|Which directory contains device files representing hardware?|/dev|https://man7.org/linux/man-pages/
+LINUX101|Which directory is typically used for mail and print spool files?|/var/spool|https://man7.org/linux/man-pages/
+LINUX101|Which directory usually contains temporary files that survive reboots (on many systems)?|/var/tmp|https://man7.org/linux/man-pages/
+LINUX101|Which directory on many distros contains system-wide application data shared between machines?|/srv|https://man7.org/linux/man-pages/
+LINUX101|Which directory in a home folder commonly stores user configuration files according to XDG?|.config|https://man7.org/linux/man-pages/
+LINUX101|Which file in a user home directory typically stores bash shell configuration?|.bashrc|https://man7.org/linux/man-pages/
+LINUX101|Which file in a user home directory typically stores login shell environment?|.profile|https://man7.org/linux/man-pages/
+LINUX101|Which directory often stores user-specific bin scripts in home?|bin|https://man7.org/linux/man-pages/
+LINUX101|Which directory in home is commonly used for downloads?|Downloads|https://man7.org/linux/man-pages/
 
 # ===== Permissions (more) =====
-LINUX102|Numeric perm for rwxr-xr-x|755
-LINUX102|Numeric perm for rw-------|600
-LINUX102|Numeric perm for rwxr-x---|750
-LINUX102|Symbolic for 644|rw-r--r--
-LINUX102|Symbolic for 700|rwx------
-LINUX102|Which permission bit allows reading a file?|r
-LINUX102|Which permission bit allows modifying a file?|w
-LINUX102|Which permission bit allows entering a directory?|x
-LINUX102|What special bit allows executables to run with file owner's privileges?|suid
-LINUX102|What special bit on directories preserves group ownership of new files?|sgid
-LINUX102|What special bit on /tmp prevents users deleting each other's files?|sticky bit
-LINUX102|Which command conceptually changes file permissions?|chmod
-LINUX102|Which command conceptually changes file owner and group?|chown
-LINUX102|Which command conceptually changes only the group of a file?|chgrp
-LINUX102|What is the name for the default permission mask used when creating files?|umask
-LINUX102|If umask is 022 what are typical new file permissions in numeric form?|644
-LINUX102|If umask is 022 what are typical new directory permissions in numeric form?|755
-LINUX102|What is the term for permissions like rwxr-xr-x instead of numeric?|symbolic
-LINUX102|What is the term for permissions like 755 instead of symbolic?|numeric
+LINUX102|Numeric perm for rwxr-xr-x|755|https://man7.org/linux/man-pages/
+LINUX102|Numeric perm for rw-------|600|https://man7.org/linux/man-pages/
+LINUX102|Numeric perm for rwxr-x---|750|https://man7.org/linux/man-pages/
+LINUX102|Symbolic for 644|rw-r--r--|https://man7.org/linux/man-pages/
+LINUX102|Symbolic for 700|rwx------|https://man7.org/linux/man-pages/
+LINUX102|Which permission bit allows reading a file?|r|https://man7.org/linux/man-pages/
+LINUX102|Which permission bit allows modifying a file?|w|https://man7.org/linux/man-pages/
+LINUX102|Which permission bit allows entering a directory?|x|https://man7.org/linux/man-pages/
+LINUX102|What special bit allows executables to run with file owner's privileges?|suid|https://man7.org/linux/man-pages/
+LINUX102|What special bit on directories preserves group ownership of new files?|sgid|https://man7.org/linux/man-pages/
+LINUX102|What special bit on /tmp prevents users deleting each other's files?|sticky bit|https://man7.org/linux/man-pages/
+LINUX102|Which command conceptually changes file permissions?|chmod|https://man7.org/linux/man-pages/man1/chmod.1.html
+LINUX102|Which command conceptually changes file owner and group?|chown|https://man7.org/linux/man-pages/man1/chown.1.html
+LINUX102|Which command conceptually changes only the group of a file?|chgrp|https://man7.org/linux/man-pages/
+LINUX102|What is the name for the default permission mask used when creating files?|umask|https://www.gnu.org/software/bash/manual/bash.html#index-umask
+LINUX102|If umask is 022 what are typical new file permissions in numeric form?|644|https://man7.org/linux/man-pages/
+LINUX102|If umask is 022 what are typical new directory permissions in numeric form?|755|https://man7.org/linux/man-pages/
+LINUX102|What is the term for permissions like rwxr-xr-x instead of numeric?|symbolic|https://man7.org/linux/man-pages/
+LINUX102|What is the term for permissions like 755 instead of symbolic?|numeric|https://man7.org/linux/man-pages/
 
 # ===== Shell Theory (more) =====
-LINUX102|What does $0 usually represent in a shell script?|script name
-LINUX102|What does $@ represent in a shell script?|all arguments
-LINUX102|What does $# represent in a shell script?|argument count
-LINUX102|What does $$ represent in a shell script?|current shell pid
-LINUX102|What does $? represent in the shell?|exit status of last command
-LINUX102|What does && between two commands mean?|run second only if first succeeded
-LINUX102|What does || between two commands mean?|run second only if first failed
-LINUX102|What is the name of the feature that stores previously entered commands?|history
-LINUX102|What is the typical default shell on many Linux systems?|bash
-LINUX102|What is the feature that replaces variables and commands before execution called?|expansion
-LINUX102|What is the syntax $(command) used for?|command substitution
-LINUX102|What does the single dot command . do with a script?|source it in current shell
-LINUX102|What is the term for connecting output of one program to input of another?|pipe
-LINUX102|Which character is used for single-character globbing?|?
-LINUX102|Which characters are used for multi-character globbing?|*
-LINUX102|What is the shell variable that defines the path search list for commands?|PATH
-LINUX102|Which environment variable usually indicates the current user's home directory?|HOME
-LINUX102|Which environment variable usually indicates the login shell?|SHELL
-LINUX102|What does Ctrl+C send to the running process?|SIGINT
-LINUX102|What does Ctrl+Z do to the current foreground process?|suspend
-LINUX102|Which built-in command lists background jobs?|jobs
-LINUX102|Which built-in command brings a job to the foreground?|fg
-LINUX102|Which built-in command continues a job in the background?|bg
+LINUX102|What does $0 usually represent in a shell script?|script name|https://man7.org/linux/man-pages/
+LINUX102|What does $@ represent in a shell script?|all arguments|https://man7.org/linux/man-pages/
+LINUX102|What does $# represent in a shell script?|argument count|https://man7.org/linux/man-pages/
+LINUX102|What does $$ represent in a shell script?|current shell pid|https://man7.org/linux/man-pages/
+LINUX102|What does $? represent in the shell?|exit status of last command|https://man7.org/linux/man-pages/
+LINUX102|What does && between two commands mean?|run second only if first succeeded|https://man7.org/linux/man-pages/
+LINUX102|What does||between two commands mean?
+LINUX102|What is the name of the feature that stores previously entered commands?|history|https://www.gnu.org/software/bash/manual/bash.html#index-history
+LINUX102|What is the typical default shell on many Linux systems?|bash|https://man7.org/linux/man-pages/
+LINUX102|What is the feature that replaces variables and commands before execution called?|expansion|https://man7.org/linux/man-pages/
+LINUX102|What is the syntax $(command) used for?|command substitution|https://man7.org/linux/man-pages/
+LINUX102|What does the single dot command . do with a script?|source it in current shell|https://man7.org/linux/man-pages/
+LINUX102|What is the term for connecting output of one program to input of another?|pipe|https://man7.org/linux/man-pages/
+LINUX102|Which character is used for single-character globbing?|?|https://man7.org/linux/man-pages/
+LINUX102|Which characters are used for multi-character globbing?|*|https://man7.org/linux/man-pages/
+LINUX102|What is the shell variable that defines the path search list for commands?|PATH|https://man7.org/linux/man-pages/
+LINUX102|Which environment variable usually indicates the current user's home directory?|HOME|https://man7.org/linux/man-pages/
+LINUX102|Which environment variable usually indicates the login shell?|SHELL|https://man7.org/linux/man-pages/
+LINUX102|What does Ctrl+C send to the running process?|SIGINT|https://man7.org/linux/man-pages/
+LINUX102|What does Ctrl+Z do to the current foreground process?|suspend|https://man7.org/linux/man-pages/
+LINUX102|Which built-in command lists background jobs?|jobs|https://man7.org/linux/man-pages/
+LINUX102|Which built-in command brings a job to the foreground?|fg|https://man7.org/linux/man-pages/
+LINUX102|Which built-in command continues a job in the background?|bg|https://man7.org/linux/man-pages/
 
 # ===== Process Theory (more) =====
-LINUX102|What does PID stand for?|process id
-LINUX102|What does PPID stand for?|parent process id
-LINUX102|What is the parent of all processes on systemd-based systems?|systemd
-LINUX102|What is the term for a process that has finished but not yet reaped by its parent?|zombie
-LINUX102|What is the term for a background process with no controlling terminal?|daemon
-LINUX102|Which command conceptually lists running processes in full detail?|ps aux
-LINUX102|Which command shows an interactive real-time view of running processes?|top
-LINUX102|Which signal is sent when a process receives a request to terminate gracefully?|SIGTERM
-LINUX102|Which signal is often used to ask a daemon to reload configuration?|SIGHUP
-LINUX102|Which signal is impossible to catch or ignore?|SIGKILL
-LINUX102|Which exit code value typically means success?|0
-LINUX102|Which shell variable holds the exit code of the last finished command?|$?
-LINUX102|What is the term for a process spawned by another process?|child process
-LINUX102|What is the term for the process that spawns child processes?|parent process
-LINUX102|What command conceptually can change process priority (niceness)?|renice
-LINUX102|What is the term for the numeric scheduling priority hint on Unix-like systems?|nice value
+LINUX102|What does PID stand for?|process id|https://man7.org/linux/man-pages/
+LINUX102|What does PPID stand for?|parent process id|https://man7.org/linux/man-pages/
+LINUX102|What is the parent of all processes on systemd-based systems?|systemd|https://man7.org/linux/man-pages/
+LINUX102|What is the term for a process that has finished but not yet reaped by its parent?|zombie|https://man7.org/linux/man-pages/
+LINUX102|What is the term for a background process with no controlling terminal?|daemon|https://man7.org/linux/man-pages/
+LINUX102|Which command conceptually lists running processes in full detail?|ps aux|https://man7.org/linux/man-pages/man1/ps.1.html
+LINUX102|Which command shows an interactive real-time view of running processes?|top|https://man7.org/linux/man-pages/
+LINUX102|Which signal is sent when a process receives a request to terminate gracefully?|SIGTERM|https://man7.org/linux/man-pages/
+LINUX102|Which signal is often used to ask a daemon to reload configuration?|SIGHUP|https://man7.org/linux/man-pages/
+LINUX102|Which signal is impossible to catch or ignore?|SIGKILL|https://man7.org/linux/man-pages/
+LINUX102|Which exit code value typically means success?|0|https://man7.org/linux/man-pages/
+LINUX102|Which shell variable holds the exit code of the last finished command?|$?|https://man7.org/linux/man-pages/
+LINUX102|What is the term for a process spawned by another process?|child process|https://man7.org/linux/man-pages/
+LINUX102|What is the term for the process that spawns child processes?|parent process|https://man7.org/linux/man-pages/
+LINUX102|What command conceptually can change process priority (niceness)?|renice|https://man7.org/linux/man-pages/
+LINUX102|What is the term for the numeric scheduling priority hint on Unix-like systems?|nice value|https://man7.org/linux/man-pages/
 
 # ===== Boot & Systemd (more) =====
-LINUX202|What is the name of the init system used by most modern Linux distros?|systemd
-LINUX202|Which command manages systemd services and units?|systemctl
-LINUX202|Which command shows overall systemd log messages?|journalctl
-LINUX202|What is the systemd unit type used for background services?|service
-LINUX202|What is the systemd unit type that groups other units into a state?|target
-LINUX202|Which target is commonly used for non-graphical multi-user systems?|multi-user.target
-LINUX202|Which target is commonly used for full graphical login systems?|graphical.target
-LINUX202|Which command shows the current default target?|systemctl get-default
-LINUX202|Which command sets the default target to multi-user.target?|sudo systemctl set-default multi-user.target
-LINUX202|Which directory typically holds package-provided unit files on systemd systems?|/usr/lib/systemd/system
-LINUX202|Which directory typically holds local override or custom unit files?|/etc/systemd/system
-LINUX202|Which command reloads systemd manager configuration after unit file changes?|sudo systemctl daemon-reload
-LINUX202|Which command shows the status of a unit named sshd.service?|systemctl status sshd
-LINUX202|Which command starts a service immediately?|sudo systemctl start sshd
-LINUX202|Which command stops a service immediately?|sudo systemctl stop sshd
-LINUX202|Which command enables a service to start at boot?|sudo systemctl enable sshd
-LINUX202|Which command disables a service from starting at boot?|sudo systemctl disable sshd
+LINUX202|What is the name of the init system used by most modern Linux distros?|systemd|https://man7.org/linux/man-pages/
+LINUX202|Which command manages systemd services and units?|systemctl|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX202|Which command shows overall systemd log messages?|journalctl|https://man7.org/linux/man-pages/man1/journalctl.1.html
+LINUX202|What is the systemd unit type used for background services?|service|https://man7.org/linux/man-pages/
+LINUX202|What is the systemd unit type that groups other units into a state?|target|https://man7.org/linux/man-pages/
+LINUX202|Which target is commonly used for non-graphical multi-user systems?|multi-user.target|https://man7.org/linux/man-pages/
+LINUX202|Which target is commonly used for full graphical login systems?|graphical.target|https://man7.org/linux/man-pages/
+LINUX202|Which command shows the current default target?|systemctl get-default|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX202|Which command sets the default target to multi-user.target?|sudo systemctl set-default multi-user.target|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX202|Which directory typically holds package-provided unit files on systemd systems?|/usr/lib/systemd/system|https://man7.org/linux/man-pages/
+LINUX202|Which directory typically holds local override or custom unit files?|/etc/systemd/system|https://man7.org/linux/man-pages/
+LINUX202|Which command reloads systemd manager configuration after unit file changes?|sudo systemctl daemon-reload|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX202|Which command shows the status of a unit named sshd.service?|systemctl status sshd|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX202|Which command starts a service immediately?|sudo systemctl start sshd|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX202|Which command stops a service immediately?|sudo systemctl stop sshd|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX202|Which command enables a service to start at boot?|sudo systemctl enable sshd|https://man7.org/linux/man-pages/man1/systemctl.1.html
+LINUX202|Which command disables a service from starting at boot?|sudo systemctl disable sshd|https://man7.org/linux/man-pages/man1/systemctl.1.html
 
 # ===== Networking (more) =====
-LINUX201|What is the standard hostname for the loopback interface?|localhost
-LINUX201|What is the name of the loopback network interface?|lo
-LINUX201|Which command shows IP addresses of all interfaces?|ip addr
-LINUX201|Which command shows routing table information?|ip route
-LINUX201|Which protocol uses port 80 by default?|http
-LINUX201|Which protocol uses port 443 by default?|https
-LINUX201|Which protocol uses port 22 by default?|ssh
-LINUX201|Which protocol uses port 25 by default?|smtp
-LINUX201|Which protocol uses port 53 by default?|dns
-LINUX201|Which protocol uses port 3306 by default?|mysql
-LINUX201|Which protocol uses port 5432 by default?|postgresql
-LINUX201|Which file on Debian-based systems logs authentication messages?|/var/log/auth.log
-LINUX201|Which file on RHEL-based systems logs secure messages and auth?|/var/log/secure
-LINUX201|What is the address 127.0.0.1 called?|loopback
-LINUX201|What is the term for converting domain names to IP addresses?|dns resolution
-LINUX201|Which private IPv4 range begins with 192.168?|192.168.0.0/16
-LINUX201|Which private IPv4 range begins with 10.|10.0.0.0/8
-LINUX201|Which private IPv4 range begins with 172.16.|172.16.0.0/12
-LINUX201|What is the term for mapping private IPs to a public IP at a router?|nat
-LINUX201|Which command sends ICMP echo requests to test connectivity?|ping
-LINUX201|Which command can fetch URL content from the command line (starts with c)?|curl
-LINUX201|Which command can download files non-interactively from the web (starts with w)?|wget
-LINUX201|Which command shows listening TCP and UDP sockets on modern Linux?|ss
+LINUX201|What is the standard hostname for the loopback interface?|localhost|https://man7.org/linux/man-pages/
+LINUX201|What is the name of the loopback network interface?|lo|https://man7.org/linux/man-pages/
+LINUX201|Which command shows IP addresses of all interfaces?|ip addr|https://man7.org/linux/man-pages/man8/ip.8.html
+LINUX201|Which command shows routing table information?|ip route|https://man7.org/linux/man-pages/man8/ip.8.html
+LINUX201|Which protocol uses port 80 by default?|http|https://man7.org/linux/man-pages/
+LINUX201|Which protocol uses port 443 by default?|https|https://man7.org/linux/man-pages/
+LINUX201|Which protocol uses port 22 by default?|ssh|https://man7.org/linux/man-pages/man1/ssh.1.html
+LINUX201|Which protocol uses port 25 by default?|smtp|https://man7.org/linux/man-pages/
+LINUX201|Which protocol uses port 53 by default?|dns|https://man7.org/linux/man-pages/
+LINUX201|Which protocol uses port 3306 by default?|mysql|https://man7.org/linux/man-pages/
+LINUX201|Which protocol uses port 5432 by default?|postgresql|https://man7.org/linux/man-pages/
+LINUX201|Which file on Debian-based systems logs authentication messages?|/var/log/auth.log|https://man7.org/linux/man-pages/
+LINUX201|Which file on RHEL-based systems logs secure messages and auth?|/var/log/secure|https://man7.org/linux/man-pages/
+LINUX201|What is the address 127.0.0.1 called?|loopback|https://man7.org/linux/man-pages/
+LINUX201|What is the term for converting domain names to IP addresses?|dns resolution|https://man7.org/linux/man-pages/
+LINUX201|Which private IPv4 range begins with 192.168?|192.168.0.0/16|https://man7.org/linux/man-pages/
+LINUX201|Which private IPv4 range begins with 10.|10.0.0.0/8|https://man7.org/linux/man-pages/
+LINUX201|Which private IPv4 range begins with 172.16.|172.16.0.0/12|https://man7.org/linux/man-pages/
+LINUX201|What is the term for mapping private IPs to a public IP at a router?|nat|https://man7.org/linux/man-pages/
+LINUX201|Which command sends ICMP echo requests to test connectivity?|ping|https://man7.org/linux/man-pages/man8/ping.8.html
+LINUX201|Which command can fetch URL content from the command line (starts with c)?|curl|https://curl.se/docs/manpage.html
+LINUX201|Which command can download files non-interactively from the web (starts with w)?|wget|https://www.gnu.org/software/wget/manual/wget.html
+LINUX201|Which command shows listening TCP and UDP sockets on modern Linux?|ss|https://man7.org/linux/man-pages/man8/ss.8.html
 
 # ===== Security (more) =====
-LINUX202|What file defines sudo permissions for all users?|/etc/sudoers
-LINUX202|Which command should always be used to edit sudoers file safely?|visudo
-LINUX202|Which directory typically holds extra sudo configuration drop-in files?|/etc/sudoers.d
-LINUX202|What is the numeric user id of the root user?|0
-LINUX202|What file holds hashed local user passwords on modern systems?|/etc/shadow
-LINUX202|What file contains local group definitions?|/etc/group
-LINUX202|Which config file defines SSH daemon settings on most systems?|/etc/ssh/sshd_config
-LINUX202|Which port does SSH listen on by default?|22
-LINUX202|Which directory in the user's home stores SSH keys?|.ssh
-LINUX202|Which file in .ssh stores authorized public keys for SSH login?|authorized_keys
-LINUX202|Which Linux security module enforces mandatory access control on RHEL-based systems?|selinux
-LINUX202|Which SELinux mode blocks actions that violate policy?|enforcing
-LINUX202|Which SELinux mode only logs but does not block actions?|permissive
-LINUX202|What is the path of the main SELinux config file on many systems?|/etc/selinux/config
-LINUX202|Which framework provides pluggable authentication modules on Linux?|pam
-LINUX202|Which directory contains PAM configuration files?|/etc/pam.d
-LINUX202|Which tool can ban IPs after too many failed login attempts (popular IDS)?|fail2ban
-LINUX202|Which file controls password aging and expiry information per user?|/etc/shadow
-LINUX202|Which command shows password aging info for a user?|chage
-LINUX202|Which command can lock a user's password to disable login?|passwd -l
+LINUX202|What file defines sudo permissions for all users?|/etc/sudoers|https://man7.org/linux/man-pages/
+LINUX202|Which command should always be used to edit sudoers file safely?|visudo|https://man7.org/linux/man-pages/man8/visudo.8.html
+LINUX202|Which directory typically holds extra sudo configuration drop-in files?|/etc/sudoers.d|https://man7.org/linux/man-pages/
+LINUX202|What is the numeric user id of the root user?|0|https://man7.org/linux/man-pages/
+LINUX202|What file holds hashed local user passwords on modern systems?|/etc/shadow|https://man7.org/linux/man-pages/
+LINUX202|What file contains local group definitions?|/etc/group|https://man7.org/linux/man-pages/
+LINUX202|Which config file defines SSH daemon settings on most systems?|/etc/ssh/sshd_config|https://man7.org/linux/man-pages/
+LINUX202|Which port does SSH listen on by default?|22|https://man7.org/linux/man-pages/
+LINUX202|Which directory in the user's home stores SSH keys?|.ssh|https://man7.org/linux/man-pages/
+LINUX202|Which file in .ssh stores authorized public keys for SSH login?|authorized_keys|https://man7.org/linux/man-pages/
+LINUX202|Which Linux security module enforces mandatory access control on RHEL-based systems?|selinux|https://man7.org/linux/man-pages/
+LINUX202|Which SELinux mode blocks actions that violate policy?|enforcing|https://man7.org/linux/man-pages/
+LINUX202|Which SELinux mode only logs but does not block actions?|permissive|https://man7.org/linux/man-pages/
+LINUX202|What is the path of the main SELinux config file on many systems?|/etc/selinux/config|https://man7.org/linux/man-pages/
+LINUX202|Which framework provides pluggable authentication modules on Linux?|pam|https://man7.org/linux/man-pages/
+LINUX202|Which directory contains PAM configuration files?|/etc/pam.d|https://man7.org/linux/man-pages/
+LINUX202|Which tool can ban IPs after too many failed login attempts (popular IDS)?|fail2ban|https://man7.org/linux/man-pages/
+LINUX202|Which file controls password aging and expiry information per user?|/etc/shadow|https://man7.org/linux/man-pages/
+LINUX202|Which command shows password aging info for a user?|chage|https://man7.org/linux/man-pages/man1/chage.1.html
+LINUX202|Which command can lock a user's password to disable login?|passwd -l|https://man7.org/linux/man-pages/man1/passwd.1.html
 
 # ===== Trivia (more) =====
-LINUX101|What is the name of the kernel used by most Linux distributions?|linux
-LINUX101|What do we call a complete operating system built around the Linux kernel?|distribution
-LINUX101|Name a popular Debian-based Linux distribution starting with U|ubuntu
-LINUX101|Name a popular Fedora successor enterprise distro backed by Red Hat|rhel
-LINUX101|Name a minimalist rolling-release distribution starting with A|arch
-LINUX101|What does CLI stand for?|command line interface
-LINUX101|What does GUI stand for?|graphical user interface
-LINUX101|What does TTY originally stand for?|teletype
-LINUX101|What is the special device file that discards all data written to it?|/dev/null
-LINUX101|Which directory name is used for temporary files?|/tmp
-LINUX101|Which command shows manual pages for commands?|man
-LINUX101|Which general term describes using only text commands without GUI?|cli
-LINUX101|What does LTS mean in context of distro releases?|long term support
-LINUX101|Which program typically handles the boot menu and loads the kernel on many systems?|grub
-LINUX101|What is the term for running a full OS from removable media like a USB stick without installing?|live system
-LINUX101|What is the term for a small program running in the background performing services?|daemon
-LINUX101|What is the name for a job scheduled with cron?|cron job
-LINUX101|Which program is commonly used as the default shell on many Linux systems?|bash
-LINUX101|Which program is widely used to track versions of source code repositories?|git
-LINUX101|Which three-letter acronym refers to the Unix-like tools collection that Linux relies heavily on?|gnu
+LINUX101|What is the name of the kernel used by most Linux distributions?|linux|https://man7.org/linux/man-pages/
+LINUX101|What do we call a complete operating system built around the Linux kernel?|distribution|https://man7.org/linux/man-pages/
+LINUX101|Name a popular Debian-based Linux distribution starting with U|ubuntu|https://man7.org/linux/man-pages/
+LINUX101|Name a popular Fedora successor enterprise distro backed by Red Hat|rhel|https://man7.org/linux/man-pages/
+LINUX101|Name a minimalist rolling-release distribution starting with A|arch|https://man7.org/linux/man-pages/
+LINUX101|What does CLI stand for?|command line interface|https://man7.org/linux/man-pages/
+LINUX101|What does GUI stand for?|graphical user interface|https://man7.org/linux/man-pages/
+LINUX101|What does TTY originally stand for?|teletype|https://man7.org/linux/man-pages/
+LINUX101|What is the special device file that discards all data written to it?|/dev/null|https://man7.org/linux/man-pages/
+LINUX101|Which directory name is used for temporary files?|/tmp|https://man7.org/linux/man-pages/
+LINUX101|Which command shows manual pages for commands?|man|https://man7.org/linux/man-pages/man1/man.1.html
+LINUX101|Which general term describes using only text commands without GUI?|cli|https://man7.org/linux/man-pages/
+LINUX101|What does LTS mean in context of distro releases?|long term support|https://man7.org/linux/man-pages/
+LINUX101|Which program typically handles the boot menu and loads the kernel on many systems?|grub|https://man7.org/linux/man-pages/
+LINUX101|What is the term for running a full OS from removable media like a USB stick without installing?|live system|https://man7.org/linux/man-pages/
+LINUX101|What is the term for a small program running in the background performing services?|daemon|https://man7.org/linux/man-pages/
+LINUX101|What is the name for a job scheduled with cron?|cron job|https://man7.org/linux/man-pages/
+LINUX101|Which program is commonly used as the default shell on many Linux systems?|bash|https://man7.org/linux/man-pages/
+LINUX101|Which program is widely used to track versions of source code repositories?|git|https://git-scm.com/docs
+LINUX101|Which three-letter acronym refers to the Unix-like tools collection that Linux relies heavily on?|gnu|https://man7.org/linux/man-pages/
 
 # ===== DevOps Pack: Docker =====
-DOCKER|Show Docker client and server version information|docker version
-DOCKER|Show detailed system-wide Docker information|docker info
-DOCKER|List running containers|docker ps
-DOCKER|List all containers including stopped|docker ps -a
-DOCKER|List Docker images|docker images
-DOCKER|Pull the latest nginx image from Docker Hub|docker pull nginx:latest
-DOCKER|Run nginx container detached mapping host port 8080 to container port 80|docker run -d -p 8080:80 nginx:latest
-DOCKER|Run ubuntu container interactively with a bash shell|docker run -it ubuntu bash
-DOCKER|Run container and auto-remove when it exits|docker run --rm alpine
-DOCKER|Assign a name web to a new nginx container|docker run -d --name web nginx
-DOCKER|Start an existing container named web|docker start web
-DOCKER|Stop a running container named web|docker stop web
-DOCKER|Restart a container named web|docker restart web
-DOCKER|Remove a stopped container with ID abc123|docker rm abc123
-DOCKER|Remove all stopped containers|docker container prune
-DOCKER|Remove image nginx:latest|docker rmi nginx:latest
-DOCKER|Remove all dangling images|docker image prune
-DOCKER|Remove all unused images not referenced by containers|docker image prune -a
-DOCKER|Follow logs for container web|docker logs -f web
-DOCKER|Show last 100 log lines for container web|docker logs --tail 100 web
-DOCKER|Execute bash inside running container web|docker exec -it web bash
-DOCKER|Copy file /tmp/a.txt from container web to current directory on host|docker cp web:/tmp/a.txt .
-DOCKER|Copy file local.txt from host to container web at /tmp/local.txt|docker cp local.txt web:/tmp/local.txt
-DOCKER|Build an image named myapp:latest from current directory|docker build -t myapp:latest .
-DOCKER|Tag local image myapp:latest as myrepo/myapp:v1|docker tag myapp:latest myrepo/myapp:v1
-DOCKER|Login to Docker registry interactively|docker login
-DOCKER|Push image myrepo/myapp:v1 to registry|docker push myrepo/myapp:v1
-DOCKER|Show resource usage (CPU, memory) of running containers|docker stats
-DOCKER|Inspect low-level details of container web|docker inspect web
-DOCKER|Inspect low-level details of image nginx:latest|docker inspect nginx:latest
-DOCKER|List Docker networks|docker network ls
-DOCKER|Create user-defined bridge network mynet|docker network create mynet
-DOCKER|Run nginx attached to mynet network with name web1|docker run -d --network=mynet --name web1 nginx
-DOCKER|Connect existing container web1 to network mynet2|docker network connect mynet2 web1
-DOCKER|Disconnect container web1 from network mynet2|docker network disconnect mynet2 web1
-DOCKER|List Docker volumes|docker volume ls
-DOCKER|Create named volume data-vol|docker volume create data-vol
-DOCKER|Run container mounting data-vol at /data|docker run -d -v data-vol:/data alpine sleep infinity
-DOCKER|Run container mounting host directory /host/data to /data in container|docker run -d -v /host/data:/data alpine sleep infinity
-DOCKER|Set environment variable FOO=bar in a new container|docker run -e FOO=bar alpine env
-DOCKER|Limit container to 512MB memory|docker run -d --memory=512m alpine sleep infinity
-DOCKER|Limit container to 1 CPU|docker run -d --cpus=1 alpine sleep infinity
-DOCKER|Show top-like stats for a single container web|docker top web
-DOCKER|Export container filesystem of web as tar to web.tar|docker export web -o web.tar
-DOCKER|Import a tarball as an image named imported:latest|docker import web.tar imported:latest
-DOCKER|Save image nginx:latest to tar archive nginx.tar|docker save nginx:latest -o nginx.tar
-DOCKER|Load image from tar archive nginx.tar|docker load -i nginx.tar
-DOCKER|Clean up unused containers images networks and build cache|docker system prune
-DOCKER|Show difference between container filesystem and its image for web|docker diff web
+DOCKER|Show Docker client and server version information|docker version|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Show detailed system-wide Docker information|docker info|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|List running containers|docker ps|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|List all containers including stopped|docker ps -a|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|List Docker images|docker images|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Pull the latest nginx image from Docker Hub|docker pull nginx:latest|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Run nginx container detached mapping host port 8080 to container port 80|docker run -d -p 8080:80 nginx:latest|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Run ubuntu container interactively with a bash shell|docker run -it ubuntu bash|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Run container and auto-remove when it exits|docker run --rm alpine|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Assign a name web to a new nginx container|docker run -d --name web nginx|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Start an existing container named web|docker start web|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Stop a running container named web|docker stop web|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Restart a container named web|docker restart web|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Remove a stopped container with ID abc123|docker rm abc123|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Remove all stopped containers|docker container prune|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Remove image nginx:latest|docker rmi nginx:latest|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Remove all dangling images|docker image prune|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Remove all unused images not referenced by containers|docker image prune -a|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Follow logs for container web|docker logs -f web|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Show last 100 log lines for container web|docker logs --tail 100 web|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Execute bash inside running container web|docker exec -it web bash|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Copy file /tmp/a.txt from container web to current directory on host|docker cp web:/tmp/a.txt .|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Copy file local.txt from host to container web at /tmp/local.txt|docker cp local.txt web:/tmp/local.txt|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Build an image named myapp:latest from current directory|docker build -t myapp:latest .|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Tag local image myapp:latest as myrepo/myapp:v1|docker tag myapp:latest myrepo/myapp:v1|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Login to Docker registry interactively|docker login|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Push image myrepo/myapp:v1 to registry|docker push myrepo/myapp:v1|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Show resource usage (CPU, memory) of running containers|docker stats|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Inspect low-level details of container web|docker inspect web|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Inspect low-level details of image nginx:latest|docker inspect nginx:latest|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|List Docker networks|docker network ls|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Create user-defined bridge network mynet|docker network create mynet|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Run nginx attached to mynet network with name web1|docker run -d --network=mynet --name web1 nginx|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Connect existing container web1 to network mynet2|docker network connect mynet2 web1|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Disconnect container web1 from network mynet2|docker network disconnect mynet2 web1|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|List Docker volumes|docker volume ls|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Create named volume data-vol|docker volume create data-vol|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Run container mounting data-vol at /data|docker run -d -v data-vol:/data alpine sleep infinity|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Run container mounting host directory /host/data to /data in container|docker run -d -v /host/data:/data alpine sleep infinity|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Set environment variable FOO=bar in a new container|docker run -e FOO=bar alpine env|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Limit container to 512MB memory|docker run -d --memory=512m alpine sleep infinity|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Limit container to 1 CPU|docker run -d --cpus=1 alpine sleep infinity|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Show top-like stats for a single container web|docker top web|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Export container filesystem of web as tar to web.tar|docker export web -o web.tar|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Import a tarball as an image named imported:latest|docker import web.tar imported:latest|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Save image nginx:latest to tar archive nginx.tar|docker save nginx:latest -o nginx.tar|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Load image from tar archive nginx.tar|docker load -i nginx.tar|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Clean up unused containers images networks and build cache|docker system prune|https://docs.docker.com/engine/reference/commandline/cli/
+DOCKER|Show difference between container filesystem and its image for web|docker diff web|https://docs.docker.com/engine/reference/commandline/cli/
 
 # ===== DevOps Pack: Kubernetes (kubectl) =====
-KUBERNETES|Show current kubectl context|kubectl config current-context
-KUBERNETES|List all contexts in kubeconfig|kubectl config get-contexts
-KUBERNETES|Switch kubectl context to my-cluster|kubectl config use-context my-cluster
-KUBERNETES|List nodes in the cluster|kubectl get nodes
-KUBERNETES|List pods in current namespace|kubectl get pods
-KUBERNETES|List pods in all namespaces|kubectl get pods -A
-KUBERNETES|List services in current namespace|kubectl get svc
-KUBERNETES|List deployments in current namespace|kubectl get deployments
-KUBERNETES|Get all resource types in current namespace|kubectl get all
-KUBERNETES|Describe pod mypod|kubectl describe pod mypod
-KUBERNETES|Describe deployment web|kubectl describe deployment web
-KUBERNETES|View logs for pod mypod|kubectl logs mypod
-KUBERNETES|Follow logs for pod mypod|kubectl logs -f mypod
-KUBERNETES|View logs for container app in pod mypod|kubectl logs mypod -c app
-KUBERNETES|Execute bash inside pod mypod|kubectl exec -it mypod -- bash
-KUBERNETES|Apply configuration from manifest.yaml|kubectl apply -f manifest.yaml
-KUBERNETES|Delete resources defined in manifest.yaml|kubectl delete -f manifest.yaml
-KUBERNETES|Delete pod mypod in current namespace|kubectl delete pod mypod
-KUBERNETES|Delete deployment web in current namespace|kubectl delete deployment web
-KUBERNETES|Scale deployment web to 3 replicas|kubectl scale deployment web --replicas=3
-KUBERNETES|Get rollout status of deployment web|kubectl rollout status deployment/web
-KUBERNETES|Undo last rollout of deployment web|kubectl rollout undo deployment/web
-KUBERNETES|List events in current namespace|kubectl get events
-KUBERNETES|Explain fields of deployment resource|kubectl explain deployment
-KUBERNETES|Get configmaps in current namespace|kubectl get configmaps
-KUBERNETES|Get secrets in current namespace|kubectl get secrets
-KUBERNETES|Create namespace staging|kubectl create namespace staging
-KUBERNETES|List namespaces|kubectl get namespaces
-KUBERNETES|Run temporary busybox pod with interactive shell|kubectl run tmp-shell --rm -it --image=busybox -- sh
-KUBERNETES|Port-forward pod mypod port 8080 to local port 8080|kubectl port-forward pod/mypod 8080:8080
-KUBERNETES|Port-forward service web port 80 to local port 8080|kubectl port-forward svc/web 8080:80
-KUBERNETES|Get pods with labels displayed|kubectl get pods --show-labels
-KUBERNETES|Label pod mypod with env=dev|kubectl label pod mypod env=dev
-KUBERNETES|Remove label env from pod mypod|kubectl label pod mypod env-
-KUBERNETES|Get pods with label env=dev|kubectl get pods -l env=dev
-KUBERNETES|Set image of deployment web container app to myapp:v2|kubectl set image deployment/web app=myapp:v2
-KUBERNETES|Get detailed yaml for deployment web|kubectl get deployment web -o yaml
-KUBERNETES|Dry-run create a deployment manifest printed to stdout|kubectl create deployment web --image=nginx --dry-run=client -o yaml
-KUBERNETES|Create a secret named db-secret from literal password=secret|kubectl create secret generic db-secret --from-literal=password=secret
-KUBERNETES|Get nodes with labels|kubectl get nodes --show-labels
-KUBERNETES|Cordon node node1 to disable new pods scheduling|kubectl cordon node1
-KUBERNETES|Uncordon node node1 to allow scheduling|kubectl uncordon node1
-KUBERNETES|Drain node node1 evicting pods safely|kubectl drain node1 --ignore-daemonsets --delete-emptydir-data
-KUBERNETES|Un-taint node node1 from key dedicated=testing:NoSchedule|kubectl taint nodes node1 dedicated=testing:NoSchedule-
-KUBERNETES|Get pod IPs in current namespace|kubectl get pods -o wide
-KUBERNETES|Check cluster information summary|kubectl cluster-info
-KUBERNETES|Show API resources supported by server|kubectl api-resources
-KUBERNETES|Create configmap app-config from file config.properties|kubectl create configmap app-config --from-file=config.properties
-KUBERNETES|Patch deployment web from patch.json file|kubectl patch deployment web --patch-file=patch.json
-KUBERNETES|Delete all pods in namespace default|kubectl delete pods --all -n default
+KUBERNETES|Show current kubectl context|kubectl config current-context|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|List all contexts in kubeconfig|kubectl config get-contexts|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Switch kubectl context to my-cluster|kubectl config use-context my-cluster|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|List nodes in the cluster|kubectl get nodes|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|List pods in current namespace|kubectl get pods|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|List pods in all namespaces|kubectl get pods -A|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|List services in current namespace|kubectl get svc|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|List deployments in current namespace|kubectl get deployments|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Get all resource types in current namespace|kubectl get all|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Describe pod mypod|kubectl describe pod mypod|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Describe deployment web|kubectl describe deployment web|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|View logs for pod mypod|kubectl logs mypod|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Follow logs for pod mypod|kubectl logs -f mypod|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|View logs for container app in pod mypod|kubectl logs mypod -c app|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Execute bash inside pod mypod|kubectl exec -it mypod -- bash|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Apply configuration from manifest.yaml|kubectl apply -f manifest.yaml|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Delete resources defined in manifest.yaml|kubectl delete -f manifest.yaml|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Delete pod mypod in current namespace|kubectl delete pod mypod|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Delete deployment web in current namespace|kubectl delete deployment web|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Scale deployment web to 3 replicas|kubectl scale deployment web --replicas=3|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Get rollout status of deployment web|kubectl rollout status deployment/web|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Undo last rollout of deployment web|kubectl rollout undo deployment/web|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|List events in current namespace|kubectl get events|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Explain fields of deployment resource|kubectl explain deployment|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Get configmaps in current namespace|kubectl get configmaps|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Get secrets in current namespace|kubectl get secrets|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Create namespace staging|kubectl create namespace staging|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|List namespaces|kubectl get namespaces|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Run temporary busybox pod with interactive shell|kubectl run tmp-shell --rm -it --image=busybox -- sh|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Port-forward pod mypod port 8080 to local port 8080|kubectl port-forward pod/mypod 8080:8080|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Port-forward service web port 80 to local port 8080|kubectl port-forward svc/web 8080:80|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Get pods with labels displayed|kubectl get pods --show-labels|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Label pod mypod with env=dev|kubectl label pod mypod env=dev|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Remove label env from pod mypod|kubectl label pod mypod env-|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Get pods with label env=dev|kubectl get pods -l env=dev|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Set image of deployment web container app to myapp:v2|kubectl set image deployment/web app=myapp:v2|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Get detailed yaml for deployment web|kubectl get deployment web -o yaml|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Dry-run create a deployment manifest printed to stdout|kubectl create deployment web --image=nginx --dry-run=client -o yaml|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Create a secret named db-secret from literal password=secret|kubectl create secret generic db-secret --from-literal=password=secret|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Get nodes with labels|kubectl get nodes --show-labels|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Cordon node node1 to disable new pods scheduling|kubectl cordon node1|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Uncordon node node1 to allow scheduling|kubectl uncordon node1|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Drain node node1 evicting pods safely|kubectl drain node1 --ignore-daemonsets --delete-emptydir-data|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Un-taint node node1 from key dedicated=testing:NoSchedule|kubectl taint nodes node1 dedicated=testing:NoSchedule-|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Get pod IPs in current namespace|kubectl get pods -o wide|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Check cluster information summary|kubectl cluster-info|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Show API resources supported by server|kubectl api-resources|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Create configmap app-config from file config.properties|kubectl create configmap app-config --from-file=config.properties|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Patch deployment web from patch.json file|kubectl patch deployment web --patch-file=patch.json|https://kubernetes.io/docs/reference/kubectl/
+KUBERNETES|Delete all pods in namespace default|kubectl delete pods --all -n default|https://kubernetes.io/docs/reference/kubectl/
 
 # ===== DevOps Pack: Git =====
-GIT|Configure global Git user name to Your Name|git config --global user.name "Your Name"
-GIT|Configure global Git user email you@example.com|git config --global user.email "you@example.com"
-GIT|Initialize a new Git repository in current directory|git init
-GIT|Clone repository from URL https://github.com/user/repo.git|git clone https://github.com/user/repo.git
-GIT|Check status of working tree|git status
-GIT|Stage file file.txt for commit|git add file.txt
-GIT|Stage all changes in current directory|git add .
-GIT|Commit staged changes with message Initial commit|git commit -m "Initial commit"
-GIT|Show commit history|git log
-GIT|Show compact one-line commit history|git log --oneline
-GIT|Show differences between working tree and index|git diff
-GIT|Show differences between index and last commit|git diff --cached
-GIT|Create new branch feature1|git branch feature1
-GIT|Switch to branch feature1|git checkout feature1
-GIT|Create and switch to new branch feature2|git checkout -b feature2
-GIT|List all branches|git branch
-GIT|Delete local branch feature1|git branch -d feature1
-GIT|Set remote origin URL for existing repo|git remote add origin https://github.com/user/repo.git
-GIT|Show configured remotes and URLs|git remote -v
-GIT|Push current branch to origin|git push origin HEAD
-GIT|Push local main branch to origin|git push origin main
-GIT|Pull latest changes from origin main|git pull origin main
-GIT|Fetch updates from origin without merging|git fetch origin
-GIT|Stash current uncommitted changes|git stash
-GIT|List available stashes|git stash list
-GIT|Apply most recent stash|git stash apply
-GIT|Drop most recent stash|git stash drop
-GIT|Reset file.txt to last committed version|git checkout -- file.txt
-GIT|Undo last commit but keep changes staged|git reset --soft HEAD~1
-GIT|Undo last commit and unstage changes but keep in working tree|git reset --mixed HEAD~1
-GIT|Undo last commit and discard changes permanently|git reset --hard HEAD~1
-GIT|Show file history including renames for file.txt|git log --follow -- file.txt
-GIT|Show who last changed each line in file.txt|git blame file.txt
-GIT|Create annotated tag v1.0 with message|git tag -a v1.0 -m "Version 1.0"
-GIT|Push all tags to origin|git push origin --tags
-GIT|Show diff between branches main and feature1|git diff main..feature1
-GIT|Merge branch feature1 into current branch|git merge feature1
-GIT|Abort an in-progress merge|git merge --abort
-GIT|Rebase current branch onto main|git rebase main
-GIT|Abort an in-progress rebase|git rebase --abort
-GIT|Continue an in-progress rebase|git rebase --continue
-GIT|Create .gitignore file including node_modules directory|echo "node_modules/" >> .gitignore
-GIT|Show summary of changes in last commit|git show --stat
-GIT|Show last commit details|git show HEAD
-GIT|Clean untracked files interactively|git clean -i
-GIT|Clean untracked files and directories forcefully|git clean -fd
-GIT|Verify Git configuration file locations|git config --list --show-origin
-GIT|Revert commit with hash abc1234 and create new commit|git revert abc1234
+GIT|Configure global Git user name to Your Name|git config --global user.name "Your Name"|https://git-scm.com/docs
+GIT|Configure global Git user email you@example.com|git config --global user.email "you@example.com"|https://git-scm.com/docs
+GIT|Initialize a new Git repository in current directory|git init|https://git-scm.com/docs
+GIT|Clone repository from URL https://github.com/user/repo.git|git clone https://github.com/user/repo.git|https://git-scm.com/docs
+GIT|Check status of working tree|git status|https://git-scm.com/docs
+GIT|Stage file file.txt for commit|git add file.txt|https://git-scm.com/docs
+GIT|Stage all changes in current directory|git add .|https://git-scm.com/docs
+GIT|Commit staged changes with message Initial commit|git commit -m "Initial commit"|https://git-scm.com/docs
+GIT|Show commit history|git log|https://git-scm.com/docs
+GIT|Show compact one-line commit history|git log --oneline|https://git-scm.com/docs
+GIT|Show differences between working tree and index|git diff|https://git-scm.com/docs
+GIT|Show differences between index and last commit|git diff --cached|https://git-scm.com/docs
+GIT|Create new branch feature1|git branch feature1|https://git-scm.com/docs
+GIT|Switch to branch feature1|git checkout feature1|https://git-scm.com/docs
+GIT|Create and switch to new branch feature2|git checkout -b feature2|https://git-scm.com/docs
+GIT|List all branches|git branch|https://git-scm.com/docs
+GIT|Delete local branch feature1|git branch -d feature1|https://git-scm.com/docs
+GIT|Set remote origin URL for existing repo|git remote add origin https://github.com/user/repo.git|https://git-scm.com/docs
+GIT|Show configured remotes and URLs|git remote -v|https://git-scm.com/docs
+GIT|Push current branch to origin|git push origin HEAD|https://git-scm.com/docs
+GIT|Push local main branch to origin|git push origin main|https://git-scm.com/docs
+GIT|Pull latest changes from origin main|git pull origin main|https://git-scm.com/docs
+GIT|Fetch updates from origin without merging|git fetch origin|https://git-scm.com/docs
+GIT|Stash current uncommitted changes|git stash|https://git-scm.com/docs
+GIT|List available stashes|git stash list|https://git-scm.com/docs
+GIT|Apply most recent stash|git stash apply|https://git-scm.com/docs
+GIT|Drop most recent stash|git stash drop|https://git-scm.com/docs
+GIT|Reset file.txt to last committed version|git checkout -- file.txt|https://git-scm.com/docs
+GIT|Undo last commit but keep changes staged|git reset --soft HEAD~1|https://git-scm.com/docs
+GIT|Undo last commit and unstage changes but keep in working tree|git reset --mixed HEAD~1|https://git-scm.com/docs
+GIT|Undo last commit and discard changes permanently|git reset --hard HEAD~1|https://git-scm.com/docs
+GIT|Show file history including renames for file.txt|git log --follow -- file.txt|https://git-scm.com/docs
+GIT|Show who last changed each line in file.txt|git blame file.txt|https://git-scm.com/docs
+GIT|Create annotated tag v1.0 with message|git tag -a v1.0 -m "Version 1.0"|https://git-scm.com/docs
+GIT|Push all tags to origin|git push origin --tags|https://git-scm.com/docs
+GIT|Show diff between branches main and feature1|git diff main..feature1|https://git-scm.com/docs
+GIT|Merge branch feature1 into current branch|git merge feature1|https://git-scm.com/docs
+GIT|Abort an in-progress merge|git merge --abort|https://git-scm.com/docs
+GIT|Rebase current branch onto main|git rebase main|https://git-scm.com/docs
+GIT|Abort an in-progress rebase|git rebase --abort|https://git-scm.com/docs
+GIT|Continue an in-progress rebase|git rebase --continue|https://git-scm.com/docs
+GIT|Create .gitignore file including node_modules directory|echo "node_modules/" >> .gitignore|https://www.gnu.org/software/bash/manual/bash.html#index-echo
+GIT|Show summary of changes in last commit|git show --stat|https://git-scm.com/docs
+GIT|Show last commit details|git show HEAD|https://git-scm.com/docs
+GIT|Clean untracked files interactively|git clean -i|https://git-scm.com/docs
+GIT|Clean untracked files and directories forcefully|git clean -fd|https://git-scm.com/docs
+GIT|Verify Git configuration file locations|git config --list --show-origin|https://git-scm.com/docs
+GIT|Revert commit with hash abc1234 and create new commit|git revert abc1234|https://git-scm.com/docs
 
 # ===== HARDCORE DEVOPS EXAM MODE =====
 
 # --- Kubernetes Deep Dive ---
-LINUX302|Explain the difference between Requests and Limits in Kubernetes|requests define minimum resources; limits define maximum resources
-LINUX302|Which kubelet flag controls eviction thresholds?|--eviction-hard
-LINUX302|What happens when a pod exceeds its memory limit?|OOMKilled
-LINUX302|What happens when a pod exceeds its CPU limit?|throttling
-LINUX302|What Kubernetes object defines network policy rules?|NetworkPolicy
-LINUX302|Default Kubernetes service type|ClusterIP
-LINUX302|How does kube-proxy handle routing in IPTABLES mode?|DNAT
-LINUX302|What CIDR holds pod IPs in a cluster?|pod CIDR
-LINUX302|What command shows all API resources the cluster supports?|kubectl api-resources
-LINUX302|What Kubernetes object stores passwords and TLS keys?|Secret
-LINUX302|What is the Kubernetes built-in load balancer type for external traffic?|LoadBalancer
-LINUX302|Which controller manages ReplicaSets?|Deployment controller
-LINUX302|What is the purpose of the HorizontalPodAutoscaler?|scale replicas automatically
-LINUX302|What is the default DNS name for a service named web in namespace default?|web.default.svc.cluster.local
-LINUX302|Where does kubelet read static pod manifests?|/etc/kubernetes/manifests
-LINUX302|Which component manages etcd snapshots in managed clusters?|kube-controller-manager
-LINUX302|Which command checks certificate expiration for kube components?|kubeadm certs check-expiration
-LINUX302|Which resource defines persistent storage in the cluster?|PersistentVolume
-LINUX302|Which resource binds a pod to a persistent volume?|PersistentVolumeClaim
-LINUX302|What is the CSI acronym?|container storage interface
-LINUX302|Which feature isolates container privileges in Kubernetes?|Pod Security Admission
-LINUX302|What is the recommended minimum etcd nodes for HA?|3
-LINUX302|Which controller handles node lifecycle?|node controller
-LINUX302|Which API object defines RBAC permissions?|Role/ClusterRole
-LINUX302|What is the control plane component that exposes the Kubernetes API?|kube-apiserver
-LINUX302|Command to check which node a pod is running on|kubectl get pod -o wide
+LINUX302|Explain the difference between Requests and Limits in Kubernetes|requests define minimum resources; limits define maximum resources|https://man7.org/linux/man-pages/
+LINUX302|Which kubelet flag controls eviction thresholds?|--eviction-hard|https://man7.org/linux/man-pages/
+LINUX302|What happens when a pod exceeds its memory limit?|OOMKilled|https://man7.org/linux/man-pages/
+LINUX302|What happens when a pod exceeds its CPU limit?|throttling|https://man7.org/linux/man-pages/
+LINUX302|What Kubernetes object defines network policy rules?|NetworkPolicy|https://man7.org/linux/man-pages/
+LINUX302|Default Kubernetes service type|ClusterIP|https://man7.org/linux/man-pages/
+LINUX302|How does kube-proxy handle routing in IPTABLES mode?|DNAT|https://man7.org/linux/man-pages/
+LINUX302|What CIDR holds pod IPs in a cluster?|pod CIDR|https://man7.org/linux/man-pages/
+LINUX302|What command shows all API resources the cluster supports?|kubectl api-resources|https://kubernetes.io/docs/reference/kubectl/
+LINUX302|What Kubernetes object stores passwords and TLS keys?|Secret|https://man7.org/linux/man-pages/
+LINUX302|What is the Kubernetes built-in load balancer type for external traffic?|LoadBalancer|https://man7.org/linux/man-pages/
+LINUX302|Which controller manages ReplicaSets?|Deployment controller|https://man7.org/linux/man-pages/
+LINUX302|What is the purpose of the HorizontalPodAutoscaler?|scale replicas automatically|https://man7.org/linux/man-pages/
+LINUX302|What is the default DNS name for a service named web in namespace default?|web.default.svc.cluster.local|https://man7.org/linux/man-pages/
+LINUX302|Where does kubelet read static pod manifests?|/etc/kubernetes/manifests|https://man7.org/linux/man-pages/
+LINUX302|Which component manages etcd snapshots in managed clusters?|kube-controller-manager|https://man7.org/linux/man-pages/
+LINUX302|Which command checks certificate expiration for kube components?|kubeadm certs check-expiration|https://man7.org/linux/man-pages/
+LINUX302|Which resource defines persistent storage in the cluster?|PersistentVolume|https://man7.org/linux/man-pages/
+LINUX302|Which resource binds a pod to a persistent volume?|PersistentVolumeClaim|https://man7.org/linux/man-pages/
+LINUX302|What is the CSI acronym?|container storage interface|https://man7.org/linux/man-pages/
+LINUX302|Which feature isolates container privileges in Kubernetes?|Pod Security Admission|https://man7.org/linux/man-pages/
+LINUX302|What is the recommended minimum etcd nodes for HA?|3|https://man7.org/linux/man-pages/
+LINUX302|Which controller handles node lifecycle?|node controller|https://man7.org/linux/man-pages/
+LINUX302|Which API object defines RBAC permissions?|Role/ClusterRole|https://man7.org/linux/man-pages/
+LINUX302|What is the control plane component that exposes the Kubernetes API?|kube-apiserver|https://man7.org/linux/man-pages/
+LINUX302|Command to check which node a pod is running on|kubectl get pod -o wide|https://kubernetes.io/docs/reference/kubectl/
 
 # --- Docker Hardcore ---
-LINUX302|Which Docker feature reuses filesystem layers for efficiency?|image layers
-LINUX302|Where are Docker images stored on Linux by default?|/var/lib/docker
-LINUX302|What system feature enforces resource isolation in containers?|cgroups
-LINUX302|What system feature provides process isolation?|namespaces
-LINUX302|Which Docker network mode gives each container its own IP?|bridge
-LINUX302|Which Docker mode uses host network stack directly?|host
-LINUX302|Command to view running container cgroup info|docker inspect --format '{{.HostConfig.CgroupParent}}'
-LINUX302|What command shows low-level events from Docker daemon?|docker events
-LINUX302|What exit code indicates container OOM kill?|137
-LINUX302|Remove all containers including running ones|docker rm -f $(docker ps -aq)
-LINUX302|What is the purpose of Docker multi-stage builds?|reduce final image size
-LINUX302|Which Dockerfile instruction sets environment variables?|ENV
-LINUX302|Which Dockerfile instruction sets default command?|CMD
-LINUX302|Which Dockerfile instruction runs build steps?|RUN
-LINUX302|Which Dockerfile instruction changes working directory?|WORKDIR
-LINUX302|Which Dockerfile instruction copies files?|COPY
+LINUX302|Which Docker feature reuses filesystem layers for efficiency?|image layers|https://man7.org/linux/man-pages/
+LINUX302|Where are Docker images stored on Linux by default?|/var/lib/docker|https://docs.docker.com/engine/reference/commandline/cli/
+LINUX302|What system feature enforces resource isolation in containers?|cgroups|https://man7.org/linux/man-pages/
+LINUX302|What system feature provides process isolation?|namespaces|https://man7.org/linux/man-pages/
+LINUX302|Which Docker network mode gives each container its own IP?|bridge|https://man7.org/linux/man-pages/
+LINUX302|Which Docker mode uses host network stack directly?|host|https://man7.org/linux/man-pages/
+LINUX302|Command to view running container cgroup info|docker inspect --format '{{.HostConfig.CgroupParent}}'|https://docs.docker.com/engine/reference/commandline/cli/
+LINUX302|What command shows low-level events from Docker daemon?|docker events|https://docs.docker.com/engine/reference/commandline/cli/
+LINUX302|What exit code indicates container OOM kill?|137|https://man7.org/linux/man-pages/
+LINUX302|Remove all containers including running ones|docker rm -f $(docker ps -aq)|https://docs.docker.com/engine/reference/commandline/cli/
+LINUX302|What is the purpose of Docker multi-stage builds?|reduce final image size|https://man7.org/linux/man-pages/
+LINUX302|Which Dockerfile instruction sets environment variables?|ENV|https://man7.org/linux/man-pages/
+LINUX302|Which Dockerfile instruction sets default command?|CMD|https://man7.org/linux/man-pages/
+LINUX302|Which Dockerfile instruction runs build steps?|RUN|https://man7.org/linux/man-pages/
+LINUX302|Which Dockerfile instruction changes working directory?|WORKDIR|https://man7.org/linux/man-pages/
+LINUX302|Which Dockerfile instruction copies files?|COPY|https://man7.org/linux/man-pages/
 
 # --- Linux Sysadmin Hardcore ---
-LINUX302|Command to show per-core CPU usage in top|press 1
-LINUX302|What kernel parameter controls OOM killer aggressiveness?|vm.overcommit_memory
-LINUX302|Which file contains kernel runtime parameters?|/proc/sys
-LINUX302|Command to modify sysctl parameter at runtime|sysctl -w
-LINUX302|Persistent sysctl configuration file path|/etc/sysctl.conf
-LINUX302|Which command detects filesystem errors?|fsck
-LINUX302|Which file lists mounted filesystems?|/proc/mounts
-LINUX302|How to check open files per process?|lsof -p PID
-LINUX302|Command to show top IO processes|iotop
-LINUX302|Command to benchmark disk performance|dd if=/dev/zero of=test bs=1M count=1024
-LINUX302|Which file stores system hostname?|/etc/hostname
-LINUX302|Which program initializes networking on most distros?|NetworkManager
-LINUX302|Command to trace system calls of a process|strace -p PID
-LINUX302|Command to list all open network sockets|ss -tulnp
-LINUX302|What does exit code 0 mean?|success
-LINUX302|What kernel facility logs hardware events?|dmesg
+LINUX302|Command to show per-core CPU usage in top|press 1|https://man7.org/linux/man-pages/
+LINUX302|What kernel parameter controls OOM killer aggressiveness?|vm.overcommit_memory|https://man7.org/linux/man-pages/
+LINUX302|Which file contains kernel runtime parameters?|/proc/sys|https://man7.org/linux/man-pages/
+LINUX302|Command to modify sysctl parameter at runtime|sysctl -w|https://man7.org/linux/man-pages/
+LINUX302|Persistent sysctl configuration file path|/etc/sysctl.conf|https://man7.org/linux/man-pages/
+LINUX302|Which command detects filesystem errors?|fsck|https://man7.org/linux/man-pages/man8/fsck.8.html
+LINUX302|Which file lists mounted filesystems?|/proc/mounts|https://man7.org/linux/man-pages/
+LINUX302|How to check open files per process?|lsof -p PID|https://man7.org/linux/man-pages/man8/lsof.8.html
+LINUX302|Command to show top IO processes|iotop|https://man7.org/linux/man-pages/
+LINUX302|Command to benchmark disk performance|dd if=/dev/zero of=test bs=1M count=1024|https://man7.org/linux/man-pages/
+LINUX302|Which file stores system hostname?|/etc/hostname|https://man7.org/linux/man-pages/
+LINUX302|Which program initializes networking on most distros?|NetworkManager|https://man7.org/linux/man-pages/
+LINUX302|Command to trace system calls of a process|strace -p PID|https://man7.org/linux/man-pages/
+LINUX302|Command to list all open network sockets|ss -tulnp|https://man7.org/linux/man-pages/man8/ss.8.html
+LINUX302|What does exit code 0 mean?|success|https://man7.org/linux/man-pages/
+LINUX302|What kernel facility logs hardware events?|dmesg|https://man7.org/linux/man-pages/man1/dmesg.1.html
 
 # --- Git Hardcore ---
-LINUX302|Command to stage only part of a file interactively|git add -p
-LINUX302|Command to resolve merge conflicts using a tool|git mergetool
-LINUX302|Difference between rebase and merge|rebase rewrites history; merge preserves history
-LINUX302|Command to squash last 3 commits|git rebase -i HEAD~3
-LINUX302|Command to generate a patch file from last commit|git format-patch -1
-LINUX302|Command to apply a patch|git apply file.patch
-LINUX302|Command to show reflog|git reflog
-LINUX302|Command to restore deleted commit via reflog|git checkout <commit>
-LINUX302|Command to amend last commit without changing message|git commit --amend --no-edit
-LINUX302|Git state where a commit has no parents|root commit
+LINUX302|Command to stage only part of a file interactively|git add -p|https://git-scm.com/docs
+LINUX302|Command to resolve merge conflicts using a tool|git mergetool|https://git-scm.com/docs
+LINUX302|Difference between rebase and merge|rebase rewrites history; merge preserves history|https://man7.org/linux/man-pages/
+LINUX302|Command to squash last 3 commits|git rebase -i HEAD~3|https://git-scm.com/docs
+LINUX302|Command to generate a patch file from last commit|git format-patch -1|https://git-scm.com/docs
+LINUX302|Command to apply a patch|git apply file.patch|https://git-scm.com/docs
+LINUX302|Command to show reflog|git reflog|https://git-scm.com/docs
+LINUX302|Command to restore deleted commit via reflog|git checkout <commit>|https://git-scm.com/docs
+LINUX302|Command to amend last commit without changing message|git commit --amend --no-edit|https://git-scm.com/docs
+LINUX302|Git state where a commit has no parents|root commit|https://man7.org/linux/man-pages/
 
 # --- Terraform Hardcore ---
-TERRAFORM|Command to show Terraform execution plan|terraform plan
-LINUX302|Command that applies infrastructure changes|terraform apply
-LINUX302|Command to download providers|terraform init
-TERRAFORM|Where are Terraform state files stored by default?|terraform.tfstate
-LINUX302|What backend stores state in an S3 bucket?|s3 backend
-LINUX302|What is the purpose of remote state?|collaboration and locking
-TERRAFORM|What is Terraform drift?|real world config differs from state
-TERRAFORM|What is a Terraform module?|reusable collection of resources
+TERRAFORM|Command to show Terraform execution plan|terraform plan|https://developer.hashicorp.com/terraform/cli
+LINUX302|Command that applies infrastructure changes|terraform apply|https://developer.hashicorp.com/terraform/cli
+LINUX302|Command to download providers|terraform init|https://developer.hashicorp.com/terraform/cli
+TERRAFORM|Where are Terraform state files stored by default?|terraform.tfstate|https://developer.hashicorp.com/terraform/docs
+LINUX302|What backend stores state in an S3 bucket?|s3 backend|https://man7.org/linux/man-pages/
+LINUX302|What is the purpose of remote state?|collaboration and locking|https://man7.org/linux/man-pages/
+TERRAFORM|What is Terraform drift?|real world config differs from state|https://developer.hashicorp.com/terraform/docs
+TERRAFORM|What is a Terraform module?|reusable collection of resources|https://developer.hashicorp.com/terraform/docs
 
 # --- Ansible Hardcore ---
-LINUX302|Default inventory file location for Ansible|/etc/ansible/hosts
-LINUX302|Default Ansible config file|ansible.cfg
-LINUX302|Command to run ad-hoc ping test on hosts|ansible all -m ping
-LINUX302|What language are Ansible playbooks written in?|yaml
-LINUX302|Command to run playbook site.yml|ansible-playbook site.yml
-LINUX302|What is an Ansible role?|reusable automation unit
-LINUX302|How to encrypt secrets for Ansible?|ansible-vault
+LINUX302|Default inventory file location for Ansible|/etc/ansible/hosts|https://man7.org/linux/man-pages/
+LINUX302|Default Ansible config file|ansible.cfg|https://man7.org/linux/man-pages/
+LINUX302|Command to run ad-hoc ping test on hosts|ansible all -m ping|https://man7.org/linux/man-pages/
+LINUX302|What language are Ansible playbooks written in?|yaml|https://man7.org/linux/man-pages/
+LINUX302|Command to run playbook site.yml|ansible-playbook site.yml|https://man7.org/linux/man-pages/
+LINUX302|What is an Ansible role?|reusable automation unit|https://man7.org/linux/man-pages/
+LINUX302|How to encrypt secrets for Ansible?|ansible-vault|https://man7.org/linux/man-pages/
 
 # --- CI/CD Hardcore ---
-LINUX302|Default GitHub Actions workflow path|.github/workflows
-LINUX302|Default GitLab CI file name|.gitlab-ci.yml
-LINUX302|Default Jenkinsfile filename|Jenkinsfile
-LINUX302|GitHub Actions keyword for defining a job|jobs
-LINUX302|GitHub Actions runner OS for ubuntu|ubuntu-latest
-LINUX302|GitLab CI default stages keyword|stages
+LINUX302|Default GitHub Actions workflow path|.github/workflows|https://man7.org/linux/man-pages/
+LINUX302|Default GitLab CI file name|.gitlab-ci.yml|https://man7.org/linux/man-pages/
+LINUX302|Default Jenkinsfile filename|Jenkinsfile|https://man7.org/linux/man-pages/
+LINUX302|GitHub Actions keyword for defining a job|jobs|https://man7.org/linux/man-pages/
+LINUX302|GitHub Actions runner OS for ubuntu|ubuntu-latest|https://man7.org/linux/man-pages/
+LINUX302|GitLab CI default stages keyword|stages|https://man7.org/linux/man-pages/
 
 # --- SRE Fundamentals ---
-LINUX302|What does SLO stand for?|service level objective
-LINUX302|What does SLI stand for?|service level indicator
-LINUX302|What is an error budget?|allowable failure before SLO violation
-LINUX302|What is MTTR?|mean time to recovery
-LINUX302|What is MTBF?|mean time between failures
-LINUX302|What is the term for automated rollback based on metrics?|auto rollback
+LINUX302|What does SLO stand for?|service level objective|https://man7.org/linux/man-pages/
+LINUX302|What does SLI stand for?|service level indicator|https://man7.org/linux/man-pages/
+LINUX302|What is an error budget?|allowable failure before SLO violation|https://man7.org/linux/man-pages/
+LINUX302|What is MTTR?|mean time to recovery|https://man7.org/linux/man-pages/
+LINUX302|What is MTBF?|mean time between failures|https://man7.org/linux/man-pages/
+LINUX302|What is the term for automated rollback based on metrics?|auto rollback|https://man7.org/linux/man-pages/
 
 # --- Incident Response ---
-LINUX302|First step in incident response|identify problem
-LINUX302|What log file contains kernel panic messages?|dmesg
-LINUX302|Command to check system time drift|timedatectl
-LINUX302|What is a postmortem?|analysis after incident
-LINUX302|What is root cause analysis?|identify underlying cause
-LINUX302|What is a runbook?|step-by-step operational guide
+LINUX302|First step in incident response|identify problem|https://man7.org/linux/man-pages/
+LINUX302|What log file contains kernel panic messages?|dmesg|https://man7.org/linux/man-pages/man1/dmesg.1.html
+LINUX302|Command to check system time drift|timedatectl|https://man7.org/linux/man-pages/man1/timedatectl.1.html
+LINUX302|What is a postmortem?|analysis after incident|https://man7.org/linux/man-pages/
+LINUX302|What is root cause analysis?|identify underlying cause|https://man7.org/linux/man-pages/
+LINUX302|What is a runbook?|step-by-step operational guide|https://man7.org/linux/man-pages/
 
 
 
-LINUX302|Show command type information for ls|type ls
+LINUX302|Show command type information for ls|type ls|https://man7.org/linux/man-pages/
 
-LINUX302|Show absolute path of command ls|which ls
+LINUX302|Show absolute path of command ls|which ls|https://man7.org/linux/man-pages/
 
-LINUX302|Run previous command as sudo|sudo !!
+LINUX302|Run previous command as sudo|sudo !!|https://man7.org/linux/man-pages/
 
 # ===== Terraform Expansion =====
-TERRAFORM|Command to format Terraform files recursively|terraform fmt -recursive
-TERRAFORM|Command to validate Terraform configuration|terraform validate
-TERRAFORM|Command to show current Terraform state resources|terraform state list
-TERRAFORM|Command to show details of one state resource|terraform state show aws_instance.web
-TERRAFORM|Command to destroy all managed infrastructure|terraform destroy
-TERRAFORM|Command to refresh state only without changing infra|terraform plan -refresh-only
-TERRAFORM|File that locks provider versions|.terraform.lock.hcl
-TERRAFORM|Terraform variable file extension|.tfvars
-TERRAFORM|CLI flag to pass variable environment=dev| -var="environment=dev"
-TERRAFORM|Command to output values after apply|terraform output
-TERRAFORM|Command to output a single value named vpc_id|terraform output vpc_id
-TERRAFORM|Function to merge maps in Terraform|merge
-TERRAFORM|Meta-argument to create multiple resources from a map|for_each
-TERRAFORM|Meta-argument to create N identical resources|count
-TERRAFORM|Command to show dependency graph|terraform graph
-TERRAFORM|Backend type commonly used with AWS for remote state|s3
-TERRAFORM|State lock helper service commonly used with S3 backend|dynamodb
-TERRAFORM|Command to initialize with backend config file|terraform init -backend-config=backend.hcl
-TERRAFORM|Set Terraform log level to debug environment variable|TF_LOG=DEBUG
-TERRAFORM|Command to run plan and save it to plan file|terraform plan -out=tfplan
-TERRAFORM|Command to apply previously saved plan tfplan|terraform apply tfplan
-TERRAFORM|Function used to look up value in map with default|lookup
-TERRAFORM|Terraform command to list installed providers|terraform providers
-TERRAFORM|Directory where plugins/modules are initialized|.terraform
-TERRAFORM|Command to import existing resource into state|terraform import
+TERRAFORM|Command to format Terraform files recursively|terraform fmt -recursive|https://developer.hashicorp.com/terraform/cli
+TERRAFORM|Command to validate Terraform configuration|terraform validate|https://developer.hashicorp.com/terraform/cli
+TERRAFORM|Command to show current Terraform state resources|terraform state list|https://developer.hashicorp.com/terraform/cli
+TERRAFORM|Command to show details of one state resource|terraform state show aws_instance.web|https://developer.hashicorp.com/terraform/cli
+TERRAFORM|Command to destroy all managed infrastructure|terraform destroy|https://developer.hashicorp.com/terraform/cli
+TERRAFORM|Command to refresh state only without changing infra|terraform plan -refresh-only|https://developer.hashicorp.com/terraform/cli
+TERRAFORM|File that locks provider versions|.terraform.lock.hcl|https://developer.hashicorp.com/terraform/docs
+TERRAFORM|Terraform variable file extension|.tfvars|https://developer.hashicorp.com/terraform/docs
+TERRAFORM|CLI flag to pass variable environment=dev|-var="environment=dev"|https://developer.hashicorp.com/terraform/docs
+TERRAFORM|Command to output values after apply|terraform output|https://developer.hashicorp.com/terraform/cli
+TERRAFORM|Command to output a single value named vpc_id|terraform output vpc_id|https://developer.hashicorp.com/terraform/cli
+TERRAFORM|Function to merge maps in Terraform|merge|https://developer.hashicorp.com/terraform/docs
+TERRAFORM|Meta-argument to create multiple resources from a map|for_each|https://developer.hashicorp.com/terraform/docs
+TERRAFORM|Meta-argument to create N identical resources|count|https://developer.hashicorp.com/terraform/docs
+TERRAFORM|Command to show dependency graph|terraform graph|https://developer.hashicorp.com/terraform/cli
+TERRAFORM|Backend type commonly used with AWS for remote state|s3|https://developer.hashicorp.com/terraform/docs
+TERRAFORM|State lock helper service commonly used with S3 backend|dynamodb|https://developer.hashicorp.com/terraform/docs
+TERRAFORM|Command to initialize with backend config file|terraform init -backend-config=backend.hcl|https://developer.hashicorp.com/terraform/cli
+TERRAFORM|Set Terraform log level to debug environment variable|TF_LOG=DEBUG|https://developer.hashicorp.com/terraform/docs
+TERRAFORM|Command to run plan and save it to plan file|terraform plan -out=tfplan|https://developer.hashicorp.com/terraform/cli
+TERRAFORM|Command to apply previously saved plan tfplan|terraform apply tfplan|https://developer.hashicorp.com/terraform/cli
+TERRAFORM|Function used to look up value in map with default|lookup|https://developer.hashicorp.com/terraform/docs
+TERRAFORM|Terraform command to list installed providers|terraform providers|https://developer.hashicorp.com/terraform/cli
+TERRAFORM|Directory where plugins/modules are initialized|.terraform|https://developer.hashicorp.com/terraform/docs
+TERRAFORM|Command to import existing resource into state|terraform import|https://developer.hashicorp.com/terraform/cli
 
 # ===== Cloud: AWS =====
-AWS|AWS networking object equivalent to private virtual network|VPC
-AWS|AWS subnet type with route to internet gateway|public subnet
-AWS|AWS subnet type without direct internet route|private subnet
-AWS|AWS service that distributes traffic across targets|Elastic Load Balancer
-AWS|AWS L7 load balancer type|Application Load Balancer
-AWS|AWS L4 load balancer type|Network Load Balancer
-AWS|AWS service for identity and access management|IAM
-AWS|Policy type attached directly to a user or role|IAM policy
-AWS|AWS service for auto scaling EC2 instances|Auto Scaling Group
-AWS|AWS metric and alarm service|CloudWatch
-AWS|AWS log service for application and system logs|CloudWatch Logs
-AWS|AWS managed DNS service|Route 53
-AWS|AWS service to block unwanted web traffic at edge|AWS WAF
-AWS|AWS service for centralized trail of API calls|CloudTrail
-AWS|AWS service for managed Kubernetes|EKS
-AWS|AWS service for managed relational database|RDS
-AWS|AWS object storage service|S3
-AWS|AWS private connectivity to S3 and DynamoDB from VPC|VPC Gateway Endpoint
-AWS|AWS private endpoint service using ENI in subnet|Interface Endpoint
-AWS|Security construct that acts as stateful instance firewall|Security Group
-AWS|Network ACL behavior|stateless
-AWS|Best-practice principal for apps needing AWS permissions|IAM role
-AWS|Auto scaling trigger usually based on which metric|CPUUtilization
-AWS|Service to store app parameters and secrets|SSM Parameter Store
-AWS|Managed secrets storage service in AWS|Secrets Manager
+AWS|AWS networking object equivalent to private virtual network|VPC|https://docs.aws.amazon.com/
+AWS|AWS subnet type with route to internet gateway|public subnet|https://docs.aws.amazon.com/
+AWS|AWS subnet type without direct internet route|private subnet|https://docs.aws.amazon.com/
+AWS|AWS service that distributes traffic across targets|Elastic Load Balancer|https://docs.aws.amazon.com/
+AWS|AWS L7 load balancer type|Application Load Balancer|https://docs.aws.amazon.com/
+AWS|AWS L4 load balancer type|Network Load Balancer|https://docs.aws.amazon.com/
+AWS|AWS service for identity and access management|IAM|https://docs.aws.amazon.com/
+AWS|Policy type attached directly to a user or role|IAM policy|https://docs.aws.amazon.com/
+AWS|AWS service for auto scaling EC2 instances|Auto Scaling Group|https://docs.aws.amazon.com/
+AWS|AWS metric and alarm service|CloudWatch|https://docs.aws.amazon.com/
+AWS|AWS log service for application and system logs|CloudWatch Logs|https://docs.aws.amazon.com/
+AWS|AWS managed DNS service|Route 53|https://docs.aws.amazon.com/
+AWS|AWS service to block unwanted web traffic at edge|AWS WAF|https://docs.aws.amazon.com/
+AWS|AWS service for centralized trail of API calls|CloudTrail|https://docs.aws.amazon.com/
+AWS|AWS service for managed Kubernetes|EKS|https://docs.aws.amazon.com/
+AWS|AWS service for managed relational database|RDS|https://docs.aws.amazon.com/
+AWS|AWS object storage service|S3|https://docs.aws.amazon.com/
+AWS|AWS private connectivity to S3 and DynamoDB from VPC|VPC Gateway Endpoint|https://docs.aws.amazon.com/
+AWS|AWS private endpoint service using ENI in subnet|Interface Endpoint|https://docs.aws.amazon.com/
+AWS|Security construct that acts as stateful instance firewall|Security Group|https://docs.aws.amazon.com/
+AWS|Network ACL behavior|stateless|https://docs.aws.amazon.com/
+AWS|Best-practice principal for apps needing AWS permissions|IAM role|https://docs.aws.amazon.com/
+AWS|Auto scaling trigger usually based on which metric|CPUUtilization|https://docs.aws.amazon.com/
+AWS|Service to store app parameters and secrets|SSM Parameter Store|https://docs.aws.amazon.com/
+AWS|Managed secrets storage service in AWS|Secrets Manager|https://docs.aws.amazon.com/
 
 # ===== Cloud: GCP =====
-GCP|GCP networking object equivalent to VPC|VPC Network
-GCP|GCP regional subnetwork resource name|subnet
-GCP|GCP global HTTP(S) load balancer operates at layer|7
-GCP|GCP TCP/UDP load balancer operates at layer|4
-GCP|GCP identity and access management service name|Cloud IAM
-GCP|GCP auto scaling feature for VM instance groups|Autoscaler
-GCP|GCP monitoring service|Cloud Monitoring
-GCP|GCP logging service|Cloud Logging
-GCP|GCP audit log service category|Cloud Audit Logs
-GCP|GCP managed Kubernetes service|GKE
-GCP|GCP managed relational database service|Cloud SQL
-GCP|GCP object storage service|Cloud Storage
-GCP|GCP service account credential identity type|service account
-GCP|GCP firewall rules are attached to|VPC network
-GCP|GCP private connectivity from VPC to Google APIs feature|Private Google Access
-GCP|GCP equivalent of AWS route53|Cloud DNS
-GCP|GCP equivalent of AWS WAF service|Cloud Armor
-GCP|GCP managed pubsub messaging service|Pub/Sub
-GCP|Autoscaling metric commonly used for MIG|CPU utilization
-GCP|GCP concept for grouping resources and billing|project
+GCP|GCP networking object equivalent to VPC|VPC Network|https://cloud.google.com/docs
+GCP|GCP regional subnetwork resource name|subnet|https://cloud.google.com/docs
+GCP|GCP global HTTP(S) load balancer operates at layer|7|https://cloud.google.com/docs
+GCP|GCP TCP/UDP load balancer operates at layer|4|https://cloud.google.com/docs
+GCP|GCP identity and access management service name|Cloud IAM|https://cloud.google.com/docs
+GCP|GCP auto scaling feature for VM instance groups|Autoscaler|https://cloud.google.com/docs
+GCP|GCP monitoring service|Cloud Monitoring|https://cloud.google.com/docs
+GCP|GCP logging service|Cloud Logging|https://cloud.google.com/docs
+GCP|GCP audit log service category|Cloud Audit Logs|https://cloud.google.com/docs
+GCP|GCP managed Kubernetes service|GKE|https://cloud.google.com/docs
+GCP|GCP managed relational database service|Cloud SQL|https://cloud.google.com/docs
+GCP|GCP object storage service|Cloud Storage|https://cloud.google.com/docs
+GCP|GCP service account credential identity type|service account|https://cloud.google.com/docs
+GCP|GCP firewall rules are attached to|VPC network|https://cloud.google.com/docs
+GCP|GCP private connectivity from VPC to Google APIs feature|Private Google Access|https://cloud.google.com/docs
+GCP|GCP equivalent of AWS route53|Cloud DNS|https://cloud.google.com/docs
+GCP|GCP equivalent of AWS WAF service|Cloud Armor|https://cloud.google.com/docs
+GCP|GCP managed pubsub messaging service|Pub/Sub|https://cloud.google.com/docs
+GCP|Autoscaling metric commonly used for MIG|CPU utilization|https://cloud.google.com/docs
+GCP|GCP concept for grouping resources and billing|project|https://cloud.google.com/docs
 
 # ===== Cloud: OCI =====
-OCI|OCI networking object equivalent to AWS VPC|VCN
-OCI|OCI subnet visibility option with public IP assignment|public subnet
-OCI|OCI subnet visibility option without public IP|private subnet
-OCI|OCI load balancer service name|Load Balancer
-OCI|OCI identity and access management service|IAM
-OCI|OCI policy attachment scope for permissions|compartment
-OCI|OCI auto scaling feature name|Auto Scaling
-OCI|OCI monitoring service name|Monitoring
-OCI|OCI centralized logging service name|Logging
-OCI|OCI managed Kubernetes service|OKE
-OCI|OCI managed relational database service|Autonomous Database
-OCI|OCI object storage service|Object Storage
-OCI|OCI security list behavior similar to NACL|stateless and stateful rules supported
-OCI|OCI construct similar to AWS Security Group|Network Security Group
-OCI|OCI DNS service name|DNS
-OCI|OCI private connectivity service to on-prem|FastConnect
-OCI|OCI service for metrics alarms notifications|Monitoring Alarms
-OCI|OCI governance boundary for resources|compartment
-OCI|OCI equivalent of route table target for internet|Internet Gateway
-OCI|OCI gateway for private access to Oracle services|Service Gateway
+OCI|OCI networking object equivalent to AWS VPC|VCN|https://docs.oracle.com/en-us/iaas/
+OCI|OCI subnet visibility option with public IP assignment|public subnet|https://docs.oracle.com/en-us/iaas/
+OCI|OCI subnet visibility option without public IP|private subnet|https://docs.oracle.com/en-us/iaas/
+OCI|OCI load balancer service name|Load Balancer|https://docs.oracle.com/en-us/iaas/
+OCI|OCI identity and access management service|IAM|https://docs.oracle.com/en-us/iaas/
+OCI|OCI policy attachment scope for permissions|compartment|https://docs.oracle.com/en-us/iaas/
+OCI|OCI auto scaling feature name|Auto Scaling|https://docs.oracle.com/en-us/iaas/
+OCI|OCI monitoring service name|Monitoring|https://docs.oracle.com/en-us/iaas/
+OCI|OCI centralized logging service name|Logging|https://docs.oracle.com/en-us/iaas/
+OCI|OCI managed Kubernetes service|OKE|https://docs.oracle.com/en-us/iaas/
+OCI|OCI managed relational database service|Autonomous Database|https://docs.oracle.com/en-us/iaas/
+OCI|OCI object storage service|Object Storage|https://docs.oracle.com/en-us/iaas/
+OCI|OCI security list behavior similar to NACL|stateless and stateful rules supported|https://docs.oracle.com/en-us/iaas/
+OCI|OCI construct similar to AWS Security Group|Network Security Group|https://docs.oracle.com/en-us/iaas/
+OCI|OCI DNS service name|DNS|https://docs.oracle.com/en-us/iaas/
+OCI|OCI private connectivity service to on-prem|FastConnect|https://docs.oracle.com/en-us/iaas/
+OCI|OCI service for metrics alarms notifications|Monitoring Alarms|https://docs.oracle.com/en-us/iaas/
+OCI|OCI governance boundary for resources|compartment|https://docs.oracle.com/en-us/iaas/
+OCI|OCI equivalent of route table target for internet|Internet Gateway|https://docs.oracle.com/en-us/iaas/
+OCI|OCI gateway for private access to Oracle services|Service Gateway|https://docs.oracle.com/en-us/iaas/
+
+# ===== Cloud Expansion with Official Docs References =====
+AWS|AWS service that enables private connection from on-prem to VPC without internet|Direct Connect|https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html
+AWS|AWS service mesh for microservices on ECS/EKS|App Mesh|https://docs.aws.amazon.com/app-mesh/latest/userguide/what-is-app-mesh.html
+AWS|AWS managed threat detection service|GuardDuty|https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html
+AWS|AWS service for central security findings across accounts|Security Hub|https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html
+AWS|AWS service for distributed denial of service protection|AWS Shield|https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html
+AWS|AWS service for secret rotation and storage|Secrets Manager|https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html
+AWS|AWS service for centralized config compliance checks|AWS Config|https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html
+AWS|AWS service for serverless event routing|EventBridge|https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html
+AWS|AWS service to manage container images|ECR|https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html
+AWS|AWS service for private DNS and health checks|Route 53|https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html
+AWS|AWS observability service for tracing distributed apps|X-Ray|https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html
+AWS|AWS load balancer type that supports WebSockets and path routing|Application Load Balancer|https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html
+
+GCP|GCP service for private service networking to Google managed services|Private Service Connect|https://cloud.google.com/vpc/docs/private-service-connect
+GCP|GCP service for identity-aware access to applications|Identity-Aware Proxy|https://cloud.google.com/iap/docs/concepts-overview
+GCP|GCP service for threat detection in cloud resources|Security Command Center|https://cloud.google.com/security-command-center/docs/concepts-security-command-center-overview
+GCP|GCP service for centralized key management|Cloud KMS|https://cloud.google.com/kms/docs
+GCP|GCP service for managed artifact and container registry|Artifact Registry|https://cloud.google.com/artifact-registry/docs/overview
+GCP|GCP service for distributed tracing|Cloud Trace|https://cloud.google.com/trace/docs/overview
+GCP|GCP service for managed service mesh on GKE|Anthos Service Mesh|https://cloud.google.com/service-mesh/docs/overview
+GCP|GCP service for event-driven workflows between services|Eventarc|https://cloud.google.com/eventarc/docs/overview
+GCP|GCP global external HTTP(S) load balancer dataplane tier|Premium Tier|https://cloud.google.com/load-balancing/docs/negs
+GCP|GCP service for policy-based organization governance|Organization Policy Service|https://cloud.google.com/resource-manager/docs/organization-policy/overview
+GCP|GCP service for collecting and routing logs|Cloud Logging|https://cloud.google.com/logging/docs
+GCP|GCP service for autoscaling Kubernetes workloads by custom metrics|Horizontal Pod Autoscaler|https://cloud.google.com/kubernetes-engine/docs/concepts/horizontalpodautoscaler
+
+OCI|OCI service for managed web application firewall|Web Application Firewall|https://docs.oracle.com/en-us/iaas/Content/WAF/Concepts/overview.htm
+OCI|OCI service for threat detection and security posture|Cloud Guard|https://docs.oracle.com/en-us/iaas/cloud-guard/home.htm
+OCI|OCI service for centralized key management|Vault|https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm
+OCI|OCI service for API gateway management|API Gateway|https://docs.oracle.com/en-us/iaas/Content/APIGateway/Concepts/apigatewayoverview.htm
+OCI|OCI service for event routing and automation|Events|https://docs.oracle.com/en-us/iaas/Content/Events/Concepts/eventsgetstarted.htm
+OCI|OCI service for collecting and querying logs|Logging|https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/loggingoverview.htm
+OCI|OCI service for scalable serverless functions|Functions|https://docs.oracle.com/en-us/iaas/Content/Functions/Concepts/functionsoverview.htm
+OCI|OCI service for centralized observability and dashboards|Observability & Management|https://docs.oracle.com/en-us/iaas/observability-management/home.htm
+OCI|OCI service for image and artifact registry|OCIR|https://docs.oracle.com/en-us/iaas/Content/Registry/home.htm
+OCI|OCI load balancer type for private internal traffic|private load balancer|https://docs.oracle.com/en-us/iaas/Content/Balance/Concepts/loadbalancingoverview.htm
+OCI|OCI feature for autoscaling instance pools|instance pool autoscaling|https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/autoscalinginstancepools.htm
+OCI|OCI service for IAM federation with external identity providers|Identity Domains|https://docs.oracle.com/en-us/iaas/Content/Identity/home.htm
