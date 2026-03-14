@@ -176,41 +176,60 @@ choose_category() {
   echo "Player: Lv.$LEVEL $(rank_title) | XP: $XP | Best Streak: $BEST_STREAK | Days: $PLAY_DAYS"
   echo
   echo "Choose a category:"
-  local i=1
-  for cat in "${CATEGORIES[@]}"; do
-    printf "  %2d) %s\n" "$i" "$cat"
-    ((i++))
-  done
-
-  # Hardcore DevOps mode (special)
-  printf "  %2d) %s\n" "$i" "HARDCORE DEVOPS MODE 💀"
-  local hardcore_index=$i
-  ((i++))
-
-  # ALL mixed
-  printf "  %2d) %s\n" "$i" "ALL (mixed)"
-  local all_index=$i
-
+  echo "   1) Linux 101"
+  echo "   2) Linux 102"
+  echo "   3) Linux 201"
+  echo "   4) Linux 202"
+  echo "   5) Linux 301"
+  echo "   6) Linux 302"
+  echo "   7) Docker 😍"
+  echo "   8) Terraform"
+  echo "   9) Kubernetes"
+  echo "  10) Git"
+  echo "  11) Cloud"
   echo
 
   local choice
   while true; do
     read -rp "Enter number: " choice
-    if [[ "$choice" =~ ^[0-9]+$ ]]; then
-      if (( choice >= 1 && choice <= i )); then
-        break
-      fi
+    if [[ "$choice" =~ ^[0-9]+$ ]] && (( choice >= 1 && choice <= 11 )); then
+      break
     fi
-    echo "Invalid choice. Please enter a number from 1 to $i."
+    echo "Invalid choice. Please enter a number from 1 to 11."
   done
 
-  if (( choice == hardcore_index )); then
-    SELECTED_CATEGORY="__HARDCORE__"
-  elif (( choice == all_index )); then
-    SELECTED_CATEGORY="__ALL__"
-  else
-    SELECTED_CATEGORY="${CATEGORIES[choice-1]}"
-  fi
+  case "$choice" in
+    1) SELECTED_CATEGORY="LINUX101" ;;
+    2) SELECTED_CATEGORY="LINUX102" ;;
+    3) SELECTED_CATEGORY="LINUX201" ;;
+    4) SELECTED_CATEGORY="LINUX202" ;;
+    5) SELECTED_CATEGORY="LINUX301" ;;
+    6) SELECTED_CATEGORY="LINUX302" ;;
+    7) SELECTED_CATEGORY="DOCKER" ;;
+    8) SELECTED_CATEGORY="TERRAFORM" ;;
+    9) SELECTED_CATEGORY="KUBERNETES" ;;
+    10) SELECTED_CATEGORY="GIT" ;;
+    11)
+      echo
+      echo "Choose cloud provider:"
+      echo "  1) AWS"
+      echo "  2) GCP"
+      echo "  3) OCI"
+      local cloud_choice
+      while true; do
+        read -rp "Enter provider number: " cloud_choice
+        if [[ "$cloud_choice" =~ ^[0-9]+$ ]] && (( cloud_choice >= 1 && cloud_choice <= 3 )); then
+          break
+        fi
+        echo "Invalid choice. Please enter 1, 2, or 3."
+      done
+      case "$cloud_choice" in
+        1) SELECTED_CATEGORY="AWS" ;;
+        2) SELECTED_CATEGORY="GCP" ;;
+        3) SELECTED_CATEGORY="OCI" ;;
+      esac
+      ;;
+  esac
 }
 
 # ------------ Collect questions for selected category ----------------
@@ -236,13 +255,11 @@ collect_questions() {
 
     [[ -z "$cat" || -z "$question" || -z "$answer" ]] && continue
 
-    if [[ "$SELECTED_CATEGORY" == "__ALL__" ]]; then
-      QUESTIONS+=("$cat|$question|$answer")
-    elif [[ "$SELECTED_CATEGORY" == "__HARDCORE__" ]]; then
-      [[ "$cat" == "DEVOPS-HARDCORE" ]] && QUESTIONS+=("$cat|$question|$answer")
-    else
-      [[ "$cat" == "$SELECTED_CATEGORY" ]] && QUESTIONS+=("$cat|$question|$answer")
-    fi
+    case "$SELECTED_CATEGORY" in
+      LINUX101|LINUX102|LINUX201|LINUX202|LINUX301|LINUX302|DOCKER|TERRAFORM|KUBERNETES|GIT|AWS|GCP|OCI)
+        [[ "$cat" == "$SELECTED_CATEGORY" ]] && QUESTIONS+=("$cat|$question|$answer")
+        ;;
+    esac
   done
 
   if (( ${#QUESTIONS[@]} == 0 )); then
@@ -274,13 +291,22 @@ run_quiz() {
   local hearts=$SESSION_HEARTS
 
   echo
-  if [[ "$SELECTED_CATEGORY" == "__ALL__" ]]; then
-    echo "Category: ALL"
-  elif [[ "$SELECTED_CATEGORY" == "__HARDCORE__" ]]; then
-    echo "Category: HARDCORE DEVOPS EXAM MODE 💀"
-  else
-    echo "Category: $SELECTED_CATEGORY"
-  fi
+  case "$SELECTED_CATEGORY" in
+    LINUX101) echo "Category: Linux 101" ;;
+    LINUX102) echo "Category: Linux 102" ;;
+    LINUX201) echo "Category: Linux 201" ;;
+    LINUX202) echo "Category: Linux 202" ;;
+    LINUX301) echo "Category: Linux 301" ;;
+    LINUX302) echo "Category: Linux 302" ;;
+    DOCKER) echo "Category: Docker 😍" ;;
+    TERRAFORM) echo "Category: Terraform" ;;
+    KUBERNETES) echo "Category: Kubernetes" ;;
+    GIT) echo "Category: Git" ;;
+    AWS) echo "Category: Cloud / AWS" ;;
+    GCP) echo "Category: Cloud / GCP" ;;
+    OCI) echo "Category: Cloud / OCI" ;;
+    *) echo "Category: $SELECTED_CATEGORY" ;;
+  esac
   echo "Total questions: $total"
   echo
   echo "Game Rules:"

@@ -1,385 +1,385 @@
 # ===== Beginner Pack (50) =====
-BEGINNER|List files in current directory|ls
-BEGINNER|List files in long format|ls -l
-BEGINNER|List all files including hidden|ls -a
-BEGINNER|List all files including hidden in long format|ls -la
-BEGINNER|Show current working directory|pwd
-BEGINNER|Change to home directory|cd ~
-BEGINNER|Change to parent directory|cd ..
-BEGINNER|Change to /var/log directory|cd /var/log
-BEGINNER|Create directory testdir|mkdir testdir
-BEGINNER|Create nested directories a/b/c|mkdir -p a/b/c
-BEGINNER|Remove empty directory olddir|rmdir olddir
-BEGINNER|Create empty file notes.txt|touch notes.txt
-BEGINNER|Show contents of file.txt|cat file.txt
-BEGINNER|View file.txt page by page|less file.txt
-BEGINNER|Show first 10 lines of file.txt|head file.txt
-BEGINNER|Show last 10 lines of file.txt|tail file.txt
-BEGINNER|Copy file a.txt to b.txt|cp a.txt b.txt
-BEGINNER|Copy a.txt into backup directory|cp a.txt backup/
-BEGINNER|Copy folder src to dest recursively|cp -r src dest
-BEGINNER|Move file a.txt to backup directory|mv a.txt backup/
-BEGINNER|Rename file old.txt to new.txt|mv old.txt new.txt
-BEGINNER|Remove file unwanted.txt|rm unwanted.txt
-BEGINNER|Remove directory tmp and its contents|rm -rf tmp
-BEGINNER|Print a message hello world|echo hello world
-BEGINNER|Show command history|history
-BEGINNER|Clear the terminal screen|clear
-BEGINNER|Show manual page for ls|man ls
-BEGINNER|Show current date|date
-BEGINNER|Show calendar for this month|cal
-BEGINNER|Print current user name|whoami
-BEGINNER|List logged-in users|who
-BEGINNER|Show environment variables|env
-BEGINNER|Show PATH variable|echo $PATH
-BEGINNER|Search for error in log.txt|grep error log.txt
-BEGINNER|Count lines in file.txt|wc -l file.txt
-BEGINNER|Count words in file.txt|wc -w file.txt
-BEGINNER|List files sorted by time|ls -lt
-BEGINNER|List files sorted by size|ls -lhS
-BEGINNER|Show disk usage of all mounted filesystems|df -h
-BEGINNER|Show disk usage of current directory|du -sh .
-BEGINNER|Show system kernel version|uname -r
-BEGINNER|Show all system information|uname -a
-BEGINNER|Show last 20 lines of syslog|tail -n 20 /var/log/syslog
-BEGINNER|Repeat last command|!!
-BEGINNER|Run last command starting with ls|!ls
-BEGINNER|Exit the shell|exit
-BEGINNER|Redirect echo output to file|echo hello > file.txt
-BEGINNER|Append output to file.txt|echo hello >> file.txt
-BEGINNER|Redirect stderr to error.log|ls /nope 2>error.log
-BEGINNER|Pipe ls output into less|ls | less
+LINUX101|List files in current directory|ls
+LINUX101|List files in long format|ls -l
+LINUX101|List all files including hidden|ls -a
+LINUX101|List all files including hidden in long format|ls -la
+LINUX101|Show current working directory|pwd
+LINUX101|Change to home directory|cd ~
+LINUX101|Change to parent directory|cd ..
+LINUX101|Change to /var/log directory|cd /var/log
+LINUX101|Create directory testdir|mkdir testdir
+LINUX101|Create nested directories a/b/c|mkdir -p a/b/c
+LINUX101|Remove empty directory olddir|rmdir olddir
+LINUX101|Create empty file notes.txt|touch notes.txt
+LINUX101|Show contents of file.txt|cat file.txt
+LINUX101|View file.txt page by page|less file.txt
+LINUX101|Show first 10 lines of file.txt|head file.txt
+LINUX101|Show last 10 lines of file.txt|tail file.txt
+LINUX101|Copy file a.txt to b.txt|cp a.txt b.txt
+LINUX101|Copy a.txt into backup directory|cp a.txt backup/
+LINUX101|Copy folder src to dest recursively|cp -r src dest
+LINUX101|Move file a.txt to backup directory|mv a.txt backup/
+LINUX101|Rename file old.txt to new.txt|mv old.txt new.txt
+LINUX101|Remove file unwanted.txt|rm unwanted.txt
+LINUX101|Remove directory tmp and its contents|rm -rf tmp
+LINUX101|Print a message hello world|echo hello world
+LINUX101|Show command history|history
+LINUX101|Clear the terminal screen|clear
+LINUX101|Show manual page for ls|man ls
+LINUX101|Show current date|date
+LINUX101|Show calendar for this month|cal
+LINUX101|Print current user name|whoami
+LINUX101|List logged-in users|who
+LINUX101|Show environment variables|env
+LINUX101|Show PATH variable|echo $PATH
+LINUX101|Search for error in log.txt|grep error log.txt
+LINUX101|Count lines in file.txt|wc -l file.txt
+LINUX101|Count words in file.txt|wc -w file.txt
+LINUX101|List files sorted by time|ls -lt
+LINUX101|List files sorted by size|ls -lhS
+LINUX101|Show disk usage of all mounted filesystems|df -h
+LINUX101|Show disk usage of current directory|du -sh .
+LINUX101|Show system kernel version|uname -r
+LINUX101|Show all system information|uname -a
+LINUX101|Show last 20 lines of syslog|tail -n 20 /var/log/syslog
+LINUX101|Repeat last command|!!
+LINUX101|Run last command starting with ls|!ls
+LINUX101|Exit the shell|exit
+LINUX101|Redirect echo output to file|echo hello > file.txt
+LINUX101|Append output to file.txt|echo hello >> file.txt
+LINUX101|Redirect stderr to error.log|ls /nope 2>error.log
+LINUX101|Pipe ls output into less|ls | less
 
 # ===== Intermediate Pack (70) =====
-INTERMEDIATE|Find file named myfile.txt|find . -name "myfile.txt"
-INTERMEDIATE|Find all .log files|find . -name "*.log"
-INTERMEDIATE|Find files larger than 10MB|find . -size +10M
-INTERMEDIATE|Find directories named backup|find . -type d -name "backup"
-INTERMEDIATE|Find files modified in last day|find . -mtime -1
-INTERMEDIATE|Recursive search for TODO|grep -r "TODO" .
-INTERMEDIATE|Case-insensitive search for error|grep -i error log.txt
-INTERMEDIATE|Show non-matching lines|grep -v foo file.txt
-INTERMEDIATE|Show grep matches with line numbers|grep -n error log.txt
-INTERMEDIATE|Sort file.txt|sort file.txt
-INTERMEDIATE|Sort unique lines|sort file.txt | uniq
-INTERMEDIATE|Count frequency of each line|sort file.txt | uniq -c
-INTERMEDIATE|Cut first column|cut -d' ' -f1 file.txt
-INTERMEDIATE|Cut second field from /etc/passwd|cut -d':' -f2 /etc/passwd
-INTERMEDIATE|Replace foo with bar|sed 's/foo/bar/g' file.txt
-INTERMEDIATE|Delete lines with DEBUG|sed '/DEBUG/d' file.txt
-INTERMEDIATE|Print first column using awk|awk '{print $1}' file.txt
-INTERMEDIATE|Print lines where 3rd field > 100|awk '$3 > 100' file.txt
-INTERMEDIATE|Show first 5 processes|ps aux | head -n 5
-INTERMEDIATE|Top 10 largest files|ls -lhS | head -n 10
-INTERMEDIATE|Compress file|gzip data.txt
-INTERMEDIATE|Uncompress file|gunzip data.txt.gz
-INTERMEDIATE|Create tar archive|tar cf backup.tar folder
-INTERMEDIATE|Extract tar archive|tar xf backup.tar
-INTERMEDIATE|Create gzip tar|tar czf backup.tar.gz folder
-INTERMEDIATE|Extract gzip tar|tar xzf backup.tar.gz
-INTERMEDIATE|Create bzip2 tar|tar cjf backup.tar.bz2 folder
-INTERMEDIATE|Extract bzip2 tar|tar xjf backup.tar.bz2
-INTERMEDIATE|List running processes|ps aux
-INTERMEDIATE|Filter ssh processes|ps aux | grep ssh
-INTERMEDIATE|Show process tree|pstree
-INTERMEDIATE|Kill PID 1234|kill 1234
-INTERMEDIATE|Force kill PID 1234|kill -9 1234
-INTERMEDIATE|Show open files on port 80|sudo lsof -i :80
-INTERMEDIATE|Show open files of PID 1234|lsof -p 1234
-INTERMEDIATE|Show listening TCP ports|ss -tln
-INTERMEDIATE|Show IP addresses|ip addr
-INTERMEDIATE|Show default route|ip route
-INTERMEDIATE|Ping example.com|ping -c 4 example.com
-INTERMEDIATE|Download file with curl|curl -O https://example.com/file.txt
-INTERMEDIATE|Download file using wget|wget https://example.com/file.txt
-INTERMEDIATE|Show symbolic permissions for file|namei -l file.txt
-INTERMEDIATE|Change permissions to 600|chmod 600 file.txt
-INTERMEDIATE|Change script to 755|chmod 755 script.sh
-INTERMEDIATE|Change owner to alice|sudo chown alice file.txt
-INTERMEDIATE|Change owner and group|sudo chown alice:dev file.txt
-INTERMEDIATE|Show current umask|umask
-INTERMEDIATE|Set umask to 022|umask 022
-INTERMEDIATE|Create hard link|ln original.txt newfile
-INTERMEDIATE|Create symbolic link|ln -s original.txt link.txt
-INTERMEDIATE|Show inode numbers|ls -i
-INTERMEDIATE|Display last 50 journalctl lines|sudo journalctl -n 50
-INTERMEDIATE|Show boot messages|dmesg | less
-INTERMEDIATE|Monitor kernel messages|dmesg -w
-INTERMEDIATE|List loaded modules|lsmod
-INTERMEDIATE|Show ext4 module info|modinfo ext4
-INTERMEDIATE|Show mounted filesystems|mount | column -t
-INTERMEDIATE|Free memory|free -h
-INTERMEDIATE|Top CPU processes|ps aux --sort=-%cpu | head
-INTERMEDIATE|Top memory processes|ps aux --sort=-%mem | head
-INTERMEDIATE|Schedule job in 5 minutes|echo "echo hi" | at now + 5 minutes
+LINUX201|Find file named myfile.txt|find . -name "myfile.txt"
+LINUX201|Find all .log files|find . -name "*.log"
+LINUX201|Find files larger than 10MB|find . -size +10M
+LINUX201|Find directories named backup|find . -type d -name "backup"
+LINUX201|Find files modified in last day|find . -mtime -1
+LINUX201|Recursive search for TODO|grep -r "TODO" .
+LINUX201|Case-insensitive search for error|grep -i error log.txt
+LINUX201|Show non-matching lines|grep -v foo file.txt
+LINUX201|Show grep matches with line numbers|grep -n error log.txt
+LINUX201|Sort file.txt|sort file.txt
+LINUX201|Sort unique lines|sort file.txt | uniq
+LINUX201|Count frequency of each line|sort file.txt | uniq -c
+LINUX201|Cut first column|cut -d' ' -f1 file.txt
+LINUX201|Cut second field from /etc/passwd|cut -d':' -f2 /etc/passwd
+LINUX201|Replace foo with bar|sed 's/foo/bar/g' file.txt
+LINUX201|Delete lines with DEBUG|sed '/DEBUG/d' file.txt
+LINUX201|Print first column using awk|awk '{print $1}' file.txt
+LINUX201|Print lines where 3rd field > 100|awk '$3 > 100' file.txt
+LINUX201|Show first 5 processes|ps aux | head -n 5
+LINUX201|Top 10 largest files|ls -lhS | head -n 10
+LINUX201|Compress file|gzip data.txt
+LINUX201|Uncompress file|gunzip data.txt.gz
+LINUX201|Create tar archive|tar cf backup.tar folder
+LINUX201|Extract tar archive|tar xf backup.tar
+LINUX201|Create gzip tar|tar czf backup.tar.gz folder
+LINUX201|Extract gzip tar|tar xzf backup.tar.gz
+LINUX201|Create bzip2 tar|tar cjf backup.tar.bz2 folder
+LINUX201|Extract bzip2 tar|tar xjf backup.tar.bz2
+LINUX201|List running processes|ps aux
+LINUX201|Filter ssh processes|ps aux | grep ssh
+LINUX201|Show process tree|pstree
+LINUX201|Kill PID 1234|kill 1234
+LINUX201|Force kill PID 1234|kill -9 1234
+LINUX201|Show open files on port 80|sudo lsof -i :80
+LINUX201|Show open files of PID 1234|lsof -p 1234
+LINUX201|Show listening TCP ports|ss -tln
+LINUX201|Show IP addresses|ip addr
+LINUX201|Show default route|ip route
+LINUX201|Ping example.com|ping -c 4 example.com
+LINUX201|Download file with curl|curl -O https://example.com/file.txt
+LINUX201|Download file using wget|wget https://example.com/file.txt
+LINUX201|Show symbolic permissions for file|namei -l file.txt
+LINUX201|Change permissions to 600|chmod 600 file.txt
+LINUX201|Change script to 755|chmod 755 script.sh
+LINUX201|Change owner to alice|sudo chown alice file.txt
+LINUX201|Change owner and group|sudo chown alice:dev file.txt
+LINUX201|Show current umask|umask
+LINUX201|Set umask to 022|umask 022
+LINUX201|Create hard link|ln original.txt newfile
+LINUX201|Create symbolic link|ln -s original.txt link.txt
+LINUX201|Show inode numbers|ls -i
+LINUX201|Display last 50 journalctl lines|sudo journalctl -n 50
+LINUX201|Show boot messages|dmesg | less
+LINUX201|Monitor kernel messages|dmesg -w
+LINUX201|List loaded modules|lsmod
+LINUX201|Show ext4 module info|modinfo ext4
+LINUX201|Show mounted filesystems|mount | column -t
+LINUX201|Free memory|free -h
+LINUX201|Top CPU processes|ps aux --sort=-%cpu | head
+LINUX201|Top memory processes|ps aux --sort=-%mem | head
+LINUX201|Schedule job in 5 minutes|echo "echo hi" | at now + 5 minutes
 
 # ===== Advanced Pack (100) =====
-ADVANCED|Sed print lines 10-20|sed -n '10,20p' file.txt
-ADVANCED|Sed delete first line|sed -i '1d' file.txt
-ADVANCED|Sed replace foo globally|sed -i 's/foo/bar/g' *.txt
-ADVANCED|Awk match regex ERROR|awk '/^ERROR/' log.txt
-ADVANCED|Awk sum 3rd column|awk '{sum+=$3} END {print sum}' file.txt
-ADVANCED|Unique IPs from log|awk '{print $1}' access.log | sort -u
-ADVANCED|Sort processes by memory|ps aux --sort=-%mem | head
-ADVANCED|Sort processes by CPU|ps aux --sort=-%cpu | head
-ADVANCED|Top 5 largest files|find . -type f -printf '%s %p\n' | sort -nr | head -n 5
-ADVANCED|Find empty files|find . -type f -empty
-ADVANCED|Find world-writable files|find / -type f -perm -0002 2>/dev/null
-ADVANCED|Find files owned by alice|find / -user alice 2>/dev/null
-ADVANCED|Record terminal session|script typescript
-ADVANCED|Replay terminal session|scriptreplay typescript
-ADVANCED|Show login history|last
-ADVANCED|Show failed logins|sudo lastb
-ADVANCED|Monitor logs in real time|sudo journalctl -f
-ADVANCED|Logs for ssh.service|sudo journalctl -u ssh.service
-ADVANCED|List systemd services|systemctl list-units --type=service
-ADVANCED|Status of sshd|systemctl status sshd
-ADVANCED|Restart sshd|sudo systemctl restart sshd
-ADVANCED|Enable sshd|sudo systemctl enable sshd
-ADVANCED|Disable sshd|sudo systemctl disable sshd
-ADVANCED|List systemd timers|systemctl list-timers
-ADVANCED|Show listening sockets|sudo ss -tulpn
-ADVANCED|Trace ls system calls|strace ls
-ADVANCED|Time command|time ls -R
-ADVANCED|Check SHA256 of iso|sha256sum file.iso
-ADVANCED|Generate random 32-byte hex|head -c 32 /dev/urandom | xxd -p
-ADVANCED|Lock user alice|sudo passwd -l alice
-ADVANCED|Unlock user alice|sudo passwd -u alice
-ADVANCED|Add user alice|sudo useradd alice
-ADVANCED|Add user alice with home|sudo useradd -m alice
-ADVANCED|Delete user alice|sudo userdel alice
-ADVANCED|Delete user alice and home|sudo userdel -r alice
-ADVANCED|Add alice to sudo group|sudo usermod -aG sudo alice
-ADVANCED|Show groups for alice|groups alice
-ADVANCED|Create group devs|sudo groupadd devs
-ADVANCED|Change alice primary group|sudo usermod -g devs alice
-ADVANCED|Change ownership recursively|sudo chown -R user:group path
-ADVANCED|Set ACL for group g|setfacl -m g:g:rw path
-ADVANCED|Show ACLs|getfacl file.txt
-ADVANCED|Mount iso|sudo mount -o loop image.iso /mnt/iso
-ADVANCED|Unmount iso|sudo umount /mnt/iso
-ADVANCED|Remount root read-only|sudo mount -o remount,ro /
-ADVANCED|Check filesystem|sudo fsck /dev/sda1
-ADVANCED|SMART info|sudo smartctl -a /dev/sda
-ADVANCED|I/O stats|iostat
-ADVANCED|iptables rules|sudo iptables -L
-ADVANCED|nftables ruleset|sudo nft list ruleset
-ADVANCED|Route table|ip route show
-ADVANCED|ARP table|ip neigh
-ADVANCED|List open connections|sudo lsof -Pni
-ADVANCED|Generate SSH key|ssh-keygen -t ed25519
-ADVANCED|Copy SSH key|ssh-copy-id user@host
-ADVANCED|SSH into host|ssh user@host
-ADVANCED|Run remote command via SSH|ssh user@host 'uptime'
-ADVANCED|Copy file via scp|scp file.txt user@host:/path/
-ADVANCED|Copy directory via rsync|rsync -avz dir/ user@host:/path/
-ADVANCED|Limit rsync bandwidth|rsync --bwlimit=1024 -avz dir/ user@host:/path/
-ADVANCED|Disk usage of /var/log|sudo du -h --max-depth=1 /var/log
-ADVANCED|Find large dirs in /home|sudo du -h /home | sort -hr | head
-ADVANCED|Count TCP connections|ss -tan | grep ESTAB | wc -l
+LINUX301|Sed print lines 10-20|sed -n '10,20p' file.txt
+LINUX301|Sed delete first line|sed -i '1d' file.txt
+LINUX301|Sed replace foo globally|sed -i 's/foo/bar/g' *.txt
+LINUX301|Awk match regex ERROR|awk '/^ERROR/' log.txt
+LINUX301|Awk sum 3rd column|awk '{sum+=$3} END {print sum}' file.txt
+LINUX301|Unique IPs from log|awk '{print $1}' access.log | sort -u
+LINUX301|Sort processes by memory|ps aux --sort=-%mem | head
+LINUX301|Sort processes by CPU|ps aux --sort=-%cpu | head
+LINUX301|Top 5 largest files|find . -type f -printf '%s %p\n' | sort -nr | head -n 5
+LINUX301|Find empty files|find . -type f -empty
+LINUX301|Find world-writable files|find / -type f -perm -0002 2>/dev/null
+LINUX301|Find files owned by alice|find / -user alice 2>/dev/null
+LINUX301|Record terminal session|script typescript
+LINUX301|Replay terminal session|scriptreplay typescript
+LINUX301|Show login history|last
+LINUX301|Show failed logins|sudo lastb
+LINUX301|Monitor logs in real time|sudo journalctl -f
+LINUX301|Logs for ssh.service|sudo journalctl -u ssh.service
+LINUX301|List systemd services|systemctl list-units --type=service
+LINUX301|Status of sshd|systemctl status sshd
+LINUX301|Restart sshd|sudo systemctl restart sshd
+LINUX301|Enable sshd|sudo systemctl enable sshd
+LINUX301|Disable sshd|sudo systemctl disable sshd
+LINUX301|List systemd timers|systemctl list-timers
+LINUX301|Show listening sockets|sudo ss -tulpn
+LINUX301|Trace ls system calls|strace ls
+LINUX301|Time command|time ls -R
+LINUX301|Check SHA256 of iso|sha256sum file.iso
+LINUX301|Generate random 32-byte hex|head -c 32 /dev/urandom | xxd -p
+LINUX301|Lock user alice|sudo passwd -l alice
+LINUX301|Unlock user alice|sudo passwd -u alice
+LINUX301|Add user alice|sudo useradd alice
+LINUX301|Add user alice with home|sudo useradd -m alice
+LINUX301|Delete user alice|sudo userdel alice
+LINUX301|Delete user alice and home|sudo userdel -r alice
+LINUX301|Add alice to sudo group|sudo usermod -aG sudo alice
+LINUX301|Show groups for alice|groups alice
+LINUX301|Create group devs|sudo groupadd devs
+LINUX301|Change alice primary group|sudo usermod -g devs alice
+LINUX301|Change ownership recursively|sudo chown -R user:group path
+LINUX301|Set ACL for group g|setfacl -m g:g:rw path
+LINUX301|Show ACLs|getfacl file.txt
+LINUX301|Mount iso|sudo mount -o loop image.iso /mnt/iso
+LINUX301|Unmount iso|sudo umount /mnt/iso
+LINUX301|Remount root read-only|sudo mount -o remount,ro /
+LINUX301|Check filesystem|sudo fsck /dev/sda1
+LINUX301|SMART info|sudo smartctl -a /dev/sda
+LINUX301|I/O stats|iostat
+LINUX301|iptables rules|sudo iptables -L
+LINUX301|nftables ruleset|sudo nft list ruleset
+LINUX301|Route table|ip route show
+LINUX301|ARP table|ip neigh
+LINUX301|List open connections|sudo lsof -Pni
+LINUX301|Generate SSH key|ssh-keygen -t ed25519
+LINUX301|Copy SSH key|ssh-copy-id user@host
+LINUX301|SSH into host|ssh user@host
+LINUX301|Run remote command via SSH|ssh user@host 'uptime'
+LINUX301|Copy file via scp|scp file.txt user@host:/path/
+LINUX301|Copy directory via rsync|rsync -avz dir/ user@host:/path/
+LINUX301|Limit rsync bandwidth|rsync --bwlimit=1024 -avz dir/ user@host:/path/
+LINUX301|Disk usage of /var/log|sudo du -h --max-depth=1 /var/log
+LINUX301|Find large dirs in /home|sudo du -h /home | sort -hr | head
+LINUX301|Count TCP connections|ss -tan | grep ESTAB | wc -l
 
 # ===== Real-World Sysadmin Tasks (more) =====
-SYSADMIN|Check disk usage of all mounted filesystems|df -h
-SYSADMIN|Check disk usage of /var in human readable form|du -sh /var
-SYSADMIN|Find files larger than 100MB under /var|sudo find /var -type f -size +100M
-SYSADMIN|Show memory usage in human readable form|free -h
-SYSADMIN|Show top CPU and memory consuming processes|top
-SYSADMIN|Show top 10 memory-hungry processes using ps|ps aux --sort=-%mem | head -n 10
-SYSADMIN|Show top 10 CPU-hungry processes using ps|ps aux --sort=-%cpu | head -n 10
-SYSADMIN|Show which services failed to start|systemctl --failed
-SYSADMIN|Show system boot log from previous boot|sudo journalctl -b -1
-SYSADMIN|List all log files in /var/log|ls /var/log
-SYSADMIN|Check if system time is synchronized|timedatectl
-SYSADMIN|Set system timezone to Asia/Tokyo|sudo timedatectl set-timezone Asia/Tokyo
-SYSADMIN|List user crontab entries for current user|crontab -l
-SYSADMIN|Edit current user crontab|crontab -e
-SYSADMIN|List system-wide crontab directory|ls /etc/cron.d
-SYSADMIN|Backup /etc directory to /root/etc-backup.tar.gz|sudo tar czf /root/etc-backup.tar.gz /etc
-SYSADMIN|List kernels installed on the system|rpm -q kernel
-SYSADMIN|Check SELinux status quickly|getenforce
-SYSADMIN|Show human readable journal entries for today|sudo journalctl --since today
-SYSADMIN|Show last 50 lines from system journal|sudo journalctl -n 50
-SYSADMIN|Show current open file limits for shell|ulimit -a
-SYSADMIN|Check which process is using port 80|sudo ss -tulpn | grep :80
-SYSADMIN|Show last reboot times|last reboot
-SYSADMIN|Schedule system reboot in 10 minutes|sudo shutdown -r +10
-SYSADMIN|Cancel a scheduled shutdown or reboot|sudo shutdown -c
-SYSADMIN|Reload systemd manager configuration after unit changes|sudo systemctl daemon-reload
-SYSADMIN|Check status of cron service on systemd systems|systemctl status crond
-SYSADMIN|Restart cron service on systemd systems|sudo systemctl restart crond
-SYSADMIN|View kernel ring buffer messages|dmesg
-SYSADMIN|Check available updates on a DNF based system|sudo dnf check-update
+LINUX202|Check disk usage of all mounted filesystems|df -h
+LINUX202|Check disk usage of /var in human readable form|du -sh /var
+LINUX202|Find files larger than 100MB under /var|sudo find /var -type f -size +100M
+LINUX202|Show memory usage in human readable form|free -h
+LINUX202|Show top CPU and memory consuming processes|top
+LINUX202|Show top 10 memory-hungry processes using ps|ps aux --sort=-%mem | head -n 10
+LINUX202|Show top 10 CPU-hungry processes using ps|ps aux --sort=-%cpu | head -n 10
+LINUX202|Show which services failed to start|systemctl --failed
+LINUX202|Show system boot log from previous boot|sudo journalctl -b -1
+LINUX202|List all log files in /var/log|ls /var/log
+LINUX202|Check if system time is synchronized|timedatectl
+LINUX202|Set system timezone to Asia/Tokyo|sudo timedatectl set-timezone Asia/Tokyo
+LINUX202|List user crontab entries for current user|crontab -l
+LINUX202|Edit current user crontab|crontab -e
+LINUX202|List system-wide crontab directory|ls /etc/cron.d
+LINUX202|Backup /etc directory to /root/etc-backup.tar.gz|sudo tar czf /root/etc-backup.tar.gz /etc
+LINUX202|List kernels installed on the system|rpm -q kernel
+LINUX202|Check SELinux status quickly|getenforce
+LINUX202|Show human readable journal entries for today|sudo journalctl --since today
+LINUX202|Show last 50 lines from system journal|sudo journalctl -n 50
+LINUX202|Show current open file limits for shell|ulimit -a
+LINUX202|Check which process is using port 80|sudo ss -tulpn | grep :80
+LINUX202|Show last reboot times|last reboot
+LINUX202|Schedule system reboot in 10 minutes|sudo shutdown -r +10
+LINUX202|Cancel a scheduled shutdown or reboot|sudo shutdown -c
+LINUX202|Reload systemd manager configuration after unit changes|sudo systemctl daemon-reload
+LINUX202|Check status of cron service on systemd systems|systemctl status crond
+LINUX202|Restart cron service on systemd systems|sudo systemctl restart crond
+LINUX202|View kernel ring buffer messages|dmesg
+LINUX202|Check available updates on a DNF based system|sudo dnf check-update
 
 # ===== Filesystem Layout (more) =====
-FS|Which directory contains user-local binary executables by default?|/usr/bin
-FS|Which directory contains essential system binaries for all users?|/bin
-FS|Which directory contains system administration binaries?|/sbin
-FS|Which directory contains system-wide libraries?|/usr/lib
-FS|Which directory is usually used for optional third-party software?|/opt
-FS|Which directory contains runtime variable data like PID files and sockets?|/run
-FS|Which pseudo-filesystem exposes kernel and process info as files?|/proc
-FS|Which pseudo-filesystem exposes device information and kernel data?|/sys
-FS|Which directory contains device files representing hardware?|/dev
-FS|Which directory is typically used for mail and print spool files?|/var/spool
-FS|Which directory usually contains temporary files that survive reboots (on many systems)?|/var/tmp
-FS|Which directory on many distros contains system-wide application data shared between machines?|/srv
-FS|Which directory in a home folder commonly stores user configuration files according to XDG?|.config
-FS|Which file in a user home directory typically stores bash shell configuration?|.bashrc
-FS|Which file in a user home directory typically stores login shell environment?|.profile
-FS|Which directory often stores user-specific bin scripts in home?|bin
-FS|Which directory in home is commonly used for downloads?|Downloads
+LINUX101|Which directory contains user-local binary executables by default?|/usr/bin
+LINUX101|Which directory contains essential system binaries for all users?|/bin
+LINUX101|Which directory contains system administration binaries?|/sbin
+LINUX101|Which directory contains system-wide libraries?|/usr/lib
+LINUX101|Which directory is usually used for optional third-party software?|/opt
+LINUX101|Which directory contains runtime variable data like PID files and sockets?|/run
+LINUX101|Which pseudo-filesystem exposes kernel and process info as files?|/proc
+LINUX101|Which pseudo-filesystem exposes device information and kernel data?|/sys
+LINUX101|Which directory contains device files representing hardware?|/dev
+LINUX101|Which directory is typically used for mail and print spool files?|/var/spool
+LINUX101|Which directory usually contains temporary files that survive reboots (on many systems)?|/var/tmp
+LINUX101|Which directory on many distros contains system-wide application data shared between machines?|/srv
+LINUX101|Which directory in a home folder commonly stores user configuration files according to XDG?|.config
+LINUX101|Which file in a user home directory typically stores bash shell configuration?|.bashrc
+LINUX101|Which file in a user home directory typically stores login shell environment?|.profile
+LINUX101|Which directory often stores user-specific bin scripts in home?|bin
+LINUX101|Which directory in home is commonly used for downloads?|Downloads
 
 # ===== Permissions (more) =====
-PERMISSIONS|Numeric perm for rwxr-xr-x|755
-PERMISSIONS|Numeric perm for rw-------|600
-PERMISSIONS|Numeric perm for rwxr-x---|750
-PERMISSIONS|Symbolic for 644|rw-r--r--
-PERMISSIONS|Symbolic for 700|rwx------
-PERMISSIONS|Which permission bit allows reading a file?|r
-PERMISSIONS|Which permission bit allows modifying a file?|w
-PERMISSIONS|Which permission bit allows entering a directory?|x
-PERMISSIONS|What special bit allows executables to run with file owner's privileges?|suid
-PERMISSIONS|What special bit on directories preserves group ownership of new files?|sgid
-PERMISSIONS|What special bit on /tmp prevents users deleting each other's files?|sticky bit
-PERMISSIONS|Which command conceptually changes file permissions?|chmod
-PERMISSIONS|Which command conceptually changes file owner and group?|chown
-PERMISSIONS|Which command conceptually changes only the group of a file?|chgrp
-PERMISSIONS|What is the name for the default permission mask used when creating files?|umask
-PERMISSIONS|If umask is 022 what are typical new file permissions in numeric form?|644
-PERMISSIONS|If umask is 022 what are typical new directory permissions in numeric form?|755
-PERMISSIONS|What is the term for permissions like rwxr-xr-x instead of numeric?|symbolic
-PERMISSIONS|What is the term for permissions like 755 instead of symbolic?|numeric
+LINUX102|Numeric perm for rwxr-xr-x|755
+LINUX102|Numeric perm for rw-------|600
+LINUX102|Numeric perm for rwxr-x---|750
+LINUX102|Symbolic for 644|rw-r--r--
+LINUX102|Symbolic for 700|rwx------
+LINUX102|Which permission bit allows reading a file?|r
+LINUX102|Which permission bit allows modifying a file?|w
+LINUX102|Which permission bit allows entering a directory?|x
+LINUX102|What special bit allows executables to run with file owner's privileges?|suid
+LINUX102|What special bit on directories preserves group ownership of new files?|sgid
+LINUX102|What special bit on /tmp prevents users deleting each other's files?|sticky bit
+LINUX102|Which command conceptually changes file permissions?|chmod
+LINUX102|Which command conceptually changes file owner and group?|chown
+LINUX102|Which command conceptually changes only the group of a file?|chgrp
+LINUX102|What is the name for the default permission mask used when creating files?|umask
+LINUX102|If umask is 022 what are typical new file permissions in numeric form?|644
+LINUX102|If umask is 022 what are typical new directory permissions in numeric form?|755
+LINUX102|What is the term for permissions like rwxr-xr-x instead of numeric?|symbolic
+LINUX102|What is the term for permissions like 755 instead of symbolic?|numeric
 
 # ===== Shell Theory (more) =====
-SHELL|What does $0 usually represent in a shell script?|script name
-SHELL|What does $@ represent in a shell script?|all arguments
-SHELL|What does $# represent in a shell script?|argument count
-SHELL|What does $$ represent in a shell script?|current shell pid
-SHELL|What does $? represent in the shell?|exit status of last command
-SHELL|What does && between two commands mean?|run second only if first succeeded
-SHELL|What does || between two commands mean?|run second only if first failed
-SHELL|What is the name of the feature that stores previously entered commands?|history
-SHELL|What is the typical default shell on many Linux systems?|bash
-SHELL|What is the feature that replaces variables and commands before execution called?|expansion
-SHELL|What is the syntax $(command) used for?|command substitution
-SHELL|What does the single dot command . do with a script?|source it in current shell
-SHELL|What is the term for connecting output of one program to input of another?|pipe
-SHELL|Which character is used for single-character globbing?|?
-SHELL|Which characters are used for multi-character globbing?|*
-SHELL|What is the shell variable that defines the path search list for commands?|PATH
-SHELL|Which environment variable usually indicates the current user's home directory?|HOME
-SHELL|Which environment variable usually indicates the login shell?|SHELL
-SHELL|What does Ctrl+C send to the running process?|SIGINT
-SHELL|What does Ctrl+Z do to the current foreground process?|suspend
-SHELL|Which built-in command lists background jobs?|jobs
-SHELL|Which built-in command brings a job to the foreground?|fg
-SHELL|Which built-in command continues a job in the background?|bg
+LINUX102|What does $0 usually represent in a shell script?|script name
+LINUX102|What does $@ represent in a shell script?|all arguments
+LINUX102|What does $# represent in a shell script?|argument count
+LINUX102|What does $$ represent in a shell script?|current shell pid
+LINUX102|What does $? represent in the shell?|exit status of last command
+LINUX102|What does && between two commands mean?|run second only if first succeeded
+LINUX102|What does || between two commands mean?|run second only if first failed
+LINUX102|What is the name of the feature that stores previously entered commands?|history
+LINUX102|What is the typical default shell on many Linux systems?|bash
+LINUX102|What is the feature that replaces variables and commands before execution called?|expansion
+LINUX102|What is the syntax $(command) used for?|command substitution
+LINUX102|What does the single dot command . do with a script?|source it in current shell
+LINUX102|What is the term for connecting output of one program to input of another?|pipe
+LINUX102|Which character is used for single-character globbing?|?
+LINUX102|Which characters are used for multi-character globbing?|*
+LINUX102|What is the shell variable that defines the path search list for commands?|PATH
+LINUX102|Which environment variable usually indicates the current user's home directory?|HOME
+LINUX102|Which environment variable usually indicates the login shell?|SHELL
+LINUX102|What does Ctrl+C send to the running process?|SIGINT
+LINUX102|What does Ctrl+Z do to the current foreground process?|suspend
+LINUX102|Which built-in command lists background jobs?|jobs
+LINUX102|Which built-in command brings a job to the foreground?|fg
+LINUX102|Which built-in command continues a job in the background?|bg
 
 # ===== Process Theory (more) =====
-PROCESS|What does PID stand for?|process id
-PROCESS|What does PPID stand for?|parent process id
-PROCESS|What is the parent of all processes on systemd-based systems?|systemd
-PROCESS|What is the term for a process that has finished but not yet reaped by its parent?|zombie
-PROCESS|What is the term for a background process with no controlling terminal?|daemon
-PROCESS|Which command conceptually lists running processes in full detail?|ps aux
-PROCESS|Which command shows an interactive real-time view of running processes?|top
-PROCESS|Which signal is sent when a process receives a request to terminate gracefully?|SIGTERM
-PROCESS|Which signal is often used to ask a daemon to reload configuration?|SIGHUP
-PROCESS|Which signal is impossible to catch or ignore?|SIGKILL
-PROCESS|Which exit code value typically means success?|0
-PROCESS|Which shell variable holds the exit code of the last finished command?|$?
-PROCESS|What is the term for a process spawned by another process?|child process
-PROCESS|What is the term for the process that spawns child processes?|parent process
-PROCESS|What command conceptually can change process priority (niceness)?|renice
-PROCESS|What is the term for the numeric scheduling priority hint on Unix-like systems?|nice value
+LINUX102|What does PID stand for?|process id
+LINUX102|What does PPID stand for?|parent process id
+LINUX102|What is the parent of all processes on systemd-based systems?|systemd
+LINUX102|What is the term for a process that has finished but not yet reaped by its parent?|zombie
+LINUX102|What is the term for a background process with no controlling terminal?|daemon
+LINUX102|Which command conceptually lists running processes in full detail?|ps aux
+LINUX102|Which command shows an interactive real-time view of running processes?|top
+LINUX102|Which signal is sent when a process receives a request to terminate gracefully?|SIGTERM
+LINUX102|Which signal is often used to ask a daemon to reload configuration?|SIGHUP
+LINUX102|Which signal is impossible to catch or ignore?|SIGKILL
+LINUX102|Which exit code value typically means success?|0
+LINUX102|Which shell variable holds the exit code of the last finished command?|$?
+LINUX102|What is the term for a process spawned by another process?|child process
+LINUX102|What is the term for the process that spawns child processes?|parent process
+LINUX102|What command conceptually can change process priority (niceness)?|renice
+LINUX102|What is the term for the numeric scheduling priority hint on Unix-like systems?|nice value
 
 # ===== Boot & Systemd (more) =====
-SYSTEMD|What is the name of the init system used by most modern Linux distros?|systemd
-SYSTEMD|Which command manages systemd services and units?|systemctl
-SYSTEMD|Which command shows overall systemd log messages?|journalctl
-SYSTEMD|What is the systemd unit type used for background services?|service
-SYSTEMD|What is the systemd unit type that groups other units into a state?|target
-SYSTEMD|Which target is commonly used for non-graphical multi-user systems?|multi-user.target
-SYSTEMD|Which target is commonly used for full graphical login systems?|graphical.target
-SYSTEMD|Which command shows the current default target?|systemctl get-default
-SYSTEMD|Which command sets the default target to multi-user.target?|sudo systemctl set-default multi-user.target
-SYSTEMD|Which directory typically holds package-provided unit files on systemd systems?|/usr/lib/systemd/system
-SYSTEMD|Which directory typically holds local override or custom unit files?|/etc/systemd/system
-SYSTEMD|Which command reloads systemd manager configuration after unit file changes?|sudo systemctl daemon-reload
-SYSTEMD|Which command shows the status of a unit named sshd.service?|systemctl status sshd
-SYSTEMD|Which command starts a service immediately?|sudo systemctl start sshd
-SYSTEMD|Which command stops a service immediately?|sudo systemctl stop sshd
-SYSTEMD|Which command enables a service to start at boot?|sudo systemctl enable sshd
-SYSTEMD|Which command disables a service from starting at boot?|sudo systemctl disable sshd
+LINUX202|What is the name of the init system used by most modern Linux distros?|systemd
+LINUX202|Which command manages systemd services and units?|systemctl
+LINUX202|Which command shows overall systemd log messages?|journalctl
+LINUX202|What is the systemd unit type used for background services?|service
+LINUX202|What is the systemd unit type that groups other units into a state?|target
+LINUX202|Which target is commonly used for non-graphical multi-user systems?|multi-user.target
+LINUX202|Which target is commonly used for full graphical login systems?|graphical.target
+LINUX202|Which command shows the current default target?|systemctl get-default
+LINUX202|Which command sets the default target to multi-user.target?|sudo systemctl set-default multi-user.target
+LINUX202|Which directory typically holds package-provided unit files on systemd systems?|/usr/lib/systemd/system
+LINUX202|Which directory typically holds local override or custom unit files?|/etc/systemd/system
+LINUX202|Which command reloads systemd manager configuration after unit file changes?|sudo systemctl daemon-reload
+LINUX202|Which command shows the status of a unit named sshd.service?|systemctl status sshd
+LINUX202|Which command starts a service immediately?|sudo systemctl start sshd
+LINUX202|Which command stops a service immediately?|sudo systemctl stop sshd
+LINUX202|Which command enables a service to start at boot?|sudo systemctl enable sshd
+LINUX202|Which command disables a service from starting at boot?|sudo systemctl disable sshd
 
 # ===== Networking (more) =====
-NETWORK|What is the standard hostname for the loopback interface?|localhost
-NETWORK|What is the name of the loopback network interface?|lo
-NETWORK|Which command shows IP addresses of all interfaces?|ip addr
-NETWORK|Which command shows routing table information?|ip route
-NETWORK|Which protocol uses port 80 by default?|http
-NETWORK|Which protocol uses port 443 by default?|https
-NETWORK|Which protocol uses port 22 by default?|ssh
-NETWORK|Which protocol uses port 25 by default?|smtp
-NETWORK|Which protocol uses port 53 by default?|dns
-NETWORK|Which protocol uses port 3306 by default?|mysql
-NETWORK|Which protocol uses port 5432 by default?|postgresql
-NETWORK|Which file on Debian-based systems logs authentication messages?|/var/log/auth.log
-NETWORK|Which file on RHEL-based systems logs secure messages and auth?|/var/log/secure
-NETWORK|What is the address 127.0.0.1 called?|loopback
-NETWORK|What is the term for converting domain names to IP addresses?|dns resolution
-NETWORK|Which private IPv4 range begins with 192.168?|192.168.0.0/16
-NETWORK|Which private IPv4 range begins with 10.|10.0.0.0/8
-NETWORK|Which private IPv4 range begins with 172.16.|172.16.0.0/12
-NETWORK|What is the term for mapping private IPs to a public IP at a router?|nat
-NETWORK|Which command sends ICMP echo requests to test connectivity?|ping
-NETWORK|Which command can fetch URL content from the command line (starts with c)?|curl
-NETWORK|Which command can download files non-interactively from the web (starts with w)?|wget
-NETWORK|Which command shows listening TCP and UDP sockets on modern Linux?|ss
+LINUX201|What is the standard hostname for the loopback interface?|localhost
+LINUX201|What is the name of the loopback network interface?|lo
+LINUX201|Which command shows IP addresses of all interfaces?|ip addr
+LINUX201|Which command shows routing table information?|ip route
+LINUX201|Which protocol uses port 80 by default?|http
+LINUX201|Which protocol uses port 443 by default?|https
+LINUX201|Which protocol uses port 22 by default?|ssh
+LINUX201|Which protocol uses port 25 by default?|smtp
+LINUX201|Which protocol uses port 53 by default?|dns
+LINUX201|Which protocol uses port 3306 by default?|mysql
+LINUX201|Which protocol uses port 5432 by default?|postgresql
+LINUX201|Which file on Debian-based systems logs authentication messages?|/var/log/auth.log
+LINUX201|Which file on RHEL-based systems logs secure messages and auth?|/var/log/secure
+LINUX201|What is the address 127.0.0.1 called?|loopback
+LINUX201|What is the term for converting domain names to IP addresses?|dns resolution
+LINUX201|Which private IPv4 range begins with 192.168?|192.168.0.0/16
+LINUX201|Which private IPv4 range begins with 10.|10.0.0.0/8
+LINUX201|Which private IPv4 range begins with 172.16.|172.16.0.0/12
+LINUX201|What is the term for mapping private IPs to a public IP at a router?|nat
+LINUX201|Which command sends ICMP echo requests to test connectivity?|ping
+LINUX201|Which command can fetch URL content from the command line (starts with c)?|curl
+LINUX201|Which command can download files non-interactively from the web (starts with w)?|wget
+LINUX201|Which command shows listening TCP and UDP sockets on modern Linux?|ss
 
 # ===== Security (more) =====
-SECURITY|What file defines sudo permissions for all users?|/etc/sudoers
-SECURITY|Which command should always be used to edit sudoers file safely?|visudo
-SECURITY|Which directory typically holds extra sudo configuration drop-in files?|/etc/sudoers.d
-SECURITY|What is the numeric user id of the root user?|0
-SECURITY|What file holds hashed local user passwords on modern systems?|/etc/shadow
-SECURITY|What file contains local group definitions?|/etc/group
-SECURITY|Which config file defines SSH daemon settings on most systems?|/etc/ssh/sshd_config
-SECURITY|Which port does SSH listen on by default?|22
-SECURITY|Which directory in the user's home stores SSH keys?|.ssh
-SECURITY|Which file in .ssh stores authorized public keys for SSH login?|authorized_keys
-SECURITY|Which Linux security module enforces mandatory access control on RHEL-based systems?|selinux
-SECURITY|Which SELinux mode blocks actions that violate policy?|enforcing
-SECURITY|Which SELinux mode only logs but does not block actions?|permissive
-SECURITY|What is the path of the main SELinux config file on many systems?|/etc/selinux/config
-SECURITY|Which framework provides pluggable authentication modules on Linux?|pam
-SECURITY|Which directory contains PAM configuration files?|/etc/pam.d
-SECURITY|Which tool can ban IPs after too many failed login attempts (popular IDS)?|fail2ban
-SECURITY|Which file controls password aging and expiry information per user?|/etc/shadow
-SECURITY|Which command shows password aging info for a user?|chage
-SECURITY|Which command can lock a user's password to disable login?|passwd -l
+LINUX202|What file defines sudo permissions for all users?|/etc/sudoers
+LINUX202|Which command should always be used to edit sudoers file safely?|visudo
+LINUX202|Which directory typically holds extra sudo configuration drop-in files?|/etc/sudoers.d
+LINUX202|What is the numeric user id of the root user?|0
+LINUX202|What file holds hashed local user passwords on modern systems?|/etc/shadow
+LINUX202|What file contains local group definitions?|/etc/group
+LINUX202|Which config file defines SSH daemon settings on most systems?|/etc/ssh/sshd_config
+LINUX202|Which port does SSH listen on by default?|22
+LINUX202|Which directory in the user's home stores SSH keys?|.ssh
+LINUX202|Which file in .ssh stores authorized public keys for SSH login?|authorized_keys
+LINUX202|Which Linux security module enforces mandatory access control on RHEL-based systems?|selinux
+LINUX202|Which SELinux mode blocks actions that violate policy?|enforcing
+LINUX202|Which SELinux mode only logs but does not block actions?|permissive
+LINUX202|What is the path of the main SELinux config file on many systems?|/etc/selinux/config
+LINUX202|Which framework provides pluggable authentication modules on Linux?|pam
+LINUX202|Which directory contains PAM configuration files?|/etc/pam.d
+LINUX202|Which tool can ban IPs after too many failed login attempts (popular IDS)?|fail2ban
+LINUX202|Which file controls password aging and expiry information per user?|/etc/shadow
+LINUX202|Which command shows password aging info for a user?|chage
+LINUX202|Which command can lock a user's password to disable login?|passwd -l
 
 # ===== Trivia (more) =====
-TRIVIA|What is the name of the kernel used by most Linux distributions?|linux
-TRIVIA|What do we call a complete operating system built around the Linux kernel?|distribution
-TRIVIA|Name a popular Debian-based Linux distribution starting with U|ubuntu
-TRIVIA|Name a popular Fedora successor enterprise distro backed by Red Hat|rhel
-TRIVIA|Name a minimalist rolling-release distribution starting with A|arch
-TRIVIA|What does CLI stand for?|command line interface
-TRIVIA|What does GUI stand for?|graphical user interface
-TRIVIA|What does TTY originally stand for?|teletype
-TRIVIA|What is the special device file that discards all data written to it?|/dev/null
-TRIVIA|Which directory name is used for temporary files?|/tmp
-TRIVIA|Which command shows manual pages for commands?|man
-TRIVIA|Which general term describes using only text commands without GUI?|cli
-TRIVIA|What does LTS mean in context of distro releases?|long term support
-TRIVIA|Which program typically handles the boot menu and loads the kernel on many systems?|grub
-TRIVIA|What is the term for running a full OS from removable media like a USB stick without installing?|live system
-TRIVIA|What is the term for a small program running in the background performing services?|daemon
-TRIVIA|What is the name for a job scheduled with cron?|cron job
-TRIVIA|Which program is commonly used as the default shell on many Linux systems?|bash
-TRIVIA|Which program is widely used to track versions of source code repositories?|git
-TRIVIA|Which three-letter acronym refers to the Unix-like tools collection that Linux relies heavily on?|gnu
+LINUX101|What is the name of the kernel used by most Linux distributions?|linux
+LINUX101|What do we call a complete operating system built around the Linux kernel?|distribution
+LINUX101|Name a popular Debian-based Linux distribution starting with U|ubuntu
+LINUX101|Name a popular Fedora successor enterprise distro backed by Red Hat|rhel
+LINUX101|Name a minimalist rolling-release distribution starting with A|arch
+LINUX101|What does CLI stand for?|command line interface
+LINUX101|What does GUI stand for?|graphical user interface
+LINUX101|What does TTY originally stand for?|teletype
+LINUX101|What is the special device file that discards all data written to it?|/dev/null
+LINUX101|Which directory name is used for temporary files?|/tmp
+LINUX101|Which command shows manual pages for commands?|man
+LINUX101|Which general term describes using only text commands without GUI?|cli
+LINUX101|What does LTS mean in context of distro releases?|long term support
+LINUX101|Which program typically handles the boot menu and loads the kernel on many systems?|grub
+LINUX101|What is the term for running a full OS from removable media like a USB stick without installing?|live system
+LINUX101|What is the term for a small program running in the background performing services?|daemon
+LINUX101|What is the name for a job scheduled with cron?|cron job
+LINUX101|Which program is commonly used as the default shell on many Linux systems?|bash
+LINUX101|Which program is widely used to track versions of source code repositories?|git
+LINUX101|Which three-letter acronym refers to the Unix-like tools collection that Linux relies heavily on?|gnu
 
 # ===== DevOps Pack: Docker =====
 DOCKER|Show Docker client and server version information|docker version
@@ -537,128 +537,226 @@ GIT|Revert commit with hash abc1234 and create new commit|git revert abc1234
 # ===== HARDCORE DEVOPS EXAM MODE =====
 
 # --- Kubernetes Deep Dive ---
-DEVOPS-HARDCORE|Explain the difference between Requests and Limits in Kubernetes|requests define minimum resources; limits define maximum resources
-DEVOPS-HARDCORE|Which kubelet flag controls eviction thresholds?|--eviction-hard
-DEVOPS-HARDCORE|What happens when a pod exceeds its memory limit?|OOMKilled
-DEVOPS-HARDCORE|What happens when a pod exceeds its CPU limit?|throttling
-DEVOPS-HARDCORE|What Kubernetes object defines network policy rules?|NetworkPolicy
-DEVOPS-HARDCORE|Default Kubernetes service type|ClusterIP
-DEVOPS-HARDCORE|How does kube-proxy handle routing in IPTABLES mode?|DNAT
-DEVOPS-HARDCORE|What CIDR holds pod IPs in a cluster?|pod CIDR
-DEVOPS-HARDCORE|What command shows all API resources the cluster supports?|kubectl api-resources
-DEVOPS-HARDCORE|What Kubernetes object stores passwords and TLS keys?|Secret
-DEVOPS-HARDCORE|What is the Kubernetes built-in load balancer type for external traffic?|LoadBalancer
-DEVOPS-HARDCORE|Which controller manages ReplicaSets?|Deployment controller
-DEVOPS-HARDCORE|What is the purpose of the HorizontalPodAutoscaler?|scale replicas automatically
-DEVOPS-HARDCORE|What is the default DNS name for a service named web in namespace default?|web.default.svc.cluster.local
-DEVOPS-HARDCORE|Where does kubelet read static pod manifests?|/etc/kubernetes/manifests
-DEVOPS-HARDCORE|Which component manages etcd snapshots in managed clusters?|kube-controller-manager
-DEVOPS-HARDCORE|Which command checks certificate expiration for kube components?|kubeadm certs check-expiration
-DEVOPS-HARDCORE|Which resource defines persistent storage in the cluster?|PersistentVolume
-DEVOPS-HARDCORE|Which resource binds a pod to a persistent volume?|PersistentVolumeClaim
-DEVOPS-HARDCORE|What is the CSI acronym?|container storage interface
-DEVOPS-HARDCORE|Which feature isolates container privileges in Kubernetes?|Pod Security Admission
-DEVOPS-HARDCORE|What is the recommended minimum etcd nodes for HA?|3
-DEVOPS-HARDCORE|Which controller handles node lifecycle?|node controller
-DEVOPS-HARDCORE|Which API object defines RBAC permissions?|Role/ClusterRole
-DEVOPS-HARDCORE|What is the control plane component that exposes the Kubernetes API?|kube-apiserver
-DEVOPS-HARDCORE|Command to check which node a pod is running on|kubectl get pod -o wide
+LINUX302|Explain the difference between Requests and Limits in Kubernetes|requests define minimum resources; limits define maximum resources
+LINUX302|Which kubelet flag controls eviction thresholds?|--eviction-hard
+LINUX302|What happens when a pod exceeds its memory limit?|OOMKilled
+LINUX302|What happens when a pod exceeds its CPU limit?|throttling
+LINUX302|What Kubernetes object defines network policy rules?|NetworkPolicy
+LINUX302|Default Kubernetes service type|ClusterIP
+LINUX302|How does kube-proxy handle routing in IPTABLES mode?|DNAT
+LINUX302|What CIDR holds pod IPs in a cluster?|pod CIDR
+LINUX302|What command shows all API resources the cluster supports?|kubectl api-resources
+LINUX302|What Kubernetes object stores passwords and TLS keys?|Secret
+LINUX302|What is the Kubernetes built-in load balancer type for external traffic?|LoadBalancer
+LINUX302|Which controller manages ReplicaSets?|Deployment controller
+LINUX302|What is the purpose of the HorizontalPodAutoscaler?|scale replicas automatically
+LINUX302|What is the default DNS name for a service named web in namespace default?|web.default.svc.cluster.local
+LINUX302|Where does kubelet read static pod manifests?|/etc/kubernetes/manifests
+LINUX302|Which component manages etcd snapshots in managed clusters?|kube-controller-manager
+LINUX302|Which command checks certificate expiration for kube components?|kubeadm certs check-expiration
+LINUX302|Which resource defines persistent storage in the cluster?|PersistentVolume
+LINUX302|Which resource binds a pod to a persistent volume?|PersistentVolumeClaim
+LINUX302|What is the CSI acronym?|container storage interface
+LINUX302|Which feature isolates container privileges in Kubernetes?|Pod Security Admission
+LINUX302|What is the recommended minimum etcd nodes for HA?|3
+LINUX302|Which controller handles node lifecycle?|node controller
+LINUX302|Which API object defines RBAC permissions?|Role/ClusterRole
+LINUX302|What is the control plane component that exposes the Kubernetes API?|kube-apiserver
+LINUX302|Command to check which node a pod is running on|kubectl get pod -o wide
 
 # --- Docker Hardcore ---
-DEVOPS-HARDCORE|Which Docker feature reuses filesystem layers for efficiency?|image layers
-DEVOPS-HARDCORE|Where are Docker images stored on Linux by default?|/var/lib/docker
-DEVOPS-HARDCORE|What system feature enforces resource isolation in containers?|cgroups
-DEVOPS-HARDCORE|What system feature provides process isolation?|namespaces
-DEVOPS-HARDCORE|Which Docker network mode gives each container its own IP?|bridge
-DEVOPS-HARDCORE|Which Docker mode uses host network stack directly?|host
-DEVOPS-HARDCORE|Command to view running container cgroup info|docker inspect --format '{{.HostConfig.CgroupParent}}'
-DEVOPS-HARDCORE|What command shows low-level events from Docker daemon?|docker events
-DEVOPS-HARDCORE|What exit code indicates container OOM kill?|137
-DEVOPS-HARDCORE|Remove all containers including running ones|docker rm -f $(docker ps -aq)
-DEVOPS-HARDCORE|What is the purpose of Docker multi-stage builds?|reduce final image size
-DEVOPS-HARDCORE|Which Dockerfile instruction sets environment variables?|ENV
-DEVOPS-HARDCORE|Which Dockerfile instruction sets default command?|CMD
-DEVOPS-HARDCORE|Which Dockerfile instruction runs build steps?|RUN
-DEVOPS-HARDCORE|Which Dockerfile instruction changes working directory?|WORKDIR
-DEVOPS-HARDCORE|Which Dockerfile instruction copies files?|COPY
+LINUX302|Which Docker feature reuses filesystem layers for efficiency?|image layers
+LINUX302|Where are Docker images stored on Linux by default?|/var/lib/docker
+LINUX302|What system feature enforces resource isolation in containers?|cgroups
+LINUX302|What system feature provides process isolation?|namespaces
+LINUX302|Which Docker network mode gives each container its own IP?|bridge
+LINUX302|Which Docker mode uses host network stack directly?|host
+LINUX302|Command to view running container cgroup info|docker inspect --format '{{.HostConfig.CgroupParent}}'
+LINUX302|What command shows low-level events from Docker daemon?|docker events
+LINUX302|What exit code indicates container OOM kill?|137
+LINUX302|Remove all containers including running ones|docker rm -f $(docker ps -aq)
+LINUX302|What is the purpose of Docker multi-stage builds?|reduce final image size
+LINUX302|Which Dockerfile instruction sets environment variables?|ENV
+LINUX302|Which Dockerfile instruction sets default command?|CMD
+LINUX302|Which Dockerfile instruction runs build steps?|RUN
+LINUX302|Which Dockerfile instruction changes working directory?|WORKDIR
+LINUX302|Which Dockerfile instruction copies files?|COPY
 
 # --- Linux Sysadmin Hardcore ---
-DEVOPS-HARDCORE|Command to show per-core CPU usage in top|press 1
-DEVOPS-HARDCORE|What kernel parameter controls OOM killer aggressiveness?|vm.overcommit_memory
-DEVOPS-HARDCORE|Which file contains kernel runtime parameters?|/proc/sys
-DEVOPS-HARDCORE|Command to modify sysctl parameter at runtime|sysctl -w
-DEVOPS-HARDCORE|Persistent sysctl configuration file path|/etc/sysctl.conf
-DEVOPS-HARDCORE|Which command detects filesystem errors?|fsck
-DEVOPS-HARDCORE|Which file lists mounted filesystems?|/proc/mounts
-DEVOPS-HARDCORE|How to check open files per process?|lsof -p PID
-DEVOPS-HARDCORE|Command to show top IO processes|iotop
-DEVOPS-HARDCORE|Command to benchmark disk performance|dd if=/dev/zero of=test bs=1M count=1024
-DEVOPS-HARDCORE|Which file stores system hostname?|/etc/hostname
-DEVOPS-HARDCORE|Which program initializes networking on most distros?|NetworkManager
-DEVOPS-HARDCORE|Command to trace system calls of a process|strace -p PID
-DEVOPS-HARDCORE|Command to list all open network sockets|ss -tulnp
-DEVOPS-HARDCORE|What does exit code 0 mean?|success
-DEVOPS-HARDCORE|What kernel facility logs hardware events?|dmesg
+LINUX302|Command to show per-core CPU usage in top|press 1
+LINUX302|What kernel parameter controls OOM killer aggressiveness?|vm.overcommit_memory
+LINUX302|Which file contains kernel runtime parameters?|/proc/sys
+LINUX302|Command to modify sysctl parameter at runtime|sysctl -w
+LINUX302|Persistent sysctl configuration file path|/etc/sysctl.conf
+LINUX302|Which command detects filesystem errors?|fsck
+LINUX302|Which file lists mounted filesystems?|/proc/mounts
+LINUX302|How to check open files per process?|lsof -p PID
+LINUX302|Command to show top IO processes|iotop
+LINUX302|Command to benchmark disk performance|dd if=/dev/zero of=test bs=1M count=1024
+LINUX302|Which file stores system hostname?|/etc/hostname
+LINUX302|Which program initializes networking on most distros?|NetworkManager
+LINUX302|Command to trace system calls of a process|strace -p PID
+LINUX302|Command to list all open network sockets|ss -tulnp
+LINUX302|What does exit code 0 mean?|success
+LINUX302|What kernel facility logs hardware events?|dmesg
 
 # --- Git Hardcore ---
-DEVOPS-HARDCORE|Command to stage only part of a file interactively|git add -p
-DEVOPS-HARDCORE|Command to resolve merge conflicts using a tool|git mergetool
-DEVOPS-HARDCORE|Difference between rebase and merge|rebase rewrites history; merge preserves history
-DEVOPS-HARDCORE|Command to squash last 3 commits|git rebase -i HEAD~3
-DEVOPS-HARDCORE|Command to generate a patch file from last commit|git format-patch -1
-DEVOPS-HARDCORE|Command to apply a patch|git apply file.patch
-DEVOPS-HARDCORE|Command to show reflog|git reflog
-DEVOPS-HARDCORE|Command to restore deleted commit via reflog|git checkout <commit>
-DEVOPS-HARDCORE|Command to amend last commit without changing message|git commit --amend --no-edit
-DEVOPS-HARDCORE|Git state where a commit has no parents|root commit
+LINUX302|Command to stage only part of a file interactively|git add -p
+LINUX302|Command to resolve merge conflicts using a tool|git mergetool
+LINUX302|Difference between rebase and merge|rebase rewrites history; merge preserves history
+LINUX302|Command to squash last 3 commits|git rebase -i HEAD~3
+LINUX302|Command to generate a patch file from last commit|git format-patch -1
+LINUX302|Command to apply a patch|git apply file.patch
+LINUX302|Command to show reflog|git reflog
+LINUX302|Command to restore deleted commit via reflog|git checkout <commit>
+LINUX302|Command to amend last commit without changing message|git commit --amend --no-edit
+LINUX302|Git state where a commit has no parents|root commit
 
 # --- Terraform Hardcore ---
-DEVOPS-HARDCORE|Command to show Terraform execution plan|terraform plan
-DEVOPS-HARDCORE|Command that applies infrastructure changes|terraform apply
-DEVOPS-HARDCORE|Command to download providers|terraform init
-DEVOPS-HARDCORE|Where are Terraform state files stored by default?|terraform.tfstate
-DEVOPS-HARDCORE|What backend stores state in an S3 bucket?|s3 backend
-DEVOPS-HARDCORE|What is the purpose of remote state?|collaboration and locking
-DEVOPS-HARDCORE|What is Terraform drift?|real world config differs from state
-DEVOPS-HARDCORE|What is a Terraform module?|reusable collection of resources
+TERRAFORM|Command to show Terraform execution plan|terraform plan
+LINUX302|Command that applies infrastructure changes|terraform apply
+LINUX302|Command to download providers|terraform init
+TERRAFORM|Where are Terraform state files stored by default?|terraform.tfstate
+LINUX302|What backend stores state in an S3 bucket?|s3 backend
+LINUX302|What is the purpose of remote state?|collaboration and locking
+TERRAFORM|What is Terraform drift?|real world config differs from state
+TERRAFORM|What is a Terraform module?|reusable collection of resources
 
 # --- Ansible Hardcore ---
-DEVOPS-HARDCORE|Default inventory file location for Ansible|/etc/ansible/hosts
-DEVOPS-HARDCORE|Default Ansible config file|ansible.cfg
-DEVOPS-HARDCORE|Command to run ad-hoc ping test on hosts|ansible all -m ping
-DEVOPS-HARDCORE|What language are Ansible playbooks written in?|yaml
-DEVOPS-HARDCORE|Command to run playbook site.yml|ansible-playbook site.yml
-DEVOPS-HARDCORE|What is an Ansible role?|reusable automation unit
-DEVOPS-HARDCORE|How to encrypt secrets for Ansible?|ansible-vault
+LINUX302|Default inventory file location for Ansible|/etc/ansible/hosts
+LINUX302|Default Ansible config file|ansible.cfg
+LINUX302|Command to run ad-hoc ping test on hosts|ansible all -m ping
+LINUX302|What language are Ansible playbooks written in?|yaml
+LINUX302|Command to run playbook site.yml|ansible-playbook site.yml
+LINUX302|What is an Ansible role?|reusable automation unit
+LINUX302|How to encrypt secrets for Ansible?|ansible-vault
 
 # --- CI/CD Hardcore ---
-DEVOPS-HARDCORE|Default GitHub Actions workflow path|.github/workflows
-DEVOPS-HARDCORE|Default GitLab CI file name|.gitlab-ci.yml
-DEVOPS-HARDCORE|Default Jenkinsfile filename|Jenkinsfile
-DEVOPS-HARDCORE|GitHub Actions keyword for defining a job|jobs
-DEVOPS-HARDCORE|GitHub Actions runner OS for ubuntu|ubuntu-latest
-DEVOPS-HARDCORE|GitLab CI default stages keyword|stages
+LINUX302|Default GitHub Actions workflow path|.github/workflows
+LINUX302|Default GitLab CI file name|.gitlab-ci.yml
+LINUX302|Default Jenkinsfile filename|Jenkinsfile
+LINUX302|GitHub Actions keyword for defining a job|jobs
+LINUX302|GitHub Actions runner OS for ubuntu|ubuntu-latest
+LINUX302|GitLab CI default stages keyword|stages
 
 # --- SRE Fundamentals ---
-DEVOPS-HARDCORE|What does SLO stand for?|service level objective
-DEVOPS-HARDCORE|What does SLI stand for?|service level indicator
-DEVOPS-HARDCORE|What is an error budget?|allowable failure before SLO violation
-DEVOPS-HARDCORE|What is MTTR?|mean time to recovery
-DEVOPS-HARDCORE|What is MTBF?|mean time between failures
-DEVOPS-HARDCORE|What is the term for automated rollback based on metrics?|auto rollback
+LINUX302|What does SLO stand for?|service level objective
+LINUX302|What does SLI stand for?|service level indicator
+LINUX302|What is an error budget?|allowable failure before SLO violation
+LINUX302|What is MTTR?|mean time to recovery
+LINUX302|What is MTBF?|mean time between failures
+LINUX302|What is the term for automated rollback based on metrics?|auto rollback
 
 # --- Incident Response ---
-DEVOPS-HARDCORE|First step in incident response|identify problem
-DEVOPS-HARDCORE|What log file contains kernel panic messages?|dmesg
-DEVOPS-HARDCORE|Command to check system time drift|timedatectl
-DEVOPS-HARDCORE|What is a postmortem?|analysis after incident
-DEVOPS-HARDCORE|What is root cause analysis?|identify underlying cause
-DEVOPS-HARDCORE|What is a runbook?|step-by-step operational guide
+LINUX302|First step in incident response|identify problem
+LINUX302|What log file contains kernel panic messages?|dmesg
+LINUX302|Command to check system time drift|timedatectl
+LINUX302|What is a postmortem?|analysis after incident
+LINUX302|What is root cause analysis?|identify underlying cause
+LINUX302|What is a runbook?|step-by-step operational guide
 
 
 
-DAILY-BOOST|Show command type information for ls|type ls
+LINUX302|Show command type information for ls|type ls
 
-DAILY-BOOST|Show absolute path of command ls|which ls
+LINUX302|Show absolute path of command ls|which ls
 
-DAILY-BOOST|Run previous command as sudo|sudo !!
+LINUX302|Run previous command as sudo|sudo !!
+
+# ===== Terraform Expansion =====
+TERRAFORM|Command to format Terraform files recursively|terraform fmt -recursive
+TERRAFORM|Command to validate Terraform configuration|terraform validate
+TERRAFORM|Command to show current Terraform state resources|terraform state list
+TERRAFORM|Command to show details of one state resource|terraform state show aws_instance.web
+TERRAFORM|Command to destroy all managed infrastructure|terraform destroy
+TERRAFORM|Command to refresh state only without changing infra|terraform plan -refresh-only
+TERRAFORM|File that locks provider versions|.terraform.lock.hcl
+TERRAFORM|Terraform variable file extension|.tfvars
+TERRAFORM|CLI flag to pass variable environment=dev| -var="environment=dev"
+TERRAFORM|Command to output values after apply|terraform output
+TERRAFORM|Command to output a single value named vpc_id|terraform output vpc_id
+TERRAFORM|Function to merge maps in Terraform|merge
+TERRAFORM|Meta-argument to create multiple resources from a map|for_each
+TERRAFORM|Meta-argument to create N identical resources|count
+TERRAFORM|Command to show dependency graph|terraform graph
+TERRAFORM|Backend type commonly used with AWS for remote state|s3
+TERRAFORM|State lock helper service commonly used with S3 backend|dynamodb
+TERRAFORM|Command to initialize with backend config file|terraform init -backend-config=backend.hcl
+TERRAFORM|Set Terraform log level to debug environment variable|TF_LOG=DEBUG
+TERRAFORM|Command to run plan and save it to plan file|terraform plan -out=tfplan
+TERRAFORM|Command to apply previously saved plan tfplan|terraform apply tfplan
+TERRAFORM|Function used to look up value in map with default|lookup
+TERRAFORM|Terraform command to list installed providers|terraform providers
+TERRAFORM|Directory where plugins/modules are initialized|.terraform
+TERRAFORM|Command to import existing resource into state|terraform import
+
+# ===== Cloud: AWS =====
+AWS|AWS networking object equivalent to private virtual network|VPC
+AWS|AWS subnet type with route to internet gateway|public subnet
+AWS|AWS subnet type without direct internet route|private subnet
+AWS|AWS service that distributes traffic across targets|Elastic Load Balancer
+AWS|AWS L7 load balancer type|Application Load Balancer
+AWS|AWS L4 load balancer type|Network Load Balancer
+AWS|AWS service for identity and access management|IAM
+AWS|Policy type attached directly to a user or role|IAM policy
+AWS|AWS service for auto scaling EC2 instances|Auto Scaling Group
+AWS|AWS metric and alarm service|CloudWatch
+AWS|AWS log service for application and system logs|CloudWatch Logs
+AWS|AWS managed DNS service|Route 53
+AWS|AWS service to block unwanted web traffic at edge|AWS WAF
+AWS|AWS service for centralized trail of API calls|CloudTrail
+AWS|AWS service for managed Kubernetes|EKS
+AWS|AWS service for managed relational database|RDS
+AWS|AWS object storage service|S3
+AWS|AWS private connectivity to S3 and DynamoDB from VPC|VPC Gateway Endpoint
+AWS|AWS private endpoint service using ENI in subnet|Interface Endpoint
+AWS|Security construct that acts as stateful instance firewall|Security Group
+AWS|Network ACL behavior|stateless
+AWS|Best-practice principal for apps needing AWS permissions|IAM role
+AWS|Auto scaling trigger usually based on which metric|CPUUtilization
+AWS|Service to store app parameters and secrets|SSM Parameter Store
+AWS|Managed secrets storage service in AWS|Secrets Manager
+
+# ===== Cloud: GCP =====
+GCP|GCP networking object equivalent to VPC|VPC Network
+GCP|GCP regional subnetwork resource name|subnet
+GCP|GCP global HTTP(S) load balancer operates at layer|7
+GCP|GCP TCP/UDP load balancer operates at layer|4
+GCP|GCP identity and access management service name|Cloud IAM
+GCP|GCP auto scaling feature for VM instance groups|Autoscaler
+GCP|GCP monitoring service|Cloud Monitoring
+GCP|GCP logging service|Cloud Logging
+GCP|GCP audit log service category|Cloud Audit Logs
+GCP|GCP managed Kubernetes service|GKE
+GCP|GCP managed relational database service|Cloud SQL
+GCP|GCP object storage service|Cloud Storage
+GCP|GCP service account credential identity type|service account
+GCP|GCP firewall rules are attached to|VPC network
+GCP|GCP private connectivity from VPC to Google APIs feature|Private Google Access
+GCP|GCP equivalent of AWS route53|Cloud DNS
+GCP|GCP equivalent of AWS WAF service|Cloud Armor
+GCP|GCP managed pubsub messaging service|Pub/Sub
+GCP|Autoscaling metric commonly used for MIG|CPU utilization
+GCP|GCP concept for grouping resources and billing|project
+
+# ===== Cloud: OCI =====
+OCI|OCI networking object equivalent to AWS VPC|VCN
+OCI|OCI subnet visibility option with public IP assignment|public subnet
+OCI|OCI subnet visibility option without public IP|private subnet
+OCI|OCI load balancer service name|Load Balancer
+OCI|OCI identity and access management service|IAM
+OCI|OCI policy attachment scope for permissions|compartment
+OCI|OCI auto scaling feature name|Auto Scaling
+OCI|OCI monitoring service name|Monitoring
+OCI|OCI centralized logging service name|Logging
+OCI|OCI managed Kubernetes service|OKE
+OCI|OCI managed relational database service|Autonomous Database
+OCI|OCI object storage service|Object Storage
+OCI|OCI security list behavior similar to NACL|stateless and stateful rules supported
+OCI|OCI construct similar to AWS Security Group|Network Security Group
+OCI|OCI DNS service name|DNS
+OCI|OCI private connectivity service to on-prem|FastConnect
+OCI|OCI service for metrics alarms notifications|Monitoring Alarms
+OCI|OCI governance boundary for resources|compartment
+OCI|OCI equivalent of route table target for internet|Internet Gateway
+OCI|OCI gateway for private access to Oracle services|Service Gateway
